@@ -31,6 +31,9 @@ if ($num_row === 1) {
     
     header('Location:home.php');
     
-    } 
+    } else {
+        echo 'username or password is incorrect';
+        
+}
 
 ?>
