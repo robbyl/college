@@ -36,7 +36,7 @@
                         </ul>
                     </div>
                     <div class="tab_content" id="tab1" style="display:none" >
-                        <button type="reset" class="post" form="news">Rest</button>
+                        <button type="reset" class="post" form="news">Reset</button>
                         <button type="submit" class="post" style="margin-right: 0" form="news">Post</button>
                         <h2 class="label">Post News</h2>
                         <div class="form-wrapper">
@@ -48,8 +48,7 @@
                                     </tr>
                                     <tr>
                                         <td>Image</td>
-                                        <td>
-                                            <input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                                        <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
                                     </tr>
                                     <tr>
                                         <td>Attachment</td>
@@ -65,106 +64,94 @@
                         <div class="clear"></div>
                     </div>
                     <div class="tab_content" id="tab2" style="display:none" >
-                        <ul>
-                            <li>
-                                <div class="thumb"> <a href="news.html"><img src="images/news1.jpg"  alt=" " /></a> </div>
-                                <div class="descripton">
-                                    <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                    <em>(Posted on 17 Jan 11 , 2011)</em>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        placerat dignissim, diam lacus placerat ligula, </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumb"> <a href="news.html"><img src="images/news2.jpg"  alt=" " /></a> </div>
-                                <div class="descripton">
-                                    <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                    <em>(Posted on 17 Jan 11 , 2011)</em>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        placerat dignissim, diam lacus placerat ligula, </p>
-                                </div>
-                            </li>
-                            <li class="nbbdr">
-                                <div class="thumb"> <a href="news.html"><img src="images/news3.jpg"  alt=" " /></a> </div>
-                                <div class="descripton">
-                                    <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                    <em>(Posted on 17 Jan 11 , 2011)</em>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        placerat dignissim, diam lacus placerat ligula, </p>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="clear"></div>
+                        <button type="reset" class="post" form="events">Reset</button>
+                        <button type="submit" class="post" style="margin-right: 0" form="events">Post</button>
+                        <h2 class="label">Post Events</h2>
+                        <div class="form-wrapper">
+                            <form id="events" action="process_events.php" method="POST" enctype="multipart/form-data">
+                                <table border="0" width="100%">
+                                    <tr>
+                                        <td width="200">Title</td>
+                                        <td><input type="text" name="title" class="text" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Image</td>
+                                        <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Attachment</td>
+                                        <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top">Event Description</td>
+                                        <td><textarea name="description" required></textarea></td>
+                                    </tr>
+                                </table>
+                            </form> 
+                            <div class="clear"></div>
+                        </div>
                     </div>
                     <div class="tab_content" id="tab3" style="display:none" >
-                        <ul>
-                            <li>
-                                <div class="thumb"> <a href="news.html"><img src="images/news1.jpg"  alt=" " /></a> </div>
-                                <div class="descripton">
-                                    <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                    <em>(Posted on 17 Jan 11 , 2011)</em>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        placerat dignissim, diam lacus placerat ligula, </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumb"> <a href="news.html"><img src="images/news2.jpg"  alt=" " /></a> </div>
-                                <div class="descripton">
-                                    <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                    <em>(Posted on 17 Jan 11 , 2011)</em>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        placerat dignissim, diam lacus placerat ligula, </p>
-                                </div>
-                            </li>
-                            <li class="nbbdr">
-                                <div class="thumb"> <a href="news.html"><img src="images/news3.jpg"  alt=" " /></a> </div>
-                                <div class="descripton">
-                                    <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                    <em>(Posted on 17 Jan 11 , 2011)</em>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        placerat dignissim, diam lacus placerat ligula, </p>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
+
+
+                        <button type="reset" class="post" form="courses">Reset</button>
+                        <button type="submit" class="post" style="margin-right: 0" form="courses">Post</button>
+                        <h2 class="label">Post Courses</h2>
+                        <div class="form-wrapper">
+                            <form id="events" action="process_courses.php" method="POST" enctype="multipart/form-data">
+                                <table border="0" width="100%">
+                                    <tr>
+                                        <td width="200">Title</td>
+                                        <td><input type="text" name="title" class="text" required></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Attachment</td>
+                                        <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top">Courses Description</td>
+                                        <td><textarea name="description" required></textarea></td>
+                                    </tr>
+                                </table>
+                            </form>
+                            <div class="clear"></div>
+                        </div>
+                    </div>   
+                    
                     <div class="tab_content" id="tab4" style="display:none" >
-                        <ul>
-                            <li>
-                                <div class="thumb"> <a href="news.html"><img src="images/news1.jpg"  alt=" " /></a> </div>
-                                <div class="descripton">
-                                    <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                    <em>(Posted on 17 Jan 11 , 2011)</em>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        placerat dignissim, diam lacus placerat ligula, </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumb"> <a href="news.html"><img src="images/news2.jpg"  alt=" " /></a> </div>
-                                <div class="descripton">
-                                    <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                    <em>(Posted on 17 Jan 11 , 2011)</em>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        placerat dignissim, diam lacus placerat ligula, </p>
-                                </div>
-                            </li>
-                            <li class="nbbdr">
-                                <div class="thumb"> <a href="news.html"><img src="images/news3.jpg"  alt=" " /></a> </div>
-                                <div class="descripton">
-                                    <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                    <em>(Posted on 17 Jan 11 , 2011)</em>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        placerat dignissim, diam lacus placerat ligula, </p>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="clear"></div>
+                        <button type="reset" class="post" form="charge_password">Reset</button>
+                        <button type="submit" class="post" style="margin-right: 0" form="resert_password">Change</button>
+                        <h2 class="label">Change your password</h2>
+                        <div class="form-wrapper">
+                            <form id="resert_password" action="resert_password.php" method="POST" enctype="multipart/form-data">
+                            <table border="0" width="100%">
+                                <tr>
+                                    <td width="200">Current Password</td>
+                                    <td><input type="password" name="title" class="text" required></td>
+                                </tr>
+                                <tr>
+                                    <td width="200">New Password</td>
+                                    <td><input type="password" name="title" class="text" required></td>
+                                </tr>
+                                <tr>
+                                    <td width="200">Repeat New Password</td>
+                                    <td><input type="password" name="title" class="text" required></td>
+                                </tr>
+                               
+                            </table>
+                        </form>
+                            <div class="clear"></div>
+                        </div>
                     </div>
-                    <!-- .end tab-wrapper --></div>
-                <!-- end .content --></div>
-            <div class="footer">
+                    <div class="clear"></div>
+                </div>
+            </div>
+            </div>
+               
+            <div class="footer"> 
 
                 <!-- end .footer --></div>
-            <!-- end .wrapper --></div>
+
     </body>
 </html>
