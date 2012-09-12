@@ -8,14 +8,14 @@ exit;
 // Get and upload image file
 $allowed_img_ext = array("jpg", "jpeg", "gif", "png");
 
-$extension = end(explode(".", $_FILES["image"]["name"]));
+$image_extenstion = end(explode(".", $_FILES["image"]["name"]));
 if ((($_FILES["image"]["type"] == "image/gif")
         || ($_FILES["image"]["type"] == "image/jpeg")
         || ($_FILES["image"]["type"] == "image/png")
         || ($_FILES["image"]["type"] == "image/gif")
         || ($_FILES["image"]["type"] == "image/pjpeg"))
         && ($_FILES["image"]["size"] < 2000000)
-        && in_array($extension, $allowed_img_ext)) {
+        && in_array($image_extenstion, $allowed_img_ext)) {
 
     // Checking file for errors
     if ($_FILES["image"]["error"] > 0) {
@@ -24,7 +24,7 @@ if ((($_FILES["image"]["type"] == "image/gif")
         info('error', $message);
     } else {
 
-        // Get file name
+        // Get image name
         $image_name = $_FILES['image']['name'];
 
         // Uploading it to image folder.
@@ -55,16 +55,16 @@ if ((($_FILES["attachment"]["type"] == "pdf")
     if ($_FILES["image"]["error"] > 0) {
 
         $message = "This file contain errors. Return Code: " . $_FILES["attachment"]["error"];
-        info('error', $message);
+        //info('error', $message);
     } else {
 
         // Get file name
-        $image_name = $_FILES['attachment']['name'];
+        $file_name = $_FILES['attachment']['name'];
 
-        // Uploading it to image folder.
-        move_uploaded_file($_FILES["attachment"]["tmp_name"], "uploads/images/" . $image_name);
+        // Uploading it to doc folder.
+        move_uploaded_file($_FILES["attachment"]["tmp_name"], "uploads/docs/" . $file_name);
         
-       echo 'uploaded';
+       echo 'doc uploaded';
     }
 } else {
     
