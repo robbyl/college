@@ -9,7 +9,6 @@ $query_news = "SELECT nws_title, nws_description, nws_posted_date, nws_attachmen
 
 $result_news = mysql_query($query_news) or die(mysql_error());
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
