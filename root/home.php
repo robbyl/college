@@ -15,6 +15,17 @@
         <script type="text/javascript">
             
         </script>
+        <script>
+            function check(input) {
+
+                if (input.value != document.getElementById('new_pass').value) {
+                    input.setCustomValidity('The two new passwords must match.');
+                } else {
+                    // input is valid -- reset the error message
+                    input.setCustomValidity('');
+                }
+            }
+        </script>
     </head>
 
     <body>
@@ -87,13 +98,11 @@
                                         <td><textarea name="description" required></textarea></td>
                                     </tr>
                                 </table>
-                            </form> 
+                            </form>
                             <div class="clear"></div>
                         </div>
                     </div>
                     <div class="tab_content" id="tab3" style="display:none" >
-
-
                         <button type="reset" class="post" form="courses">Reset</button>
                         <button type="submit" class="post" style="margin-right: 0" form="courses">Post</button>
                         <h2 class="label">Post Courses</h2>
@@ -104,7 +113,6 @@
                                         <td width="200">Title</td>
                                         <td><input type="text" name="title" class="text" required></td>
                                     </tr>
-
                                     <tr>
                                         <td>Attachment</td>
                                         <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
@@ -117,41 +125,40 @@
                             </form>
                             <div class="clear"></div>
                         </div>
-                    </div>   
-                    
+                    </div>
                     <div class="tab_content" id="tab4" style="display:none" >
                         <button type="reset" class="post" form="charge_password">Reset</button>
                         <button type="submit" class="post" style="margin-right: 0" form="resert_password">Change</button>
                         <h2 class="label">Change your password</h2>
                         <div class="form-wrapper">
-                            <form id="resert_password" action="resert_password.php" method="POST" enctype="multipart/form-data">
-                            <table border="0" width="100%">
-                                <tr>
-                                    <td width="200">Current Password</td>
-                                    <td><input type="password" name="title" class="text" required></td>
-                                </tr>
-                                <tr>
-                                    <td width="200">New Password</td>
-                                    <td><input type="password" name="title" class="text" required></td>
-                                </tr>
-                                <tr>
-                                    <td width="200">Repeat New Password</td>
-                                    <td><input type="password" name="title" class="text" required></td>
-                                </tr>
-                               
-                            </table>
-                        </form>
+                            <form id="resert_password" action="process_change_pass.php" method="POST">
+                                <table border="0" width="100%">
+                                    <tr>
+                                        <td width="200">Current Password</td>
+                                        <td><input type="password" name="curr_pass" id="curr_pass" required size="255" class="text" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200">New Password</td>
+                                        <td><input type="password" name="new_pass" id="new_pass" size="255" class="text" required></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200">Repeat New Password</td>
+                                        <td>
+                                            <input type="password" name="rep_new_pass" id="rep_new_pass"
+                                                   required size="255" oninput="check(this)" class="text" >
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
                             <div class="clear"></div>
                         </div>
                     </div>
                     <div class="clear"></div>
                 </div>
             </div>
-            </div>
-               
-            <div class="footer"> 
+        </div>
+        <div class="footer"> 
 
-                <!-- end .footer --></div>
-
+            <!-- end .footer --></div>
     </body>
 </html>
