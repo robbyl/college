@@ -8,7 +8,17 @@ $query_news = "SELECT nws_title, nws_description, nws_posted_date, nws_attachmen
                 LIMIT 0,10";
 
 $result_news = mysql_query($query_news) or die(mysql_error());
+
+
+$query_events = "SELECT event_title, event_posted_date ,event_description,event_attachment
+                 FROM events
+                 ORDER BY event_posted_date DESC
+                 LIMIT 0,10";
+
+$result_events = mysql_query($query_events) or die(mysql_error());
 ?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -129,6 +139,7 @@ $result_news = mysql_query($query_news) or die(mysql_error());
             <!-- Wapper Sec -->
             <div id="wrapper_sec">
                 <!-- masterhead -->
+
                 <!-- Content Seciton -->
                 <div id="content_section">
                     <div class="clear"></div>
@@ -198,9 +209,8 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                             <div class="tabwrapper">
                                 <div class="tabs_links">
                                     <ul>
-                                        <li><a  href="index.php#tab1">News</a></li>
-                                        <li><a class="nobg" href="index.php#tab2">Events</a></li>
-
+                                        <li><a href="#tab1">News</a></li>
+                                        <li><a href="#tab2">Events</a></li>
                                     </ul>
                                 </div>
                                 <div class="tab_content" id="tab1" style="display:none" >
@@ -351,8 +361,8 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                         <div class="rtab">
                             <div class="tab_navigation">
                                 <ul>
-                                    <li class="active" ><a   href="index.php#rtab1">News</a></li>
-                                    <li><a href="index.php#rtab2">Events</a> </li>
+                                    <li class="active" ><a href="#rtab1">News</a></li>
+                                    <li><a href="#rtab2">Events</a> </li>
                                 </ul>
                             </div>
                             <div class="rtab_content" id="rtab1" style="display:none;">
@@ -377,34 +387,23 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                             </div>
                             <div class="rtab_content" id="rtab2" style="display:none;">
                                 <ul>
+                                    <?php 
+                                    while ($row_events = mysql_fetch_array($result_events)) {
+                                        ?>
                                     <li>
                                         <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
                                         <div class="description">
-                                            <h6><a href="index.php#">Peter Morgen</a></h6>
-                                            <p><a href="index.php#" class="gray" >MBA, March 2011</a></p>
+                                            <h6><a href="index.php#"><?php echo $row_events['event_title'] ?></a></h6>
+                                            <em>(Posted on <?php echo $row_events['event_posted_date'] ?>)</em>
+                                            <p><a href="index.php#" class="gray" ><?php echo $row_events['event_description'] ?></a></p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="thumb" ><a href="index.php#"><img src="images/student2.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="index.php#">Elizabeth Simon</a></h6>
-                                            <p><a href="index.php#" class="gray">BBA February 2010</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb" ><a href="index.php#"><img src="images/student3.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="index.php#">Remond Price</a></h6>
-                                            <p><a href="index.php#" class="gray">ACCA January 2011</a></p>
-                                        </div>
-                                    </li>
-                                    <li class="nobg" >
-                                        <div class="thumb" ><a href="index.php#"><img src="images/student4.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="index.php#">Maria Knowls</a></h6>
-                                            <p><a href="index.php#" class="gray">MBA December 2010</a></p>
-                                        </div>
-                                    </li>
+                                    
+                                     <?php
+                                    }
+                                    ?>
+                                    
+                            
                                 </ul>
                                 <div class="clear"></div>
                             </div>

@@ -27,6 +27,7 @@ $(document).ready(function() {
         $(this).addClass("active"); //Add "active" class to selected tab
         $(".rtab_content").hide(); //Hide all tab content
         var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+		
         $(activeTab).fadeIn(); //Fade in the active content
         return false;
     });
