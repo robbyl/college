@@ -130,7 +130,6 @@ $result_news = mysql_query($query_news) or die(mysql_error());
             <!-- Wapper Sec -->
             <div id="wrapper_sec">
                 <!-- masterhead -->
-
                 <!-- Content Seciton -->
                 <div id="content_section">
                     <div class="clear"></div>
