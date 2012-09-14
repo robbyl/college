@@ -59,10 +59,13 @@ img {
     border-top: 1px solid #d9d9d9;
 }
 
+.footer p{
+    
+}
 .nav {
-    list-style: none;
     float: right;
-    margin-top: 10px;
+    margin-top: 13px;
+    margin-right: 10px;
 }
 
 .nav li {
@@ -72,7 +75,6 @@ img {
 .nav li a {
     display: block;
     padding: 4px;
-    background: pink;
 }
 
 .form-wrapper {
@@ -273,4 +275,20 @@ h1, h2, h3, h4 {
 
 .post:hover {
     border: 1px solid #999999;
+}
+.footer p { margin-left:500px;}
+
+.message {
+    position: fixed;
+    top: 0;
+    width: 300px;
+    margin-left: 50%;
+    left: -160px;
+    background: #ffffe0;
+    border: 1px #f5df01 solid;
+    padding: 0px 10px 5px 10px;
+    word-wrap: break-word;
+    box-shadow: 0 2px 2px rgba(0,0,0, 0.2);
+    border-radius: 2px;
+    z-index: 100;
 }
