@@ -1,0 +1,7 @@
+/nbproject/
+<<<<<<< HEAD
+/plugins/dompdf/
+/plugins/mpdf/
+=======
+!/nbproject/project.properties
+>>>>>>> branch 'master' of https://github.com/robbyl/college.git
