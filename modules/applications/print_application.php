@@ -1,5 +1,4 @@
 <?php require '../../includes/session_validator.php'; ?>
-
 <!doctype html>
 <html>
     <head>
@@ -14,7 +13,7 @@
         <link href="../../css/sheet.css" rel="stylesheet" type="text/css">
     </head>
 
-    <body>
+    <body onload="window.print(); window.close();">
         <div class="container">
 
             <?php
@@ -63,25 +62,18 @@
 
                         <div class="header-title">
                             <p><?php echo $row_authority['aut_name'] ?></p> 
-                            <p style="font-size: 18px;">METER READING SHEET</p>
+                            <p style="font-size: 18px;">APPLICATION DETAIL</p>
                             <div class="page-logo">
                                 <img src="../settings/logo/<?php echo $row_authority['logo'] ?>" height="80">
                             </div>
                         </div>
 
                         <!-- end .sheet-header --></div>
-
-                    <div class="print-details" style="float: right">
-                        <p>Print Date: <span style="font-weight: normal"><?php echo date('Y-m-d') ?></span></p>
-                        <p>Billing Area/Zone: <span style="font-weight: normal">Migongo</span></p>
-                    </div>
                     <div class="print-details">
-                        <p>Reading Date: ..................................</p>
-                        <p>Meter Reader: ................................................................</p>
-                        <p>Billing Month: <span style="font-weight: normal"><?php echo date('Y-m-d') ?></span></p>                   
+                        <p>Print Date: <span style="font-weight: normal"><?php echo date('Y-m-d') ?></span></p>                  
                     </div>
 
-                    <div class="sheet-table" style="width:700px; margin: 0 auto">
+                    <div class="sheet-table" style="width: 850px; margin: 0 auto">
                         <div class="hr-line"></div>
                         <fieldset style="float: left">
                             <legend>Applicant Details</legend>
@@ -132,7 +124,7 @@
                                 </tr>
                             </table>
                         </fieldset>
-                        <fieldset style="float: left">
+                        <fieldset style="float: right">
                             <legend>Application Details</legend>
                             <table width="" border="0" cellpadding="5" cellspacing="0">
                                 <tr>
@@ -170,11 +162,10 @@
                             </table>
                         </fieldset>
                         <?php
-                    } 
-                } 
+                    }
+                }
                 ?>
                 <!-- end .content --></div>
-            <?php include '../../includes/footer.php'; ?>
             <!-- end .container -->
         </div>
     </body>
