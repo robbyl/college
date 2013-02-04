@@ -3,6 +3,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
+session_start();
+$user_name = $_SESSION['username'];
+session_commit();
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,10 +36,15 @@
         <div class="wrapper">
             <div class="header">
                 <ul class="nav">
-                    <li><a href="">Welcome</a></li>
-                    <li><a href="">Logout</a></li>
+                    <li>Welcome <?php echo $user_name; ?>!</li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
-                <!-- end .header --></div>
+                <!-- end .header -->
+                <?php
+                // Displaying message and errors
+                include 'info.php';
+                ?>
+            </div>
             <div class="content">
                 <div class="tabwrapper">
                     <div class="tabs_links">
@@ -158,7 +167,7 @@
             </div>
         </div>
         <div class="footer"> 
-
+            <p>college - &copy; <?php echo date('Y'); ?> Stemcom Technologies</p>
             <!-- end .footer --></div>
     </body>
 </html>

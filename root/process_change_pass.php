@@ -4,6 +4,7 @@
 
 //require '../../includes/session_validator.php';
 require '../config/config.php';
+require '../functions/general_functions.php';
 
 session_start();
 $curr_pass = sha1($_POST['curr_pass']);
@@ -31,7 +32,8 @@ if ($num_currpass === 1) {
     $result_newpass = mysql_query($query_newpass) or die();
 
     if ($result_newpass) {
-        
+       
+        info('message', 'Password changed!');
         header('Location: home.php');
     } else {
 
