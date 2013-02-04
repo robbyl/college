@@ -6,6 +6,7 @@
  */
 
 require '../config/config.php';
+require '../functions/general_functions.php';
 
 $username = $_POST['username'];
 $password = sha1($_POST['password']);
@@ -32,8 +33,8 @@ if ($num_row === 1) {
     header('Location:home.php');
     
     } else {
-        echo 'username or password is incorrect';
-        
+        info('error', 'Incorrect username or password');
+        header('Location:index.php');   
 }
 
 ?>

@@ -1,7 +1,5 @@
 <?php
 
-
-
 //require '../../includes/session_validator.php';
 require '../config/config.php';
 require '../functions/general_functions.php';
@@ -40,7 +38,7 @@ if ($num_currpass === 1) {
         header('Location: home.php');
     }
 } else {
-
+    info('error', 'Incorrect current password!');
     header('Location: home.php');
 }
 ?>
