@@ -19,7 +19,7 @@
             <?php
             // showing errors and messages
 
-           // include 'includes/info.php';
+            include '../includes/info.php';
             ?>
 
             <div class="login-wrapper">
