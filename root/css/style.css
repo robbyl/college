@@ -55,12 +55,13 @@ img {
 }
 
 .footer {
-    height: 30px;
+    height: 40px;
+    width: 100%;
     border-top: 1px solid #d9d9d9;
 }
 
-.footer p{
-
+.footer p {
+    line-height: 40px;
 }
 .nav {
     float: right;

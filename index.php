@@ -1,8 +1,7 @@
-<?php 
-
+<?php
 require 'config/config.php';
 
-$query_news = "SELECT nws_title, nws_description, nws_posted_date, nws_attachment
+$query_news = "SELECT nws_title, nws_description, nws_attachment, nws_posted_date
                  FROM news
              ORDER BY nws_posted_date DESC
                 LIMIT 0,10";
@@ -10,7 +9,7 @@ $query_news = "SELECT nws_title, nws_description, nws_posted_date, nws_attachmen
 $result_news = mysql_query($query_news) or die(mysql_error());
 
 
-$query_events = "SELECT event_title, event_posted_date ,event_description,event_attachment
+$query_events = "SELECT event_title, event_description, event_attachment, event_posted_date
                  FROM events
                  ORDER BY event_posted_date DESC
                  LIMIT 0,10";
@@ -67,8 +66,12 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                         <ul>
                             <li>
                                 <input name="txt" value="Search you any keyword"
-                                       onfocus="if(this.value=='Search you any keyword') {this.value='';}"
-                                       onblur="if(this.value=='') {this.value='Search you any keyword';}"   type="text" />
+                                       onfocus="if (this.value == 'Search you any keyword') {
+                                                   this.value = '';
+                                               }"
+                                       onblur="if (this.value == '') {
+                                                   this.value = 'Search you any keyword';
+                                               }"   type="text" />
                             </li>
                             <li><a class="search" href="index.php#">Search</a></li>
                         </ul>
@@ -287,8 +290,12 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                         <ul class="option">
                                             <li>
                                                 <input name="txt" value="Search you any keyword"
-                                                       onfocus="if(this.value=='Search you any keyword') {this.value='';}"
-                                                       onblur="if(this.value=='') {this.value='Search you any keyword';}"
+                                                       onfocus="if (this.value == 'Search you any keyword') {
+                                                   this.value = '';
+                                               }"
+                                                       onblur="if (this.value == '') {
+                                                   this.value = 'Search you any keyword';
+                                               }"
                                                        type="text" />
                                             </li>
                                             <li><a class="search right" href="index.php#">Search</a></li>
@@ -367,43 +374,54 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                             </div>
                             <div class="rtab_content" id="rtab1" style="display:none;">
                                 <ul>
-                                    <?php 
+                                    <?php
                                     while ($row_news = mysql_fetch_array($result_news)) {
                                         ?>
                                         <li>
-                                        <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="index.php#"><?php echo $row_news['nws_title'] ?></a></h6>
-                                            <em>(Posted on <?php echo $row_news['nws_posted_date'] ?>)</em>
-                                            <p><a href="index.php#" class="gray" ><?php echo $row_news['nws_description'] ?></a></p>
-                                        </div>
-                                    </li>
-                                    <?php
+                                            <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
+                                            <div class="description">
+                                                <h6><a href="index.php#"><?php echo $row_news['nws_title'] ?></a></h6>
+                                                <em>
+                                                    (Posted on <?php
+                                                    $posted = date_create($row_news['nws_posted_date']);
+                                                    echo date_format($posted, 'd M, Y')
+                                                    ?>)
+                                                </em>
+                                                <p><a href="index.php#" class="gray" ><?php echo $row_news['nws_description'] ?></a></p>
+                                            </div>
+                                        </li>
+                                        <?php
                                     }
                                     ?>
-                                    
+
                                 </ul>
                                 <div class="clear"></div>
                             </div>
                             <div class="rtab_content" id="rtab2" style="display:none;">
                                 <ul>
-                                    <?php 
+                                    <?php
                                     while ($row_events = mysql_fetch_array($result_events)) {
                                         ?>
-                                    <li>
-                                        <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="index.php#"><?php echo $row_events['event_title'] ?></a></h6>
-                                            <em>(Posted on <?php echo $row_events['event_posted_date'] ?>)</em>
-                                            <p><a href="index.php#" class="gray" ><?php echo $row_events['event_description'] ?></a></p>
-                                        </div>
-                                    </li>
-                                    
-                                     <?php
+                                        <li>
+                                            <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
+                                            <div class="description">
+                                                <h6><a href="index.php#"><?php echo $row_events['event_title'] ?></a></h6>
+                                                <em>
+                                                    (Posted on
+                                                    <?php
+                                                    $posted = date_create($row_events['event_posted_date']);
+                                                    echo date_format($posted, 'd M, Y')
+                                                    ?>)
+                                                </em>
+                                                <p><a href="index.php#" class="gray" ><?php echo $row_events['event_description'] ?></a></p>
+                                            </div>
+                                        </li>
+
+                                        <?php
                                     }
                                     ?>
-                                    
-                            
+
+
                                 </ul>
                                 <div class="clear"></div>
                             </div>

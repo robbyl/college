@@ -76,6 +76,7 @@ if ((($_FILES["attachment"]["type"] == "application/pdf")
 }
 
 require '../config/config.php';
+require '../functions/general_functions.php';
 
 $query_news = "INSERT INTO news
                       (nws_title, nws_posted_date, nws_description,
@@ -86,9 +87,11 @@ $query_news = "INSERT INTO news
 $result_news = mysql_query($query_news) or die(mysql_error());
 
 if($result_news){
-    echo 'posted successfully';
+    info('message', 'News posted successfully!');
+    header('Location: home.php');
 } else {
-    echo 'cannot post event';
+    info('error', 'Cannot post news!');
+    header('Location: home.php');
 }
 
 ?>

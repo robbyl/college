@@ -76,19 +76,22 @@ if ((($_FILES["attachment"]["type"] == "application/pdf")
 }
 
 require '../config/config.php';
+require '../functions/general_functions.php';
 
-$query_news = "INSERT INTO event
+$query_news = "INSERT INTO events
                       (event_title, event_posted_date, event_description,
-                       nws_attachment, _image)
+                       event_attachment, event_image)
                VALUES ('$title', CURRENT_TIMESTAMP(), '$description',
                    '$file_name', '$image_name')";
 
 $result_news = mysql_query($query_news) or die(mysql_error());
 
 if($result_news){
-    echo 'posted successfully';
+    info('message', 'Event posted successfully!');
+    header('Location: home.php');
 } else {
-    echo 'cannot post event';
+    info('error', 'Cannot post event!');
+    header('Location: home.php');
 }
 
 ?>
