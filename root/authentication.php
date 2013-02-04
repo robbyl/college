@@ -33,7 +33,7 @@ if ($num_row === 1) {
     header('Location:home.php');
     
     } else {
-        info('error', 'Incorrect username or password');
+        info('error-outer', 'Incorrect username or password!');
         header('Location:index.php');   
 }
 
