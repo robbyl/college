@@ -1,6 +1,6 @@
 <?php
 /*
- * 2012 softbill
+ * 2013 Royal Pharm
  *
  * NOTICE OF LICENSE
  *
@@ -16,5 +16,5 @@
  */
 ?>
 <div class="footer">
-    <p>softbill - &copy; <?php echo date('Y'); ?> Stemcom Technologies.</p>
+    <p> &copy; <?php echo date('Y'); ?> Stemcom Technologies.</p>
     <!-- end .footer --></div>

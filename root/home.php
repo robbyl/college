@@ -37,6 +37,7 @@ session_commit();
             <div class="header">
                 <ul class="nav">
                     <li>Welcome <?php echo $user_name; ?>!</li>
+                    <li><a href="../index.php">Royal-Home</a></li>|
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
                 <!-- end .header -->
@@ -166,8 +167,9 @@ session_commit();
                 </div>
             </div>
         </div>
-        <div class="footer"> 
-            <p>college - &copy; <?php echo date('Y'); ?> Stemcom Technologies</p>
-            <!-- end .footer --></div>
+        <div> 
+            <?php include '../includes/footer.php'; ?>
+            <!-- end .footer -->
+        </div>
     </body>
 </html>
