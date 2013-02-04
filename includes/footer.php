@@ -16,5 +16,5 @@
  */
 ?>
 <div class="footer">
-    <p> &copy; <?php echo date('Y'); ?> Stemcom Technologies.</p>
+    <p> &copy; <?php echo date('Y'); ?> Royal Pharm.</p>
     <!-- end .footer --></div>
