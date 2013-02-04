@@ -523,7 +523,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
             <!-- page bottm -->
             <div id="pagebottom">
                 <!-- copyright -->
-                <div class="copyright">&copy; <?php echo date('Y') ?>  <a href="index.php#">College Site</a> All Rights Reserved</div>
+                <div class="copyright">&copy; <?php echo date('Y') ?>  <a href="index.php#">Royal Pharm</a> All Rights Reserved</div>
                 <a href="index.php#" class="top">Top</a>
                 <!-- Social Networks -->
                 <div class="socail_networks">
