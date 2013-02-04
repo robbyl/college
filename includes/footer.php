@@ -16,5 +16,5 @@
  */
 ?>
 <div class="footer">
-    <p> &copy; <?php echo date('Y'); ?> Royal Pharm.</p>
+    <p> &copy; <?php echo date('Y'); ?> Royal Pharmaceutical Training Institute.</p>
     <!-- end .footer --></div>
