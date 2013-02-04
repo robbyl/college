@@ -45,7 +45,7 @@
                     </table>
                 </form>
                 <!-- .end login wrapper --></div>
-            <div class="login-footer">softbill - &copy; <?php echo date('Y'); ?> Stemcom Technologies.
+            <div class="login-footer">&copy; <?php echo date('Y'); ?> College.
                 <!-- end .footer --></div>
             <!-- end .main-wrapper --></div>
     </body>

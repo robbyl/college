@@ -13,7 +13,7 @@
         <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
         <script src="js/tabs.js" type="text/javascript"></script>
         <script type="text/javascript">
-            
+
         </script>
         <script>
             function check(input) {
