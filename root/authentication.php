@@ -34,7 +34,7 @@ if ($num_row === 1) {
     
     } else {
         info('error-outer', 'Incorrect username or password!');
-        header('Location:index.php');   
+        header('Location: index.php');   
 }
 
 ?>

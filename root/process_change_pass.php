@@ -34,7 +34,7 @@ if ($num_currpass === 1) {
         info('message', 'Password changed!');
         header('Location: home.php');
     } else {
-
+        info('error', 'Cannot change password!');
         header('Location: home.php');
     }
 } else {

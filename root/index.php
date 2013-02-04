@@ -45,8 +45,7 @@
                     </table>
                 </form>
                 <!-- .end login wrapper --></div>
-            <div> 
-            <?php include '../includes/footer.php'; ?>
+            <div class="login-footer">&copy; <?php echo date('Y'); ?> College.
             <!-- end .footer --></div>
             <!-- end .main-wrapper --></div>
     </body>
