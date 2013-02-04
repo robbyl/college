@@ -45,7 +45,7 @@
                     </table>
                 </form>
                 <!-- .end login wrapper --></div>
-            <div class="login-footer">&copy; <?php echo date('Y'); ?> College.
+            <div class="login-footer">&copy; <?php echo date('Y'); ?> Royal Pharmaceutical Training Institute.
             <!-- end .footer --></div>
             <!-- end .main-wrapper --></div>
     </body>

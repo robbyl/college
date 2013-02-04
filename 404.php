@@ -62,7 +62,7 @@
         </div>
         <div style="clear: both"></div>
         <div class="footer">
-            <p style="padding: 10px 15%;"> Royal Pharmaceutical Training Institute.</p>
+            <p style="padding: 10px 15%;">&copy; <?php echo date('Y'); ?> Royal Pharmaceutical Training Institute.</p>
             <!-- end .footer --></div>
 
     </body>
