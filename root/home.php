@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 $user_name = $_SESSION['username'];
 session_commit();
@@ -12,9 +11,6 @@ session_commit();
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
         <script src="js/tabs.js" type="text/javascript"></script>
-        <script type="text/javascript">
-
-        </script>
         <script>
             function check(input) {
 
@@ -46,10 +42,13 @@ session_commit();
                 <div class="tabwrapper">
                     <div class="tabs_links">
                         <ul>
-                            <li><a  href="#tab1">News</a></li>
-                            <li><a href="#tab2">Events</a></li>
-                            <li><a href="#tab3">Courses</a></li>
-                            <li><a href="#tab4">Change password</a></li>
+                            <li><a  href="#tab1">Post News</a></li>
+                            <li><a href="#tab2">Post Events</a></li>
+                            <li><a href="#tab3">Post Courses</a></li>
+                            <li><a href="#tab4">Manage News</a></li>
+                            <li><a href="#tab5">Manage Events</a></li>
+                            <li><a href="#tab6">Manage Courses</a></li>
+                            <li><a href="#tab7">Change password</a></li>
                         </ul>
                     </div>
                     <div class="tab_content" id="tab1" style="display:none" >
@@ -133,6 +132,27 @@ session_commit();
                         </div>
                     </div>
                     <div class="tab_content" id="tab4" style="display:none" >
+                        <h2 class="label">Manage News</h2>
+                        <div class="form-wrapper">
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="tab_content" id="tab5" style="display:none" >
+                        <h2 class="label">Manage News</h2>
+                        <div class="form-wrapper">
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="tab_content" id="tab6" style="display:none" >
+                        <h2 class="label">Manage Events</h2>
+                        <div class="form-wrapper">
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="tab_content" id="tab7" style="display:none" >
                         <button type="reset" class="post" form="charge_password">Reset</button>
                         <button type="submit" class="post" style="margin-right: 0" form="resert_password">Change</button>
                         <h2 class="label">Change your password</h2>
