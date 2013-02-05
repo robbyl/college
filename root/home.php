@@ -69,11 +69,11 @@ session_commit();
                                     </tr>
                                     <tr>
                                         <td>Attachment</td>
-                                        <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                                        <td><input type="file" name="attachment" required="" class="text" style="padding-left: 0; padding-right: 10px"></td>
                                     </tr>
                                     <tr>
                                         <td style="vertical-align: top">News Description</td>
-                                        <td><textarea name="description" required></textarea></td>
+                                        <td><textarea name="description" required=""></textarea></td>
                                     </tr>
                                 </table>
                             </form>
@@ -97,7 +97,7 @@ session_commit();
                                     </tr>
                                     <tr>
                                         <td>Attachment</td>
-                                        <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                                        <td><input type="file" name="attachment" required="" class="text" style="padding-left: 0; padding-right: 10px"></td>
                                     </tr>
                                     <tr>
                                         <td style="vertical-align: top">Event Description</td>

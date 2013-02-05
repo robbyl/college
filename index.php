@@ -18,8 +18,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
 ?>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>College02</title>
@@ -65,13 +64,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                         <div class="advance_search"><a href="index.php#">Advance Option</a></div>
                         <ul>
                             <li>
-                                <input name="txt" value="Search you any keyword"
-                                       onfocus="if (this.value == 'Search you any keyword') {
-                                                   this.value = '';
-                                               }"
-                                       onblur="if (this.value == '') {
-                                                   this.value = 'Search you any keyword';
-                                               }"   type="text" />
+                                <input name="txt" placeholder="Search you any keyword" type="text" />
                             </li>
                             <li><a class="search" href="index.php#">Search</a></li>
                         </ul>
@@ -380,14 +373,14 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                         <li>
                                             <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
                                             <div class="description">
-                                                <h6><a href="index.php#"><?php echo $row_news['nws_title'] ?></a></h6>
+                                                <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>"><?php echo $row_news['nws_title'] ?></a></h6>
                                                 <em>
                                                     (Posted on <?php
                                                     $posted = date_create($row_news['nws_posted_date']);
                                                     echo date_format($posted, 'd M, Y')
                                                     ?>)
                                                 </em>
-                                                <p><a href="index.php#" class="gray" ><?php echo $row_news['nws_description'] ?></a></p>
+                                                <p><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>" class="gray" ><?php echo $row_news['nws_description'] ?></a></p>
                                             </div>
                                         </li>
                                         <?php
