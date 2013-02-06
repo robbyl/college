@@ -2,6 +2,13 @@
 session_start();
 $user_name = $_SESSION['username'];
 session_commit();
+
+require '../config/config.php';
+
+$query_news = "SELECT * 
+                 FROM news
+                 ORDER BY nws_posted_date DESC";
+$result_news = mysql_query($query_news) or die(mysql_error());
 ?>
 <!DOCTYPE html>
 <html>
@@ -134,7 +141,26 @@ session_commit();
                     <div class="tab_content" id="tab4" style="display:none" >
                         <h2 class="label">Manage News</h2>
                         <div class="form-wrapper">
+                            <table border="1" width="100%" cellspacing="0">
+                                <th>Title</th>
+                                <th>Date posted</th>
+                                <th>Description</th>
+                                <th>Attachment</th>
+                                <th colspan="2">Actions</th>
+                                <?php
+                                while ($row_news = mysql_fetch_array($result_news)) {
 
+                                    echo '<tr>';
+                                    echo '<td>' . $row_news['nws_title'] . '</td>';
+                                    echo '<td>' . $row_news['nws_posted_date'] . '</td>';
+                                    echo '<td>' . $row_news['nws_description'] . '</td>';
+                                    echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
+                                    echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '">Edit</a></td>';
+                                    echo '<td><a href="delete_news.php?id=' . $row_news['nws_id'] . '">Delete</a></td>';
+                                    echo '</tr>';
+                                }
+                                ?>
+                            </table>
                             <div class="clear"></div>
                         </div>
                     </div>
