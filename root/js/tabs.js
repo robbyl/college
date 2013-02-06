@@ -16,8 +16,6 @@ $(document).ready(function() {
     });
 
 
-
-
     $(".rtab_content").hide(); //Hide all content
     $(".tab_navigation ul li:first").addClass("active").show(); //Activate first tab
     $(".rtab_content:first").show(); //Show first tab content
