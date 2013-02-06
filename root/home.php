@@ -9,6 +9,16 @@ $query_news = "SELECT *
                  FROM news
                  ORDER BY nws_posted_date DESC";
 $result_news = mysql_query($query_news) or die(mysql_error());
+
+$query_evnt = "SELECT * 
+                 FROM events
+                 ORDER BY event_posted_date DESC";
+$result_evnt = mysql_query($query_evnt) or die(mysql_error());
+
+$query_courses = "SELECT * 
+                 FROM courses
+                 ORDER BY course_posted_date DESC";
+$result_courses = mysql_query($query_courses) or die(mysql_error());
 ?>
 <!DOCTYPE html>
 <html>
@@ -166,16 +176,52 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                         </div>
                     </div>
                     <div class="tab_content" id="tab5" style="display:none" >
-                        <h2 class="label">Manage News</h2>
+                        <h2 class="label">Manage Events</h2>
                         <div class="form-wrapper">
+                            <table border="1" width="100%" cellspacing="0">
+                                <th>Title</th>
+                                <th>Date posted</th>
+                                <th>Description</th>
+                                <th>Attachment</th>
+                                <th colspan="2">Actions</th>
+                                <?php
+                                while ($row_evnt = mysql_fetch_array($result_evnt)) {
 
+                                    echo '<tr>';
+                                    echo '<td>' . $row_evnt['event_title'] . '</td>';
+                                    echo '<td>' . $row_evnt['event_posted_date'] . '</td>';
+                                    echo '<td>' . $row_evnt['event_description'] . '</td>';
+                                    echo '<td><a href="uploads/docs/' . $row_evnt['event_attachment'] . '">' . $row_evnt['event_attachment'] . '</a></td>';
+                                    echo '<td><a href="edit_events.php?id=' . $row_evnt['event_id'] . '">Edit</a></td>';
+                                    echo '<td><a href="delete_events.php?id=' . $row_evnt['event_id'] . '">Delete</a></td>';
+                                    echo '</tr>';
+                                }
+                                ?>
+                            </table>
                             <div class="clear"></div>
                         </div>
                     </div>
                     <div class="tab_content" id="tab6" style="display:none" >
-                        <h2 class="label">Manage Events</h2>
+                        <h2 class="label">Manage Courses</h2>
                         <div class="form-wrapper">
+                            <table border="1" width="100%" cellspacing="0">
+                                <th>Title</th>
+                                <th>Date posted</th>
+                                <th>Description</th>
+                                <th colspan="2">Actions</th>
+                                <?php
+                                while ($row_courses = mysql_fetch_array($result_courses)) {
 
+                                    echo '<tr>';
+                                    echo '<td>' . $row_courses['course_title'] . '</td>';
+                                    echo '<td>' . $row_courses['course_posted_date'] . '</td>';
+                                    echo '<td>' . $row_courses['course_description'] . '</td>';
+                                    echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '">Edit</a></td>';
+                                    echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '">Delete</a></td>';
+                                    echo '</tr>';
+                                }
+                                ?>
+                            </table>
                             <div class="clear"></div>
                         </div>
                     </div>
