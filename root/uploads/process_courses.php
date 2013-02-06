@@ -4,11 +4,11 @@ $title = $_POST['title'];
 $description = $_POST['description'];
 
 // Get and upload image file
-$allowed_img_ext = array("jpg", "jpeg", "gif", "png");
+//$allowed_img_ext = array("jpg", "jpeg", "gif", "png");
 
-$image_extenstion = end(explode(".", $_FILES["image"]["name"]));
+//$image_extenstion = end(explode(".", $_FILES["image"]["name"]));
 
-if (in_array($image_extenstion, $allowed_img_ext) && in_array($image_extenstion, $allowed_img_ext)) {
+/*if (in_array($image_extenstion, $allowed_img_ext) && in_array($image_extenstion, $allowed_img_ext)) {
 
     // Checking file for errors
     if ($_FILES["image"]["error"] > 0) {
@@ -33,7 +33,7 @@ if (in_array($image_extenstion, $allowed_img_ext) && in_array($image_extenstion,
 //    header('Location: settings.php');
 //    exit(0);
 }
-
+*/
 // Get and upload attachment file
 $allowed_file_ext = array("pdf", "doc", "docx");
 
@@ -67,8 +67,8 @@ if (in_array($extension, $allowed_file_ext) && ($_FILES["attachment"]["size"] < 
 require '../config/config.php';
 require '../functions/general_functions.php';
 
-$query_news = "INSERT INTO events
-                      (event_title, event_posted_date, event_description, event_attachment, event_image)
+$query_news = "INSERT INTO courses
+                      (nws_title, nws_posted_date, nws_description, nws_attachment, nws_image)
                VALUES ('$title', CURRENT_TIMESTAMP(), '$description', '$file_name', '$image_name')";
 
 $result_news = mysql_query($query_news) or die(mysql_error());
