@@ -300,3 +300,19 @@ h1, h2, h3, h4 {
     background: #ffebe8;
     border: 1px #cd0707 solid;
 }
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e0e0e0;
+}
+
+.data-table td, .data-table th {
+    border: 1px solid #e0e0e0;
+    padding: 5px;
+}
+
+.data-table th {
+    background-color: #999999;
+    color: #ffffff;
+}

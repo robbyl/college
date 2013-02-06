@@ -141,7 +141,7 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                     <div class="tab_content" id="tab4" style="display:none" >
                         <h2 class="label">Manage News</h2>
                         <div class="form-wrapper">
-                            <table border="1" width="100%" cellspacing="0">
+                            <table class="data-table">
                                 <th>Title</th>
                                 <th>Date posted</th>
                                 <th>Description</th>
@@ -149,10 +149,11 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                                 <th colspan="2">Actions</th>
                                 <?php
                                 while ($row_news = mysql_fetch_array($result_news)) {
-
+                                    $posted = date_create($row_news['nws_posted_date']);
+                                    
                                     echo '<tr>';
                                     echo '<td>' . $row_news['nws_title'] . '</td>';
-                                    echo '<td>' . $row_news['nws_posted_date'] . '</td>';
+                                    echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
                                     echo '<td>' . $row_news['nws_description'] . '</td>';
                                     echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
                                     echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '">Edit</a></td>';
