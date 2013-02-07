@@ -29,7 +29,24 @@ $(document).ready(function() {
         return false;
     });
 
+    $('.message, .error').hide().slideDown('normal').click(function() {
+        $(this).slideUp('normal');
+    });
 
+    oTable = $('.data-table').dataTable({
+        "bJQueryUI": true,
+        "bScrollCollapse": true,
+        "sScrollY": "auto",
+        "bAutoWidth": true,
+        "bPaginate": true,
+        "sPaginationType": "full_numbers", //full_numbers,two_button
+        "bStateSave": true,
+        "bInfo": true,
+        "bFilter": true,
+        "iDisplayLength": 25,
+        "bLengthChange": true,
+        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
+    });
 
 });
 
@@ -39,14 +56,22 @@ $(function() {
         btnPrev: ".rightarrow"
     });
     $("a.galleryimg").fancybox({
-        'titlePosition'		: 'inside',
-        'overlayColor'		: '#000',
-        'overlayOpacity'	: 0.9
+        'titlePosition': 'inside',
+        'overlayColor': '#000',
+        'overlayOpacity': 0.9
 
     });
 });
 
+function check(input) {
 
+    if (input.value != document.getElementById('new_pass').value) {
+        input.setCustomValidity('The two new passwords must match.');
+    } else {
+        // input is valid -- reset the error message
+        input.setCustomValidity('');
+    }
+}
 
 // cufon script
-Cufon.replace('h1,h2,h3,h4,h5, h6, .txtcufon');
+//Cufon.replace('h1,h2,h3,h4,h5, h6, .txtcufon');

@@ -26,19 +26,16 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
         <link rel="icon" href="./favicon.ico" type="image/x-icon" />
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
-        <script src="js/tabs.js" type="text/javascript"></script>
-        <script>
-            function check(input) {
+        <link rel="stylesheet" type="text/css" href="css/data_table.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" />
+        <link rel="stylesheet" type="text/css" href="css/ui_darkness.css" />
 
-                if (input.value != document.getElementById('new_pass').value) {
-                    input.setCustomValidity('The two new passwords must match.');
-                } else {
-                    // input is valid -- reset the error message
-                    input.setCustomValidity('');
-                }
-            }
-        </script>
+
+        <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
+        <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <script src="js/jquery.dataTables.columnFilter.js" type="text/javascript"></script>
+        <script src="js/jquery.dataTables.pagination.js" type="text/javascript"></script>
+        <script src="js/royal-core.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -151,26 +148,33 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab4" style="display:none" >
                         <h2 class="label">Manage News</h2>
                         <div class="form-wrapper">
-                            <table class="data-table">
-                                <th>Title</th>
-                                <th>Date posted</th>
-                                <th>Description</th>
-                                <th>Attachment</th>
-                                <th colspan="2">Actions</th>
-                                <?php
-                                while ($row_news = mysql_fetch_array($result_news)) {
-                                    $posted = date_create($row_news['nws_posted_date']);
-                                    
-                                    echo '<tr>';
-                                    echo '<td>' . $row_news['nws_title'] . '</td>';
-                                    echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
-                                    echo '<td>' . $row_news['nws_description'] . '</td>';
-                                    echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
-                                    echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '">Edit</a></td>';
-                                    echo '<td><a href="delete_news.php?id=' . $row_news['nws_id'] . '">Delete</a></td>';
-                                    echo '</tr>';
-                                }
-                                ?>
+                            <table class="data-table" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Date posted</th>
+                                        <th>Description</th>
+                                        <th>Attachment</th>
+                                        <th>Actions</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    while ($row_news = mysql_fetch_array($result_news)) {
+                                        $posted = date_create($row_news['nws_posted_date']);
+
+                                        echo '<tr>';
+                                        echo '<td>' . $row_news['nws_title'] . '</td>';
+                                        echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
+                                        echo '<td>' . $row_news['nws_description'] . '</td>';
+                                        echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
+                                        echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '">Edit</a></td>';
+                                        echo '<td><a href="delete_news.php?id=' . $row_news['nws_id'] . '">Delete</a></td>';
+                                        echo '</tr>';
+                                    }
+                                    ?>
+                                </tbody>
                             </table>
                             <div class="clear"></div>
                         </div>
@@ -178,25 +182,32 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab5" style="display:none" >
                         <h2 class="label">Manage Events</h2>
                         <div class="form-wrapper">
-                            <table border="1" width="100%" cellspacing="0">
-                                <th>Title</th>
-                                <th>Date posted</th>
-                                <th>Description</th>
-                                <th>Attachment</th>
-                                <th colspan="2">Actions</th>
-                                <?php
-                                while ($row_evnt = mysql_fetch_array($result_evnt)) {
+                            <table class="data-table" border="1" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Date posted</th>
+                                        <th>Description</th>
+                                        <th>Attachment</th>
+                                        <th>Actions</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    while ($row_evnt = mysql_fetch_array($result_evnt)) {
 
-                                    echo '<tr>';
-                                    echo '<td>' . $row_evnt['event_title'] . '</td>';
-                                    echo '<td>' . $row_evnt['event_posted_date'] . '</td>';
-                                    echo '<td>' . $row_evnt['event_description'] . '</td>';
-                                    echo '<td><a href="uploads/docs/' . $row_evnt['event_attachment'] . '">' . $row_evnt['event_attachment'] . '</a></td>';
-                                    echo '<td><a href="edit_events.php?id=' . $row_evnt['event_id'] . '">Edit</a></td>';
-                                    echo '<td><a href="delete_events.php?id=' . $row_evnt['event_id'] . '">Delete</a></td>';
-                                    echo '</tr>';
-                                }
-                                ?>
+                                        echo '<tr>';
+                                        echo '<td>' . $row_evnt['event_title'] . '</td>';
+                                        echo '<td>' . $row_evnt['event_posted_date'] . '</td>';
+                                        echo '<td>' . $row_evnt['event_description'] . '</td>';
+                                        echo '<td><a href="uploads/docs/' . $row_evnt['event_attachment'] . '">' . $row_evnt['event_attachment'] . '</a></td>';
+                                        echo '<td><a href="edit_events.php?id=' . $row_evnt['event_id'] . '">Edit</a></td>';
+                                        echo '<td><a href="delete_events.php?id=' . $row_evnt['event_id'] . '">Delete</a></td>';
+                                        echo '</tr>';
+                                    }
+                                    ?>
+                                </tbody>
                             </table>
                             <div class="clear"></div>
                         </div>
@@ -205,10 +216,12 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                         <h2 class="label">Manage Courses</h2>
                         <div class="form-wrapper">
                             <table border="1" width="100%" cellspacing="0">
-                                <th>Title</th>
-                                <th>Date posted</th>
-                                <th>Description</th>
-                                <th colspan="2">Actions</th>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Date posted</th>
+                                    <th>Description</th>
+                                    <th colspan="2">Actions</th>
+                                </tr>
                                 <?php
                                 while ($row_courses = mysql_fetch_array($result_courses)) {
 
@@ -261,4 +274,5 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
             <!-- end .footer -->
         </div>
     </body>
+
 </html>
