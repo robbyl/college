@@ -33,6 +33,12 @@ $(document).ready(function() {
         $(this).slideUp('normal');
     });
 
+    $('a.edit-news').click(function(event) {
+        event.preventDefault();
+        getPopForm(this.href);
+        
+    });
+
     oTable = $('.data-table').dataTable({
         "bJQueryUI": true,
         "bScrollCollapse": true,
@@ -62,6 +68,26 @@ $(function() {
 
     });
 });
+
+function getPopForm(filename, filter) {
+
+    $.ajax({
+        url: filename,
+        data: filter,
+        type: 'GET',
+        dataType: 'html',
+        beforeSend: function() {
+            $('#pop-up').html('<div class="message">Loading...</div>');
+        },
+        success: function(data, textStatus, xhr) {
+            $('body').css('overflow', 'hidden');
+            $('#pop-up').html(data);
+        },
+        error: function(xhr, textStatus, errorThrown) {
+            $('#pop-up').html('<div class="error">Connection lost! Try again</div>');
+        }
+    });
+}
 
 function check(input) {
 

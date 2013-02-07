@@ -30,7 +30,6 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
         <link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" />
         <link rel="stylesheet" type="text/css" href="css/ui_darkness.css" />
 
-
         <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.columnFilter.js" type="text/javascript"></script>
@@ -146,6 +145,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                         </div>
                     </div>
                     <div class="tab_content" id="tab4" style="display:none" >
+                        <div id="pop-up"></div>
                         <h2 class="label">Manage News</h2>
                         <div class="form-wrapper">
                             <table class="data-table" width="100%">
@@ -169,7 +169,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                                         echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
                                         echo '<td>' . $row_news['nws_description'] . '</td>';
                                         echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
-                                        echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '">Edit</a></td>';
+                                        echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '" class="edit-news">Edit</a></td>';
                                         echo '<td><a href="delete_news.php?id=' . $row_news['nws_id'] . '">Delete</a></td>';
                                         echo '</tr>';
                                     }
