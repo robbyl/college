@@ -27,12 +27,12 @@ $(document).ready(function() {
         $(this).addClass("active"); //Add "active" class to selected tab
         $(".rtab_content").hide(); //Hide all tab content
         var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
-		
+
         $(activeTab).fadeIn(); //Fade in the active content
         return false;
     });
 
-
+    $('a:contains("WOWSlider.com")').remove();
 
 });
 
@@ -42,9 +42,9 @@ $(function() {
         btnPrev: ".rightarrow"
     });
     $("a.galleryimg").fancybox({
-        'titlePosition'		: 'inside',
-        'overlayColor'		: '#000',
-        'overlayOpacity'	: 0.9
+        'titlePosition': 'inside',
+        'overlayColor': '#000',
+        'overlayOpacity': 0.9
 
     });
 });
