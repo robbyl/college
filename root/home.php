@@ -215,25 +215,29 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab6" style="display:none" >
                         <h2 class="label">Manage Courses</h2>
                         <div class="form-wrapper">
-                            <table border="1" width="100%" cellspacing="0">
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Date posted</th>
-                                    <th>Description</th>
-                                    <th colspan="2">Actions</th>
-                                </tr>
-                                <?php
-                                while ($row_courses = mysql_fetch_array($result_courses)) {
-
-                                    echo '<tr>';
-                                    echo '<td>' . $row_courses['course_title'] . '</td>';
-                                    echo '<td>' . $row_courses['course_posted_date'] . '</td>';
-                                    echo '<td>' . $row_courses['course_description'] . '</td>';
-                                    echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '">Edit</a></td>';
-                                    echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '">Delete</a></td>';
-                                    echo '</tr>';
-                                }
-                                ?>
+                            <table border="1" class="data-table" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Date posted</th>
+                                        <th>Description</th>
+                                        <th>Actions</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    while ($row_courses = mysql_fetch_array($result_courses)) {
+                                        echo '<tr>';
+                                        echo '<td>' . $row_courses['course_title'] . '</td>';
+                                        echo '<td>' . $row_courses['course_posted_date'] . '</td>';
+                                        echo '<td>' . $row_courses['course_description'] . '</td>';
+                                        echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '">Edit</a></td>';
+                                        echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '">Delete</a></td>';
+                                        echo '</tr>';
+                                    }
+                                    ?>
+                                </tbody>
                             </table>
                             <div class="clear"></div>
                         </div>
