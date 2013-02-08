@@ -34,7 +34,10 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
                 <div class="pop-up-header">Edit news<div class="close"></div></div>
-                <form class="pop-up-form" id="news-form" action="process_edit_events.php" method="POST" enctype="multipart/form-data">
+                <form class="pop-up-form" id="news-form" action="process_edit_news.php" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?php echo $row_news['nws_id'] ?>" />
+                    <input type="hidden" name="nws_image" value="<?php echo $row_news['nws_image'] ?>" />
+                    <input type="hidden" name="nws_attachment" value="<?php echo $row_news['nws_attachment'] ?>" />
                     <table border="0" width="100%">
                         <tr>
                             <td width="200">Title</td>
