@@ -25,20 +25,20 @@ $result_events = mysql_query($query_events) or die(mysql_error());
     <!-- Stylesheet -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" media="screen" />
+    <!--<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" media="screen" />-->
     <link rel="stylesheet" type="text/css" href="engine1/style.css" />
     <!-- Javascript -->
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/ddsmoothmenu.js" type="text/javascript"></script>
     <script src="js/contentslider.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/jcarousellite_1.0.1.js"></script>
+    <!--<script type="text/javascript" src="js/jcarousellite_1.0.1.js"></script>-->
     <script type="text/javascript" src="js/jquery.easing.1.1.js"></script>
     <script type="text/javascript" src="js/cufon-yui.js"></script>
     <script type="text/javascript" src="js/DIN_500.font.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/tabs.js"></script>
-    <script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
+    <!--<script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>-->
+    <!--<script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>-->
 </head>
 <body>
     <div class="wapper-header">
@@ -176,7 +176,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                     <!-- Content Heading -->
                     <div class="content_heading">
                         <div class="heading">
-                            <h2>Welcome to University of College Education</h2>
+                            <h2>Welcome to Royal Pharmaceutical Training Institute</h2>
                         </div>
                     </div>
                     <p class="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu porta lorem. Cras turpis ipsum, iaculis ut                                 auctor eget, euismod eget enim. Curabitur a lorem porttitor lectus euismod semper vitae eu purus. </p>
@@ -185,154 +185,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                     <div class="clear"></div>
                     <!-- Content Block -->
                     <div class="contentblock">
-                        <!-- Tabs -->
-                        <div class="tabwrapper">
-                            <div class="tabs_links">
-                                <ul>
-                                    <li><a href="#tab1">News</a></li>
-                                    <li><a href="#tab2">Events</a></li>
-                                </ul>
-                            </div>
-                            <div class="tab_content" id="tab1" style="display:none" >
-                                <ul>
-                                    <li>
-                                        <div class="thumb"> <a href="news.html"><img src="images/news1.jpg"  alt=" " /></a> </div>
-                                        <div class="descripton">
-                                            <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                            <em>(Posted on 17 Jan 11 , 2011)</em>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                placerat dignissim, diam lacus placerat ligula, </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb"> <a href="news.html"><img src="images/news2.jpg"  alt=" " /></a> </div>
-                                        <div class="descripton">
-                                            <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                            <em>(Posted on 17 Jan 11 , 2011)</em>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                placerat dignissim, diam lacus placerat ligula, </p>
-                                        </div>
-                                    </li>
-                                    <li class="nbbdr">
-                                        <div class="thumb"> <a href="news.html"><img src="images/news3.jpg"  alt=" " /></a> </div>
-                                        <div class="descripton">
-                                            <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                            <em>(Posted on 17 Jan 11 , 2011)</em>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                placerat dignissim, diam lacus placerat ligula, </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="tab_content" id="tab2" style="display:none" >
-                                <ul>
-                                    <li>
-                                        <div class="thumb"> <a href="news.html"><img src="images/news1.jpg"  alt=" " /></a> </div>
-                                        <div class="descripton">
-                                            <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                            <em>(Posted on 17 Jan 11 , 2011)</em>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                placerat dignissim, diam lacus placerat ligula, </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb"> <a href="news.html"><img src="images/news2.jpg"  alt=" " /></a> </div>
-                                        <div class="descripton">
-                                            <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                            <em>(Posted on 17 Jan 11 , 2011)</em>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                placerat dignissim, diam lacus placerat ligula, </p>
-                                        </div>
-                                    </li>
-                                    <li class="nbbdr">
-                                        <div class="thumb"> <a href="news.html"><img src="images/news3.jpg"  alt=" " /></a> </div>
-                                        <div class="descripton">
-                                            <h6><a href="news.html">Lorem ipsum dolor sit amet, conse</a></h6>
-                                            <em>(Posted on 17 Jan 11 , 2011)</em>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                placerat dignissim, diam lacus placerat ligula, </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <!-- Search Course -->
-                        <div class="search_course">
-                            <h4>Search Our New Courses</h4>
-                            <p><a href="index.php#">Our courses</a> are applied,innovative and grounded in the real world.</p>
-                            <div class="box">
-                                <div class="search_option">
-                                    <ul class="option">
-                                        <li>
-                                            <input name="txt" value="Search you any keyword"
-                                                   onfocus="if (this.value == 'Search you any keyword') {
-                                                               this.value = '';
-                                                           }"
-                                                   onblur="if (this.value == '') {
-                                                               this.value = 'Search you any keyword';
-                                                           }"
-                                                   type="text" />
-                                        </li>
-                                        <li><a class="search right" href="index.php#">Search</a></li>
-                                    </ul>
-                                    <ul class="advance_option">
-                                        <li class="selected"><a href="index.php#">Advance Option</a></li>
-                                        <li><a href="index.php#">Help</a></li>
-                                        <li><a href="index.php#">A to Z Courses </a></li>
-                                        <li class="nobg"><a href="index.php#"> Support</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Degree Type -->
-                                <div class="degree_type">
-                                    <h5>Degree type</h5>
-                                    <ul>
-                                        <li>
-                                            <input class="radiobutton" name="txt" type="radio" value="" />
-                                            <span>Undergraduate</span></li>
-                                        <li>
-                                            <input class="radiobutton" name="txt" type="radio" value="" />
-                                            <span>Post graduate</span></li>
-                                        <li>
-                                            <input class="radiobutton" name="txt" type="radio" value="" />
-                                            <span>School</span></li>
-                                        <li>
-                                            <input class="radiobutton" name="txt" type="radio" value="" />
-                                            <span>Others</span></li>
-                                        <li>
-                                            <input class="radiobutton" name="txt" type="radio" value="" />
-                                            <span>Vocational Course</span></li>
-                                    </ul>
-                                </div>
-                                <!-- Residnece Type -->
-                                <div class="resident_type">
-                                    <h5>Resident Type</h5>
-                                    <ul>
-                                        <li>
-                                            <input class="radiobutton" name="txt" type="radio" value="" />
-                                            <span>United Kingdom</span></li>
-                                        <li>
-                                            <input class="radiobutton" name="txt" type="radio" value="" />
-                                            <span>Wales</span></li>
-                                        <li>
-                                            <input class="radiobutton" name="txt" type="radio" value="" />
-                                            <span>Ireland</span></li>
-                                        <li>
-                                            <select class="select_country" name="txt">
-                                                <option>USA</option>
-                                                <option>United Kingdom</option>
-                                                <option>Canada</option>
-                                            </select>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="clear"></div>
 
-                                <!-- apply now -->
-                                <div class="apply_now"> <a class="aply_now" href="index.php#">Apply Now</a> <a class="find_out_how" href="index.php#">find out how</a> </div>
-                            </div>
-                        </div>
                         <div class="clear"></div>
                     </div>
                     <div class="clear"></div>
