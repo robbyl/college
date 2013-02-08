@@ -1,7 +1,7 @@
 <?php
 
 /*
- * 2012 Royal pharm
+ * 2012 Royal pharm.
  *
  * NOTICE OF LICENSE
  *
