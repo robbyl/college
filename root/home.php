@@ -29,6 +29,9 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
         <link rel="stylesheet" type="text/css" href="css/data_table.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" />
         <link rel="stylesheet" type="text/css" href="css/ui_darkness.css" />
+        
+        <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
 
         <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
