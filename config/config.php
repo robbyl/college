@@ -1,7 +1,7 @@
 <?php
 
 /*
- * 2012 Flight
+ * 2012 Royal pharm
  *
  * NOTICE OF LICENSE
  *
@@ -12,7 +12,7 @@
  * Do not edit or add to this file.
  *
  *  @author Robert Loondo <robbyl@ovi.com>
- *  @copyright  2012 Flight
+ *  @copyright  2013 Royal pharm
  *  @version  Release: $Revision: 1.0.0 $
  */
 
