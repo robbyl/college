@@ -33,8 +33,9 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     <body>
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
-                <div class="pop-up-header">Edit news<div class="close"></div></div>
-                <form class="pop-up-form" id="news-form" action="process_edit_events.php" method="POST" enctype="multipart/form-data">
+                <div class="pop-up-header">Edit courses<div class="close"></div></div>
+                <form class="pop-up-form" id="news-form" action="process_edit_courses.php" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?php echo $row_courses['course_id'] ?>" />
                     <table border="0" width="100%">
                         <tr>
                             <td width="200">Title</td>
