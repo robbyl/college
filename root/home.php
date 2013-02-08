@@ -42,6 +42,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
 
     <body>
         <div class="wrapper">
+            <div id="pop-up"></div>
             <div class="header">
                 <ul class="nav">
                     <li>Welcome <?php echo $user_name; ?>!</li>
@@ -148,7 +149,6 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                         </div>
                     </div>
                     <div class="tab_content" id="tab4" style="display:none" >
-                        <div id="pop-up"></div>
                         <h2 class="label">Manage News</h2>
                         <div class="form-wrapper">
                             <table class="data-table" width="100%">
@@ -205,7 +205,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                                         echo '<td>' . $row_evnt['event_posted_date'] . '</td>';
                                         echo '<td>' . $row_evnt['event_description'] . '</td>';
                                         echo '<td><a href="uploads/docs/' . $row_evnt['event_attachment'] . '">' . $row_evnt['event_attachment'] . '</a></td>';
-                                        echo '<td><a href="edit_events.php?id=' . $row_evnt['event_id'] . '">Edit</a></td>';
+                                        echo '<td><a href="edit_events.php?id=' . $row_evnt['event_id'] . '" class="edit-events">Edit</a></td>';
                                         echo '<td><a href="delete_events.php?id=' . $row_evnt['event_id'] . '">Delete</a></td>';
                                         echo '</tr>';
                                     }
@@ -235,7 +235,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                                         echo '<td>' . $row_courses['course_title'] . '</td>';
                                         echo '<td>' . $row_courses['course_posted_date'] . '</td>';
                                         echo '<td>' . $row_courses['course_description'] . '</td>';
-                                        echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '">Edit</a></td>';
+                                        echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '" class="edit-courses">Edit</a></td>';
                                         echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '">Delete</a></td>';
                                         echo '</tr>';
                                     }

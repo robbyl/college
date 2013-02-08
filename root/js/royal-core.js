@@ -39,6 +39,16 @@ $(document).ready(function() {
         
     });
 
+    $('a.edit-events').click(function(event) {
+        event.preventDefault();
+        getPopForm(this.href);
+    });
+
+    $('a.edit-courses').click(function(event) {
+        event.preventDefault();
+        getPopForm(this.href);
+    });
+
     oTable = $('.data-table').dataTable({
         "bJQueryUI": true,
         "bScrollCollapse": true,
