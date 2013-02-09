@@ -30,9 +30,6 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
         <link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" />
         <link rel="stylesheet" type="text/css" href="css/ui_darkness.css" />
 
-        <link rel="stylesheet" type="text/css" href="engine1/style.css" />
-        <script type="text/javascript" src="engine1/jquery.js"></script>
-
         <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.columnFilter.js" type="text/javascript"></script>
@@ -151,7 +148,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab4" style="display:none" >
                         <h2 class="label">Manage News</h2>
                         <div class="form-wrapper">
-                            <table class="data-table" width="100%">
+                            <table class="data-table1" width="100%">
                                 <thead>
                                     <tr>
                                         <th>Title</th>
@@ -185,7 +182,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab5" style="display:none" >
                         <h2 class="label">Manage Events</h2>
                         <div class="form-wrapper">
-                            <table class="data-table" border="1" width="100%">
+                            <table class="data-table2" border="1" width="100%">
                                 <thead>
                                     <tr>
                                         <th>Title</th>
@@ -218,7 +215,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab6" style="display:none" >
                         <h2 class="label">Manage Courses</h2>
                         <div class="form-wrapper">
-                            <table border="1" class="data-table" width="100%">
+                            <table border="1" class="data-table3" width="100%">
                                 <thead>
                                     <tr>
                                         <th>Title</th>
