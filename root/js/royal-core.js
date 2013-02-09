@@ -1,6 +1,55 @@
 // JavaScript Document
 
 $(document).ready(function() {
+    
+    var oTable1;
+    var oTable2;
+    var oTable3;
+    
+    oTable1 = $('.data-table1').dataTable({
+        "bJQueryUI": true,
+        "bScrollCollapse": true,
+        "sScrollY": "auto",
+        "bAutoWidth": false,
+        "bPaginate": true,
+        "sPaginationType": "full_numbers", //full_numbers,two_button
+        "bStateSave": true,
+        "bInfo": true,
+        "bFilter": true,
+        "iDisplayLength": 25,
+        "bLengthChange": true,
+        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
+    });
+    
+    oTable2 = $('.data-table2').dataTable({
+        "bJQueryUI": true,
+        "bScrollCollapse": true,
+        "sScrollY": "auto",
+        "bAutoWidth": false,
+        "bPaginate": true,
+        "sPaginationType": "full_numbers", //full_numbers,two_button
+        "bStateSave": true,
+        "bInfo": true,
+        "bFilter": true,
+        "iDisplayLength": 25,
+        "bLengthChange": true,
+        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
+    });
+    
+    oTable3 = $('.data-table3').dataTable({
+        "bJQueryUI": true,
+        "bScrollCollapse": true,
+        "sScrollY": "auto",
+        "bAutoWidth": false,
+        "bPaginate": true,
+        "sPaginationType": "full_numbers", //full_numbers,two_button
+        "bStateSave": true,
+        "bInfo": true,
+        "bFilter": true,
+        "iDisplayLength": 25,
+        "bLengthChange": true,
+        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
+    });
 
     $(".tab_content").hide(); //Hide all content
     $(".tabs_links ul li:first").addClass("active").show(); //Activate first tab
@@ -12,6 +61,10 @@ $(document).ready(function() {
         $(".tab_content").hide(); //Hide all tab content
         var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
         $(activeTab).fadeIn(); //Fade in the active content
+           
+        oTable1.fnAdjustColumnSizing();
+        oTable2.fnAdjustColumnSizing();
+        oTable3.fnAdjustColumnSizing();
         return false;
     });
 
@@ -36,7 +89,7 @@ $(document).ready(function() {
     $('a.edit-news').click(function(event) {
         event.preventDefault();
         getPopForm(this.href);
-        
+
     });
 
     $('a.edit-events').click(function(event) {
@@ -47,21 +100,6 @@ $(document).ready(function() {
     $('a.edit-courses').click(function(event) {
         event.preventDefault();
         getPopForm(this.href);
-    });
-
-    oTable = $('.data-table').dataTable({
-        "bJQueryUI": true,
-        "bScrollCollapse": true,
-        "sScrollY": "auto",
-        "bAutoWidth": true,
-        "bPaginate": true,
-        "sPaginationType": "full_numbers", //full_numbers,two_button
-        "bStateSave": true,
-        "bInfo": true,
-        "bFilter": true,
-        "iDisplayLength": 25,
-        "bLengthChange": true,
-        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
     });
 
 });

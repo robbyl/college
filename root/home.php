@@ -29,9 +29,6 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
         <link rel="stylesheet" type="text/css" href="css/data_table.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" />
         <link rel="stylesheet" type="text/css" href="css/ui_darkness.css" />
-        
-        <link rel="stylesheet" type="text/css" href="engine1/style.css" />
-	<script type="text/javascript" src="engine1/jquery.js"></script>
 
         <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
@@ -52,7 +49,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                 <!-- end .header -->
                 <?php
                 // Displaying message and errors
-                include 'info.php';
+                include '../includes/info.php';
                 ?>
             </div>
             <div class="content">
@@ -151,7 +148,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab4" style="display:none" >
                         <h2 class="label">Manage News</h2>
                         <div class="form-wrapper">
-                            <table class="data-table" width="100%">
+                            <table class="data-table1" width="100%">
                                 <thead>
                                     <tr>
                                         <th>Title</th>
@@ -173,7 +170,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                                         echo '<td>' . $row_news['nws_description'] . '</td>';
                                         echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
                                         echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '" class="edit-news">Edit</a></td>';
-                                        echo '<td><a href="delete_news.php?id=' . $row_news['nws_id'] . '">Delete</a></td>';
+                                        echo '<td><a href="delete_news.php?id=' . $row_news['nws_id'] . '" onClick="return confirm(\'Are you sure you want to delete this news\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
                                     ?>
@@ -185,7 +182,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab5" style="display:none" >
                         <h2 class="label">Manage Events</h2>
                         <div class="form-wrapper">
-                            <table class="data-table" border="1" width="100%">
+                            <table class="data-table2" border="1" width="100%">
                                 <thead>
                                     <tr>
                                         <th>Title</th>
@@ -207,7 +204,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                                         echo '<td>' . $row_evnt['event_description'] . '</td>';
                                         echo '<td><a href="uploads/docs/' . $row_evnt['event_attachment'] . '">' . $row_evnt['event_attachment'] . '</a></td>';
                                         echo '<td><a href="edit_events.php?id=' . $row_evnt['event_id'] . '" class="edit-events">Edit</a></td>';
-                                        echo '<td><a href="delete_events.php?id=' . $row_evnt['event_id'] . '">Delete</a></td>';
+                                        echo '<td><a href="delete_events.php?id=' . $row_evnt['event_id'] . '" onClick="return confirm(\'Are you sure you want to delete this event\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
                                     ?>
@@ -219,7 +216,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab6" style="display:none" >
                         <h2 class="label">Manage Courses</h2>
                         <div class="form-wrapper">
-                            <table border="1" class="data-table" width="100%">
+                            <table border="1" class="data-table3" width="100%">
                                 <thead>
                                     <tr>
                                         <th>Title</th>
@@ -239,7 +236,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                                         echo '<td>' . date_format( $course_posted, 'd M, Y @ H:i') . '</td>';
                                         echo '<td>' . $row_courses['course_description'] . '</td>';
                                         echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '" class="edit-courses">Edit</a></td>';
-                                        echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '">Delete</a></td>';
+                                        echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '" onClick="return confirm(\'Are you sure you want to delete this course\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
                                     ?>
