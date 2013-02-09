@@ -199,10 +199,11 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                                 <tbody>
                                     <?php
                                     while ($row_evnt = mysql_fetch_array($result_evnt)) {
+                                        $evnt_posted = date_create($row_evnt['event_posted_date']);
 
                                         echo '<tr>';
                                         echo '<td>' . $row_evnt['event_title'] . '</td>';
-                                        echo '<td>' . $row_evnt['event_posted_date'] . '</td>';
+                                        echo '<td>' . date_format($evnt_posted, 'd M, Y @ H:i') . '</td>';
                                         echo '<td>' . $row_evnt['event_description'] . '</td>';
                                         echo '<td><a href="uploads/docs/' . $row_evnt['event_attachment'] . '">' . $row_evnt['event_attachment'] . '</a></td>';
                                         echo '<td><a href="edit_events.php?id=' . $row_evnt['event_id'] . '" class="edit-events">Edit</a></td>';
@@ -231,9 +232,11 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                                 <tbody>
                                     <?php
                                     while ($row_courses = mysql_fetch_array($result_courses)) {
+                                        $course_posted = date_create($row_courses['course_posted_date']);
+                                        
                                         echo '<tr>';
                                         echo '<td>' . $row_courses['course_title'] . '</td>';
-                                        echo '<td>' . $row_courses['course_posted_date'] . '</td>';
+                                        echo '<td>' . date_format( $course_posted, 'd M, Y @ H:i') . '</td>';
                                         echo '<td>' . $row_courses['course_description'] . '</td>';
                                         echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '" class="edit-courses">Edit</a></td>';
                                         echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '">Delete</a></td>';
