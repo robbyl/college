@@ -42,10 +42,6 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                             <td><input type="text" name="title" value="<?php echo $row_courses['course_title'] ?>" class="text" required></td>
                         </tr>
                         <tr>
-                            <td>Image</td>
-                            <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
-                        </tr>
-                        <tr>
                             <td>Attachment</td>
                             <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
