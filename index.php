@@ -235,7 +235,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                     <li>
                                         <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
                                         <div class="description">
-                                            <h6><a href="index.php#"><?php echo $row_events['event_title'] ?></a></h6>
+                                            <h6><a href="root/uploads/docs/<?php echo $row_events['event_attachment']?>"><?php echo $row_events['event_title'] ?></a></h6>
                                             <em>
                                                 (Posted on
                                                 <?php
