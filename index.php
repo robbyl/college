@@ -53,10 +53,9 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                         <li class="first">&nbsp;</li>
                         <li><a href="news.html">News</a></li>
                         <li><a href="index.php#">Events</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="index.php#">Jobs</a></li>
-                        <li><a href="index.php#">Student Profile </a></li>
-                        <li><a href="index.php#" style="padding-right: 0">Our Campuses</a></li>
+                        <!--<li><a href="index.php#">Jobs</a></li>-->
+                        <li><a href="index.php#">Contact Us</a></li>
+                        <li><a href="index.php#" style="padding-right: 0">Site Map</a></li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -79,35 +78,40 @@ $result_events = mysql_query($query_events) or die(mysql_error());
             <div id="smoothmenu1" class="ddsmoothmenu">
                 <ul>
                     <li class="first"><a class="selected" href="index.php">Home</a></li>
-                    <li><a href="static.html">About Us</a></li>
-                    <li><a href="index.php#">Admissions</a></li>
-                    <li><a href="course.html">Academics</a>
-                        <!-- Sub Menu level 1 -->
+                    <li><a href="static.html">About Us</a>
                         <ul>
-                            <li><a href="course.html">Integer eu mi lorem, sit amet</a></li>
-                            <li><a href="course.html" class="dropdown">Accumsan neque</a>
-                                <!-- Sub Menu Level 2 -->
-                                <ul>
-                                    <li><a href="course.html">nteger eu mi lorem, sit amet</a></li>
-                                    <li><a href="course.html">Accumsan neque</a></li>
-                                    <li><a href="course.html">Donec varius arcu eu quam</a></li>
-                                    <li><a href="course.html">Rutrum rhoncus.</a></li>
-                                    <li><a href="course.html">Donec suscipit enim et</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="course.html">Donec varius arcu eu quam</a></li>
-                            <li><a href="course.html">Rutrum rhoncus.</a></li>
-                            <li><a href="course.html">Donec suscipit enim et </a></li>
-                            <li><a href="course.html">Ipsum eleifend quis luctus</a></li>
-                            <li><a href="course.html">Arcu scelerisque.</a></li>
-                            <li><a href="course.html">Duis a tortor tellusvel egestas</a></li>
+                            <li><a href="#">Background</a></li>
+                            <li><a href="#">Mission, Vision & Values</a></li>
+                            <li><a href="#">Institute Structure</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.php#">Research</a> </li>
-                    <li><a href="index.php#">Campus &amp; Community</a></li>
-                    <li><a href="index.php#">Support Us</a> </li>
-                    <li><a href="index.php#">Pages</a>
+                    <li><a href="index.php#">Admissions</a>
                         <ul>
+                            <li><a href="#">Entry requirements</a></li>
+                            <li><a href="#">Application Form</a></li>
+                            <li><a href="#">Fee Structure</a></li>
+                            <li><a href="#">Programmes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="course.html">Academics</a>
+                        <ul>
+                            <li><a href="course.html">Library</a></li>
+                            <li><a href="course.html">Laboratory</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.php#">Research</a></li>
+                    <li><a href="index.php#">Campus Life</a>
+                        <ul>
+                            <li><a href="#">Hostel Information</a></li>
+                            <li><a href="#">Student Organization</a></li>
+                            <li><a href="#">Religion Life</a></li>
+                            <li><a href="#">Spots and Games</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a>
+                    <li><a href="contact.html" class="last">Site Map</a>
+<!--                        <ul>
                             <li><a href="index.php">Home</a></li>
                             <li><a href="course.html">Courses</a></li>
                             <li><a href="blog.html">Blog</a></li>
@@ -116,16 +120,16 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="static.html">Static</a></li>
-                        </ul>
+                        </ul>-->
                     </li>
-                    <li><a href="index.php#" class="last">Themes</a>
+<!--                    <li><a href="index.php#" class="last">Themes</a>
                         <ul>
                             <li><a href="index.php">Blue</a></li>
                             <li><a href="../green/index.html">Green</a></li>
                             <li><a href="../gray/index.html">Gray</a></li>
                             <li><a href="../teal/index.html">Teal</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
             <!-- navigation ends -->
@@ -310,46 +314,39 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                 <ul>
                     <li><a href="index.php#">Home</a></li>
                     <li><a href="index.php#">Site map</a></li>
-                    <li><a href="index.php#">International students</a></li>
-                    <li><a href="index.php#">About Collegeme</a></li>
-                    <li><a href="index.php#">Current Students</a></li>
-                    <li><a href="index.php#">Staff</a></li>
-                </ul>
-            </div>
-            <!-- Help and Support -->
-            <div class="help_support">
-                <h5>Help &amp;Support</h5>
-                <ul>
-                    <li><a href="index.php#">Academic Calendar</a></li>
-                    <li><a href="index.php#">Bookstore</a></li>
-                    <li><a href="index.php#">Colleges &amp; Schools</a></li>
-                    <li><a href="index.php#">Courses</a></li>
-                    <li><a href="index.php#">Professional Programs</a></li>
-                    <li><a href="index.php#">Our Help Desk</a></li>
+                    <li><a href="index.php#">About Us</a></li>
                 </ul>
             </div>
             <!-- Quick Links -->
             <div class="quick_links">
-                <h5>Quick Links</h5>
+                <h5>ICT Links</h5>
                 <ul>
-                    <li><a href="index.php#">Directories</a></li>
-                    <li><a href="index.php#">Site map</a></li>
-                    <li><a href="index.php#">cMail | xMail</a></li>
+                    <li><a href="index.php#">Administration</a></li>
+                    <li><a href="index.php#">Staff Mail</a></li>
+<!--                    <li><a href="index.php#"></a></li>
                     <li><a href="index.php#">Campus Notices</a></li>
                     <li><a href="index.php#">Emergency Information</a></li>
-                    <li><a href="index.php#">Staff</a></li>
+                    <li><a href="index.php#">Staff</a></li>-->
                 </ul>
             </div>
             <!-- Addmission -->
             <div class="Addmissoin">
                 <h5>Addmission</h5>
                 <ul>
-                    <li><a href="index.php#">Business</a></li>
-                    <li><a href="index.php#">Financial Aid</a></li>
-                    <li><a href="index.php#">Graduate</a></li>
-                    <li><a href="index.php#">Law</a></li>
-                    <li><a href="index.php#">Undergraduate</a></li>
-                    <li><a href="index.php#">School</a></li>
+                    <li><a href="index.php#">Entry Requirements</a></li>
+                    <li><a href="index.php#">Application Form</a></li>
+                    <li><a href="index.php#">Fee Structure</a></li>
+                    <li><a href="index.php#">Programmes</a></li>
+                </ul>
+            </div>
+            <!-- Help and Support -->
+            <div class="help_support">
+                <h5>Help &amp;Support</h5>
+                <ul>
+                    <li><a href="index.php#">Physical Location</a></li>
+                    <li><a href="index.php#">E-mail Address</a></li>
+                    <li><a href="index.php#">Phone Number</a></li>
+                    <li><a href="index.php#">Web Site</a></li>
                 </ul>
             </div>
             <!-- Contact Us -->
