@@ -405,10 +405,7 @@
                 </div>
                 <div class="clear"></div>
             </div>
-        </div>
-        <!-- Footer seciton -->
-        
-        <?php include './includes/footer.php'; ?> 
+        </div
     </body>
 </html>
 
