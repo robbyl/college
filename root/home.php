@@ -277,7 +277,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
             </div>
         </div>
         <div> 
-            <?php include '../includes/footer.php'; ?>
+            <?php include 'footer.php'; ?>
             <!-- end .footer -->
         </div>
     </body>
