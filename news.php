@@ -4,7 +4,7 @@ include 'functions/general_functions.php';
 
 $page = (int) (!isset($_GET["page"]) ? 1 : $_GET["page"]);
 $page = clean($page);
-$limit = 10;
+$limit = 2;
 $startpoint = ($page * $limit) - $limit;
 
 $statement = "news ORDER BY nws_posted_date DESC";

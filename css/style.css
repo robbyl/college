@@ -1684,6 +1684,13 @@ ul.listing li .description p {
     padding-right: 6px;
 }
 
+.details {
+    height: 23px;
+    float: right;
+    line-height: 23px;
+    padding-right: 6px;
+}
+
 .pginaiton li.dots {
     float: left;
     color: #747474;
@@ -1721,7 +1728,7 @@ ul.listing li .description p {
     font-weight: bold;
 }
 
-.pginaiton li a:hover {
+.pginaiton li a:hover, .pginaiton li .current {
     color: #fff;
     background-color: #89ab20;
 }
