@@ -9,6 +9,7 @@
         <div class="topnavigation">
             <ul>
                 <li class="first">&nbsp;</li>
+                <li><a href="root/index.php">Administration</a></li>
                 <li><a href="news.php">News</a></li>
                 <li><a href="index.php#">Events</a></li>
                 <!--<li><a href="index.php#">Jobs</a></li>-->
@@ -51,10 +52,10 @@
                     <li><a href="#">Programmes</a></li>
                 </ul>
             </li>
-            <li><a href="course.html">Academics</a>
+            <li><a href="course.php">Academics</a>
                 <ul>
-                    <li><a href="course.html">Library</a></li>
-                    <li><a href="course.html">Laboratory</a></li>
+                    <li><a href="course.php">Library</a></li>
+                    <li><a href="course.php">Laboratory</a></li>
                 </ul>
             </li>
             <li><a href="index.php#">Research</a></li>
@@ -66,9 +67,9 @@
                     <li><a href="#">Spots and Games</a></li>
                 </ul>
             </li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a>
-            <li><a href="contact.html" class="last">Site Map</a>
+            <li><a href="gallery.php">Gallery</a></li>
+            <li><a href="contact.php">Contact Us</a>
+            <li><a href="contact.php" class="last">Site Map</a>
                 <!--                        <ul>
                                             <li><a href="index.php">Home</a></li>
                                             <li><a href="course.html">Courses</a></li>

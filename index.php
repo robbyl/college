@@ -120,7 +120,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                 while ($row_news = mysql_fetch_array($result_news)) {
                                     ?>
                                     <li>
-                                        <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
+                                        <div class="thumb" ><a href="#"><img src="images/student1.jpg"  alt="" /></a></div>
                                         <div class="description">
                                             <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>"><?php echo $row_news['nws_title'] ?></a></h6>
                                             <em>
@@ -147,7 +147,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                     ?>
                                     <li>
                                         <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
-                                        <div class="description">
+                                        <div class="description" class="thumb">
                                             <h6><a href="root/uploads/docs/<?php echo $row_events['event_attachment'] ?>"><?php echo $row_events['event_title'] ?></a></h6>
                                             <em>
                                                 (Posted on
@@ -156,7 +156,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                                 echo date_format($posted, 'd M, Y')
                                                 ?>)
                                             </em>
-                                            <p><a href="index.php#" class="gray" ><?php echo $row_events['event_description'] ?></a></p>
+                                            <p><a href="root/uploads/docs/<?php echo $row_events['event_attachment'] ?>" class="gray" ><?php echo $row_events['event_description'] ?></a></p>
                                         </div>
                                     </li>
 
