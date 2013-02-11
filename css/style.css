@@ -1112,9 +1112,12 @@ ul.advance_option li.selected a {
 
 .rtab_content ul li .description {
     width: 42px;
-    height: 42px;
+    height: 70px;
     width: 163px;
     float: right;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
 }
 
 .rtab_content ul li .description h6 {
@@ -1681,6 +1684,13 @@ ul.listing li .description p {
     padding-right: 6px;
 }
 
+.details {
+    height: 23px;
+    float: right;
+    line-height: 23px;
+    padding-right: 6px;
+}
+
 .pginaiton li.dots {
     float: left;
     color: #747474;
@@ -1718,7 +1728,7 @@ ul.listing li .description p {
     font-weight: bold;
 }
 
-.pginaiton li a:hover {
+.pginaiton li a:hover, .pginaiton li .current {
     color: #fff;
     background-color: #89ab20;
 }
