@@ -144,7 +144,13 @@ input {
 .wapper-header {
     width: 100%;
     background: #201f1f;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
+}
+
+.separator {
+    height: 10px;
+    width: 100%;
+    background: #f3f3f3;
 }
 
 #bottomsec {
@@ -181,7 +187,18 @@ input {
 
 .logo {
     float: left;
-    padding: 22px 0 0 0px;
+    width: 100px;
+    height: 60px;
+    margin: 30px 0 0 0px;
+}
+
+.title {
+    float: left;
+    height: 60px;
+    margin: 30px 0 0 0px;
+    line-height: 60px;
+    font-size: 2em;
+    color: #e0e0e0;
 }
 
 /*
