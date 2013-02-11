@@ -2,13 +2,14 @@
 include 'config/config.php';
 include 'functions/general_functions.php';
 
-$pages = (int) (!isset($_GET["pages"]) ? 1 : $_GET["pages"]);
-$limit = 2;
-$startpoint = ($pages * $limit) - $limit;
+$page = (int) (!isset($_GET["page"]) ? 1 : $_GET["page"]);
+$page = clean($page);
+$limit = 10;
+$startpoint = ($page * $limit) - $limit;
 
 $statement = "news ORDER BY nws_posted_date DESC";
 
-$query_news = "SELECT * 
+$query_news = "SELECT *
                  FROM {$statement}
                  LIMIT {$startpoint}, {$limit}";
 $result_news = mysql_query($query_news) or die(mysql_error());
@@ -45,7 +46,7 @@ $result_news = mysql_query($query_news) or die(mysql_error());
             <div id="wrapper_sec">
                 <!-- masterhead -->
 
-                <!-- Content Seciton -->
+                <!-- Content Section -->
                 <div id="content_section">
                     <!-- News Updates -->
 
@@ -53,135 +54,60 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                     <!-- Col1 -->
                     <div class="col1">
                         <!-- Banner -->
-                        <div id="banner1">
+<!--                        <div id="banner1">
                             <a href="news.html#"><img src="images/newsbanner.gif" alt="" /></a>
                             <div class="heading">
                                 <h1>College News and Events</h1>
                             </div>
                         </div>
-                        <!-- Content Links -->
+                         Content Links 
                         <div class="content_links">
                             <ul>
                                 <li><a class="our_university" href="news.html#">Our University</a></li>
                                 <li><a class="admission" href="news.html#">Admissions</a></li>
                                 <li><a class="accommodaiton" href="news.html#">Accommodations</a></li>
                                 <li><a class="community" href="news.html#">Community</a></li>
-                                <li><a class="schorship" href="news.html#">Scholorships</a></li>
+                                <li><a class="schorship" href="news.html#">scholarships</a></li>
                                 <li class="last"><a class="take_tour" href="news.html#">Take a Tour</a></li>
                             </ul>
-                        </div>
+                        </div>-->
                         <!-- Content Heading -->
                         <div id="content2">
-                            <h2 class="pad8">Welcome to University of College Education</h2>
+                            <h2 class="pad8">Institute News</h2>
                             <!-- News Listing -->
                             <ul class="listing">
-                                <li>
-                                    <div class="thumb"><a href="news.html#"><img src="images/news1.gif"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="news.html#" class="colr">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit </a></h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta, leo a posuere luctus, justo                                               leomi leoegestas libero, nec volutpat purus mi leosed dui. Suspendisse sem dui, semper in semper                                               lacinia, elementum ornare lorem. Lorem ipsum dolor sit amet.
-                                        </p>
-                                        <div class="clear"></div>
-                                        <div class="info">
-                                            <span class="lastupdte"> Last Update by:<i>Tue, 26/01/11</i></span>
-                                            <span class="tag">Tag: <a href="news.html#">Business</a></span>
-                                            <span class="comments"><a href="news.html#"><strong>852</strong> Comments</a></span>
-                                            <a class="moreinfo" href="news.html#">:: Moreinfo</a>
+                                <?php
+                                while ($row_news = mysql_fetch_array($result_news)) {
+                                    ?>
+                                    <li>
+                                        <div class="thumb"><a href="news.html#"><img src="images/news1.gif"  alt="" /></a></div>
+                                        <div class="description">
+                                            <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment'];?>" class="colr"><?php echo $row_news['nws_title']; ?></a></h6>
+                                            <p>
+                                                <?php echo $row_news['nws_description']; ?>
+                                            </p>
+                                            <div class="clear"></div>
+                                            <div class="info">
+                                                <?php 
+                                                   $posted = date_create($row_news['nws_posted_date']);
+                                                ?>
+                                                <span class="lastupdte"> Last Update by:<i><?php echo date_format($posted, 'D, d M Y') ?></i></span>
+                                                <!--<span class="tag">Tag: <a href="news.html#">Business</a></span>-->
+                                                <!--<span class="comments"><a href="news.html#"><strong>852</strong> Comments</a></span>-->
+                                                <a class="moreinfo" href="root/uploads/docs/<?php echo $row_news['nws_attachment'];?>">:: Moreinfo</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li>
-                                    <div class="thumb"><a href="news.html#"><img src="images/news2.gif"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="news.html#" class="colr">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit </a></h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta, leo a posuere luctus, justo                                               leomi leoegestas libero, nec volutpat purus mi leosed dui. Suspendisse sem dui, semper in semper                                               lacinia, elementum ornare lorem. Lorem ipsum dolor sit amet.
-                                        </p>
                                         <div class="clear"></div>
-                                        <div class="info">
-                                            <span class="lastupdte"> Last Update by:<i>Tue, 26/01/11</i></span>
-                                            <span class="tag">Tag: <a href="news.html#">Business</a></span>
-                                            <span class="comments"><a href="news.html#"><strong>852</strong> Comments</a></span>
-                                            <a class="moreinfo" href="news.html#">:: Moreinfo</a>
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li>
-                                    <div class="thumb"><a href="news.html#"><img src="images/news3.gif"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="news.html#" class="colr">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit </a></h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta, leo a posuere luctus, justo                                               leomi leoegestas libero, nec volutpat purus mi leosed dui. Suspendisse sem dui, semper in semper                                               lacinia, elementum ornare lorem. Lorem ipsum dolor sit amet.
-                                        </p>
-                                        <div class="clear"></div>
-                                        <div class="info">
-                                            <span class="lastupdte"> Last Update by:<i>Tue, 26/01/11</i></span>
-                                            <span class="tag">Tag: <a href="news.html#">Business</a></span>
-                                            <span class="comments"><a href="news.html#"><strong>852</strong> Comments</a></span>
-                                            <a class="moreinfo" href="news.html#">:: Moreinfo</a>
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li>
-                                    <div class="thumb"><a href="news.html#"><img src="images/news4.gif"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="news.html#" class="colr">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit </a></h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta, leo a posuere luctus, justo                                               leomi leoegestas libero, nec volutpat purus mi leosed dui. Suspendisse sem dui, semper in semper                                               lacinia, elementum ornare lorem. Lorem ipsum dolor sit amet.
-                                        </p>
-                                        <div class="clear"></div>
-                                        <div class="info">
-                                            <span class="lastupdte"> Last Update by:<i>Tue, 26/01/11</i></span>
-                                            <span class="tag">Tag: <a href="news.html#">Business</a></span>
-                                            <span class="comments"><a href="news.html#"><strong>852</strong> Comments</a></span>
-                                            <a class="moreinfo" href="news.html#">:: Moreinfo</a>
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li>
-                                    <div class="thumb"><a href="news.html#"><img src="images/news5.gif"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="news.html#" class="colr">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit </a></h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta, leo a posuere luctus, justo                                               leomi leoegestas libero, nec volutpat purus mi leosed dui. Suspendisse sem dui, semper in semper                                               lacinia, elementum ornare lorem. Lorem ipsum dolor sit amet.
-                                        </p>
-                                        <div class="clear"></div>
-                                        <div class="info">
-                                            <span class="lastupdte"> Last Update by:<i>Tue, 26/01/11</i></span>
-                                            <span class="tag">Tag: <a href="news.html#">Business</a></span>
-                                            <span class="comments"><a href="news.html#"><strong>852</strong> Comments</a></span>
-                                            <a class="moreinfo" href="news.html#">:: Moreinfo</a>
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
-                                <li class="last">
-                                    <div class="thumb"><a href="news.html#"><img src="images/news6.gif"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="news.html#" class="colr">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit </a></h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta, leo a posuere luctus, justo                                               leomi leoegestas libero, nec volutpat purus mi leosed dui. Suspendisse sem dui, semper in semper                                               lacinia, elementum ornare lorem. Lorem ipsum dolor sit amet.
-                                        </p>
-                                        <div class="clear"></div>
-                                        <div class="info">
-                                            <span class="lastupdte"> Last Update by:<i>Tue, 26/01/11</i></span>
-                                            <span class="tag">Tag: <a href="news.html#">Business</a></span>
-                                            <span class="comments"><a href="news.html#"><strong>852</strong> Comments</a></span>
-                                            <a class="moreinfo" href="news.html#">:: Moreinfo</a>
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
+                                    </li>
+                                    <?php
+                                }
+                                ?>
                             </ul>
                             <div class="clear"></div>
                             <!-- pagination Listing -->
                             <div class="pginaiton pad9">
-                                <ul>
+                                <?php echo pagination($statement, $limit, $page)  ?>
+<!--                                <ul>
                                     <li><a href="news.html#">1</a></li>
                                     <li><a href="news.html#">2</a></li>
                                     <li><a href="news.html#">3</a></li>
@@ -192,7 +118,7 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                                     <li class="dots"> . . . . . . .</li>
                                     <li ><a href="news.html#"> 22</a></li>
                                     <li class="nextpage"><a href="news.html#">Next Page</a></li>
-                                </ul>
+                                </ul>-->
                             </div>
                             <div class="clear"></div>
                         </div>

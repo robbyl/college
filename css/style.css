@@ -1112,9 +1112,12 @@ ul.advance_option li.selected a {
 
 .rtab_content ul li .description {
     width: 42px;
-    height: 42px;
+    height: 70px;
     width: 163px;
     float: right;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
 }
 
 .rtab_content ul li .description h6 {
