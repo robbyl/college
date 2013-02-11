@@ -60,14 +60,14 @@
     <!-- page bottm -->
     <div id="pagebottom">
         <!-- copyright -->
-        <div class="copyright">&copy; <?php echo date('Y') ?>  <a href="index.php#">Royal Pharm</a> All Rights Reserved</div>
+        <div class="copyright">&copy; <?php echo date('Y') ?>  <a href="index.php#">Royal Pharmaceutical Training Institute</a> All Rights Reserved</div>
         <a href="index.php#" class="top">Top</a>
         <!-- Social Networks -->
         <div class="socail_networks">
             <ul>
-                <li class="servcies">Follows us our servcies</li>
+                <li class="servcies">Follow us on</li>
                 <li><a href="index.php#"><img src="images/facebook_icon.gif"  alt="" /> </a></li>
-                <li><a href="index.php#"><img src="images/linkedin_icon.gif"  alt="" /> </a></li>
+                <!--<li><a href="index.php#"><img src="images/linkedin_icon.gif"  alt="" /> </a></li>-->
                 <li><a href="index.php#"><img src="images/twitter_icon.gif"  alt="" /> </a></li>
             </ul>
         </div>
