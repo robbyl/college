@@ -21,102 +21,12 @@
         <script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
     </head>
     <body>
+        <div class="wapper-header">
+            <?php include 'includes/header.php';?>
+        </div>
         <div id="bg">
             <!-- Wapper Sec -->
             <div id="wrapper_sec">
-                <!-- masterhead -->
-                <div id="masterhead">
-                    <!-- Logo -->
-                    <div class="logo"><a href="index.php"><img src="images/logo.png" alt="" /></a></div>
-                    <!-- masterhead Right Section -->
-                    <div class="topright_sec">
-                        <!-- top navigation -->
-                        <div class="topnavigation">
-                            <ul>
-                                <li class="first">&nbsp;</li>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="static.html#">Events</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="static.html#">Jobs</a></li>
-                                <li><a href="static.html#">Student Profile </a></li>
-                                <li><a href="static.html#">Our Campuses</a></li>
-                                <li><a class="nobg" href="static.html#"><img src="images/rss.gif"  alt="" /></a></li>
-                                <li class="last">&nbsp;</li>
-                            </ul>
-                        </div>
-                        <div class="clear"></div>
-                        <!-- top search -->
-                        <div class="top_search">
-                            <div class="advance_search"><a href="static.html#">Advance Option</a></div>
-                            <ul>
-                                <li><input name="txt" value="Search you any keyword"
-                                           onfocus="if(this.value=='Search you any keyword') {this.value='';}"
-                                           onblur="if(this.value=='') {this.value='Search you any keyword';}"   type="text" /></li>
-                                <li><a class="search" href="static.html#">Search</a></li>
-                            </ul>
-                        </div>
-                        <div class="clear"> </div>
-                    </div>
-                    <div class="clear"></div>
-                    <!-- Navigation -->
-                    <div class="navigation">
-                        <div id="smoothmenu1" class="ddsmoothmenu">
-                            <ul>
-                                <li class="first"><a class="selected" href="index.php">Home</a></li>
-                                <li><a href="static.html">About Us</a></li>
-                                <li><a href="static.html#">Admissions</a></li>
-                                <li><a href="course.html">Academics</a>
-                                    <!-- Sub Menu level 1 -->
-                                    <ul>
-                                        <li><a href="course.html">Integer eu mi lorem, sit amet</a></li>
-                                        <li><a href="course.html" class="dropdown">Accumsan neque</a>
-                                            <!-- Sub Menu Level 2 -->
-                                            <ul>
-                                                <li><a href="course.html">nteger eu mi lorem, sit amet</a></li>
-                                                <li><a href="course.html">Accumsan neque</a></li>
-                                                <li><a href="course.html">Donec varius arcu eu quam</a></li>
-                                                <li><a href="course.html">Rutrum rhoncus.</a></li>
-                                                <li><a href="course.html">Donec suscipit enim et</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="course.html">Donec varius arcu eu quam</a></li>
-                                        <li><a href="course.html">Rutrum rhoncus.</a></li>
-                                        <li><a href="course.html">Donec suscipit enim et </a></li>
-                                        <li><a href="course.html">Ipsum eleifend quis luctus</a></li>
-                                        <li><a href="course.html">Arcu scelerisque.</a></li>
-                                        <li><a href="course.html">Duis a tortor tellusvel egestas</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="static.html#">Research</a> </li>
-                                <li><a href="static.html#">Campus &amp; Community</a></li>
-                                <li><a href="static.html#">Support Us</a> </li>
-                                <li><a href="static.html#">Pages</a>
-                                    <ul>
-                                        <li><a href="index.php">Home</a></li>
-                                        <li><a href="course.html">Courses</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blogdetail.html">Blog Detail</a></li>
-                                        <li><a href="news.html">News</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="static.html">Static</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="static.html#" class="last">Themes</a>
-                                    <ul>
-                                        <li><a href="index.php">Blue</a></li>
-                                        <li><a href="../green/index.html">Green</a></li>
-                                        <li><a href="../gray/index.html">Gray</a></li>
-                                        <li><a href="../teal/index.html">Teal</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- navigation ends -->
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <!-- Content Seciton -->
                 <div id="content_section">
                     <div class="static_content">
                         <h2 class="hpad">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Proin dapibus dignissim fermentum.
@@ -340,72 +250,7 @@
             </div>
         </div>
         <!-- Footer Section -->
-        <div id="bottom_seciton">
-            <div id="footer">
-                <!--Find your way -->
-                <div class="find_your_way">
-                    <h5>Find your Way</h5>
-                    <ul>
-                        <li><a href="static.html#">Home</a></li>
-                        <li><a href="static.html#">Site map</a></li>
-                        <li><a href="static.html#">International students</a></li>
-                        <li><a href="static.html#">About Collegeme</a></li>
-                        <li><a href="static.html#">Current Students</a></li>
-                        <li><a href="static.html#">Staff</a></li>
-                    </ul>
-                </div>
-                <!-- Help and Support -->
-                <div class="help_support">
-                    <h5>Help &amp;Support</h5>
-                    <ul>
-                        <li><a href="static.html#">Academic Calendar</a></li>
-                        <li><a href="static.html#">Bookstore</a></li>
-                        <li><a href="static.html#">Colleges &amp; Schools</a></li>
-                        <li><a href="static.html#">Courses</a></li>
-                        <li><a href="static.html#">Professional Programs</a></li>
-                        <li><a href="static.html#">Our Help Desk</a></li>
-                    </ul>
-                </div>
-                <!-- Quick Links -->
-                <div class="quick_links">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><a href="static.html#">Directories</a></li>
-                        <li><a href="static.html#">Site map</a></li>
-                        <li><a href="static.html#">cMail | xMail</a></li>
-                        <li><a href="static.html#">Campus Notices</a></li>
-                        <li><a href="static.html#">Emergency Information</a></li>
-                        <li><a href="static.html#">Staff</a></li>
-                    </ul>
-                </div>
-                <!-- Addmission -->
-                <div class="Addmissoin">
-                    <h5>Addmission</h5>
-                    <ul>
-                        <li><a href="static.html#">Business</a></li>
-                        <li><a href="static.html#">Financial Aid</a></li>
-                        <li><a href="static.html#">Graduate</a></li>
-                        <li><a href="static.html#">Law</a></li>
-                        <li><a href="static.html#">Undergraduate</a></li>
-                        <li><a href="static.html#">School</a></li>
-                    </ul>
-                </div>
-                <!-- Contact Us -->
-                <div class="contact_us">
-                    <h5>Contact Us</h5>
-                    <ul>
-                        <li class="telephone_no">+44 (12) 123 4567 891</li>
-                        <li  class="mailing_address">
-                            Lorem ipsum dolor sit amet
-                            consectetur adipis.
-                        </li>
-                        <li class="email_address"><a href="static.html#">info@college.com</a></li>
-                        <li class="googlemaps"><a href="static.html#">Google Maps</a></li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div
+         <?php include 'includes/footer.php';?>
     </body>
 </html>
 

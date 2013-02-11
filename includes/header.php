@@ -34,7 +34,7 @@
     <div id="smoothmenu1" class="ddsmoothmenu">
         <ul>
             <li class="first"><a class="selected" href="index.php">Home</a></li>
-            <li><a href="static.html">About Us</a>
+            <li><a href="static.php">About Us</a>
                 <ul>
                     <li><a href="#">Background</a></li>
                     <li><a href="#">Mission, Vision & Values</a></li>
@@ -49,7 +49,7 @@
                     <li><a href="#">Programmes</a></li>
                 </ul>
             </li>
-            <li><a href="course.html">Academics</a>
+            <li><a href="course.php">Academics</a>
                 <ul>
                     <li><a href="course.html">Library</a></li>
                     <li><a href="course.html">Laboratory</a></li>
@@ -64,8 +64,8 @@
                     <li><a href="#">Spots and Games</a></li>
                 </ul>
             </li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a>
+            <li><a href="gallery.php">Gallery</a></li>
+            <li><a href="contact.php">Contact Us</a>
             <li><a href="contact.html" class="last">Site Map</a>
                 <!--                        <ul>
                                             <li><a href="index.php">Home</a></li>
