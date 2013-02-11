@@ -4,7 +4,7 @@ require 'config/config.php';
 $query_news = "SELECT nws_title, nws_description, nws_attachment, nws_posted_date
                  FROM news
              ORDER BY nws_posted_date DESC
-                LIMIT 0,10";
+                LIMIT 0, 5";
 
 $result_news = mysql_query($query_news) or die(mysql_error());
 
@@ -12,7 +12,7 @@ $result_news = mysql_query($query_news) or die(mysql_error());
 $query_events = "SELECT event_title, event_description, event_attachment, event_posted_date
                  FROM events
                  ORDER BY event_posted_date DESC
-                 LIMIT 0,10";
+                 LIMIT 0, 5";
 
 $result_events = mysql_query($query_events) or die(mysql_error());
 ?>
@@ -170,7 +170,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                     </div>
                     <!-- Our College Gallery -->
                     <div class="college_gallery">
-                        <h5>Our College Gallery</h5>
+                        <h5>Downloads</h5>
                         <ul>
                             <li>
                                 <div class="thumb"><a href="index.php#"><img src="images/ourcollege1.jpg"  alt="" /></a></div>
