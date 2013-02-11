@@ -44,6 +44,12 @@
 .ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited{
     color: white;
 }
+
+.ddsmoothmenu .current {
+    color:#666 !important;
+    background-color: #f3f3f3 !important;
+}
+
 .ddsmoothmenu ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
     color:#666;
     background-color: #fff !important;
@@ -95,7 +101,7 @@
     color: white !important;
 }
 .ddsmoothmenu ul li a.dropdown:hover {
-    background-color: #fff;
+    background-color: #fff !important;
     color: #fff !important;
     background-repeat:no-repeat;
 }

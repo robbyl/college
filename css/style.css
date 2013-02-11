@@ -1221,8 +1221,6 @@ ul.advance_option li.selected a {
 =======================================================================
 */
 
-
-
 .college_gallery {
     width: 238px;
     margin-bottom: 10px;
@@ -1241,7 +1239,7 @@ ul.advance_option li.selected a {
     float: left;
     padding-left: 13px;
     border-bottom: solid 1px #d5d5d5;
-    background-color: #f4ffd3;
+    background-color: #E7F1FF;
 }
 
 .college_gallery ul {
@@ -3333,4 +3331,17 @@ a.top {
     left: -1px;
     z-index: 99999;
     border-left: solid 1px #fff;
+}
+
+.all-news-events {
+    width: 100%;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ececec;
+}
+
+.all-news-events:hover {
+    background-color: #e0e0e0;
 }

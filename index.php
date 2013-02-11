@@ -138,6 +138,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
 
                             </ul>
                             <div class="clear"></div>
+                            <div><a href="news.php" class="all-news-events">View all news</a></div>
                         </div>
                         <div class="rtab_content" id="rtab2" style="display:none;">
                             <ul>
@@ -162,10 +163,9 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                     <?php
                                 }
                                 ?>
-
-
                             </ul>
                             <div class="clear"></div>
+                            <div><a href="events.php" class="all-news-events">View all events</a></div>
                         </div>
                     </div>
                     <!-- Our College Gallery -->

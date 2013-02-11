@@ -1,6 +1,8 @@
 <div id="masterhead">
     <!-- Logo -->
     <div class="logo"><a href="index.php"><img src="images/logo.png" alt="" /></a></div>
+    <div class="title">Royal Pharmaceutical Training Institute</div>
+    <!--<div class="title"><h2>Royal Pharmaceutical Training Institute</h2></div>-->
     <!-- masterhead Right Section -->
     <div class="topright_sec">
         <!-- top navigation -->
@@ -17,7 +19,7 @@
         <div class="clear"></div>
         <!-- top search -->
         <div class="top_search">
-            <div class="advance_search"><a href="index.php#">Advance Option</a></div>
+            <div class="advance_search"></div>
             <ul>
                 <li>
                     <input name="txt" placeholder="Search you any keyword" type="text" />
@@ -33,7 +35,7 @@
 <div class="navigation" style="float: none; margin: 0 auto !important; width: 960px;">
     <div id="smoothmenu1" class="ddsmoothmenu">
         <ul>
-            <li class="first"><a class="selected" href="index.php">Home</a></li>
+            <li class="first"><a class="current" href="index.php">Home</a></li>
             <li><a href="static.html">About Us</a>
                 <ul>
                     <li><a href="#">Background</a></li>
@@ -90,4 +92,6 @@
     </div>
     <!-- navigation ends -->
     <div class="clear"></div>
+</div>
+<div class="separator">
 </div>
