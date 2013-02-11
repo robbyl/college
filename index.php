@@ -1,4 +1,8 @@
 <?php
+
+$values = explode('\\', __FILE__);
+$current_file_name = end($values);
+
 require 'config/config.php';
 
 $query_news = "SELECT nws_title, nws_description, nws_attachment, nws_posted_date

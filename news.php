@@ -1,6 +1,7 @@
 <?php
 include 'config/config.php';
 include 'functions/general_functions.php';
+$current_file_name = 'index.php';
 
 $page = (int) (!isset($_GET["page"]) ? 1 : $_GET["page"]);
 $page = clean($page);
