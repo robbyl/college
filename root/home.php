@@ -7,18 +7,23 @@ require '../config/config.php';
 
 $query_news = "SELECT * 
                  FROM news
-                 ORDER BY nws_posted_date DESC";
+             ORDER BY nws_posted_date DESC";
 $result_news = mysql_query($query_news) or die(mysql_error());
 
 $query_evnt = "SELECT * 
                  FROM events
-                 ORDER BY event_posted_date DESC";
+             ORDER BY event_posted_date DESC";
 $result_evnt = mysql_query($query_evnt) or die(mysql_error());
 
 $query_courses = "SELECT * 
-                 FROM courses
-                 ORDER BY course_posted_date DESC";
+                    FROM courses
+                ORDER BY course_posted_date DESC";
 $result_courses = mysql_query($query_courses) or die(mysql_error());
+
+$query_downloads = "SELECT * 
+                      FROM downloads
+                  ORDER BY dwn_date_uploaded DESC";
+$result_downloads = mysql_query($query_downloads) or die(mysql_error());
 ?>
 <!DOCTYPE html>
 <html>
@@ -249,6 +254,82 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                                         echo '<td>' . $row_courses['course_description'] . '</td>';
                                         echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '" class="edit-courses">Edit</a></td>';
                                         echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '" onClick="return confirm(\'Are you sure you want to delete this course\');">Delete</a></td>';
+                                        echo '</tr>';
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="tab_content" id="tab4" style="display:none" >
+                        <div class="root-heading">
+                            <h2 class="label">Manage Uploads</h2>
+                            <button class="post upload" >Upload new files</button>
+                            <div style="clear: both"></div>
+                        </div>
+
+                        <div class="form-wrapper">
+                            <table class="data-table4" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Date uploaded</th>
+                                        <th>File name</th>
+                                        <th>Actions</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    while ($row_download = mysql_fetch_array($result_downloads)) {
+                                        $posted = date_create($row_download['dwn_date_uploaded']);
+
+                                        echo '<tr>';
+                                        echo '<td>' . $row_download['dwn_title'] . '</td>';
+                                        echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
+                                        echo '<td><a href="uploads/downloads/' . $row_download['dwn_file_name'] . '">' . $row_download['dwn_file_name'] . '</a></td>';
+                                        echo '<td><a href="edit_download.php?id=' . $row_download['dwn_id'] . '" class="edit-download">Edit</a></td>';
+                                        echo '<td><a href="delete_download.php?id=' . $row_download['dwn_id'] . '" onClick="return confirm(\'Are you sure you want to delete this file\');">Delete</a></td>';
+                                        echo '</tr>';
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="tab_content" id="tab5" style="display:none" >
+                        <div class="root-heading">
+                            <h2 class="label">Manage News</h2>
+                            <button class="post news" >Post news</button>
+                            <div style="clear: both"></div>
+                        </div>
+
+                        <div class="form-wrapper">
+                            <table class="data-table5" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Date posted</th>
+                                        <th>Description</th>
+                                        <th>Attachment</th>
+                                        <th>Actions</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    while ($row_news = mysql_fetch_array($result_news)) {
+                                        $posted = date_create($row_news['nws_posted_date']);
+
+                                        echo '<tr>';
+                                        echo '<td>' . $row_news['nws_title'] . '</td>';
+                                        echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
+                                        echo '<td>' . $row_news['nws_description'] . '</td>';
+                                        echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
+                                        echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '" class="edit-news">Edit</a></td>';
+                                        echo '<td><a href="delete_news.php?id=' . $row_news['nws_id'] . '" onClick="return confirm(\'Are you sure you want to delete this news\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
                                     ?>
