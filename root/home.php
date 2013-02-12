@@ -229,7 +229,7 @@ $result_downloads = mysql_query($query_downloads) or die(mysql_error());
                     <div class="tab_content" id="tab3" style="display:none" >
                         <div class="root-heading">
                             <h2 class="label">Manage Courses</h2>
-                            <button class="post events" >Post courses</button>
+                            <button class="post courses" >Post courses</button>
                             <div style="clear: both"></div>
                         </div>
                         <div class="form-wrapper">
