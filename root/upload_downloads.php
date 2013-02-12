@@ -24,7 +24,7 @@
                         </tr>
                         <tr>
                             <td>File Path</td>
-                            <td><input type="file" name="download" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                            <td><input type="file" name="download" class="text" required="" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                     </table>
                 </form>
