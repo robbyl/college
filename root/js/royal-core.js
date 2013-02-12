@@ -52,7 +52,7 @@ $(document).ready(function() {
         "bLengthChange": true,
         "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
     });
-    
+
     oTable4 = $('.data-table4').dataTable({
         "bJQueryUI": true,
         "bScrollCollapse": true,
@@ -67,7 +67,7 @@ $(document).ready(function() {
         "bLengthChange": true,
         "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
     });
-    
+
     oTable5 = $('.data-table5').dataTable({
         "bJQueryUI": true,
         "bScrollCollapse": true,
@@ -135,12 +135,27 @@ $(document).ready(function() {
         event.preventDefault();
         getPopForm(this.href);
     });
-    
+
+    $('.news').click(function(event) {
+        event.preventDefault();
+        getPopForm('post_news.php');
+    });
+
+    $('.events').click(function(event) {
+        event.preventDefault();
+        getPopForm('post_events.php');
+    });
+
+    $('.courses').click(function(event) {
+        event.preventDefault();
+        getPopForm('post_courses.php');
+    });
+
     $('.upload').click(function(event) {
         event.preventDefault();
         getPopForm('upload_downloads.php');
     });
-    
+
 });
 
 $(function() {
