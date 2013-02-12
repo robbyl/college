@@ -1,11 +1,11 @@
 // JavaScript Document
 
 $(document).ready(function() {
-    
+
     var oTable1;
     var oTable2;
     var oTable3;
-    
+
     oTable1 = $('.data-table1').dataTable({
         "bJQueryUI": true,
         "bScrollCollapse": true,
@@ -20,7 +20,7 @@ $(document).ready(function() {
         "bLengthChange": true,
         "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
     });
-    
+
     oTable2 = $('.data-table2').dataTable({
         "bJQueryUI": true,
         "bScrollCollapse": true,
@@ -35,7 +35,7 @@ $(document).ready(function() {
         "bLengthChange": true,
         "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
     });
-    
+
     oTable3 = $('.data-table3').dataTable({
         "bJQueryUI": true,
         "bScrollCollapse": true,
@@ -54,6 +54,7 @@ $(document).ready(function() {
     $(".tab_content").hide(); //Hide all content
     $(".tabs_links ul li:first").addClass("active").show(); //Activate first tab
     $(".tab_content:first").show(); //Show first tab content
+    oTable1.fnAdjustColumnSizing();
     //On Click Event
     $(".tabs_links ul li").click(function() {
         $(".tabs_links ul li").removeClass("active"); //Remove any "active" class
@@ -61,8 +62,7 @@ $(document).ready(function() {
         $(".tab_content").hide(); //Hide all tab content
         var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
         $(activeTab).fadeIn(); //Fade in the active content
-           
-        oTable1.fnAdjustColumnSizing();
+
         oTable2.fnAdjustColumnSizing();
         oTable3.fnAdjustColumnSizing();
         return false;
@@ -101,7 +101,7 @@ $(document).ready(function() {
         event.preventDefault();
         getPopForm(this.href);
     });
-
+    
 });
 
 $(function() {
