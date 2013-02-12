@@ -147,7 +147,7 @@ $result_courses = mysql_query($query_courses) or die(mysql_error());
                     <div class="tab_content" id="tab1" style="display:none" >
                         <div class="root-heading">
                             <h2 class="label">Manage News</h2>
-                            <button class="post news" >Post news</button>
+                            <button class="post news">Post news</button>
                             <div style="clear: both"></div>
                         </div>
 

@@ -101,6 +101,10 @@ $(document).ready(function() {
         event.preventDefault();
         getPopForm(this.href);
     });
+    $('news').click(function(event) {
+        event.preventDefault();
+        getPopForm(this.href);
+    });
     
 });
 
