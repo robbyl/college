@@ -8,8 +8,8 @@ $news_title = clean($_POST['title']);
 $news_description = clean($_POST['description']);
 $news_image = clean($_POST['nws_image']); // image name from database
 $news_attachment = clean($_POST['nws_attachment']); // attachment name from database
-$image_name = $_FILES["image"]["name"]; // image name from submitted form.
-$attachment_name = $_FILES["attachment"]["name"]; // attachment name from submitted form.
+$image_name = clean($_FILES["image"]["name"]); // image name from submitted form.
+$attachment_name = clean($_FILES["attachment"]["name"]); // attachment name from submitted form.
 
 if ($news_image !== $image_name && !empty($image_name)) {
 // Get and upload image file
@@ -42,11 +42,9 @@ if ($news_image !== $image_name && !empty($image_name)) {
         }
     } else {
 
-        echo 'invalid image format';
-
-//    info('error', 'This file type is not allowed');
-//    header('Location: settings.php');
-//    exit(0);
+    info('error', 'This image type is not allowed');
+    header('Location: home.php');
+    exit(0);
     }
 }
 
@@ -80,11 +78,9 @@ if ($news_attachment !== $attachment_name && !empty($attachment_name)) {
         }
     } else {
 
-        echo 'invalid file format';
-
-//    info('error', 'This file type is not allowed');
-//    header('Location: settings.php');
-//    exit(0);
+    info('error', 'This file type is not allowed');
+    header('Location: home.php');
+    exit(0);
     }
 }
 
