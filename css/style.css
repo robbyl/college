@@ -1252,7 +1252,7 @@ ul.advance_option li.selected a {
     background-image: url(../images/rbder.png);
     background-repeat: no-repeat;
     background-position: bottom;
-    padding: 9px 11px;
+    padding: 5px 11px;
     width: 216px;
     float: left;
 }
@@ -1263,12 +1263,8 @@ ul.advance_option li.selected a {
     float: left;
 }
 
-.college_gallery ul li .thumb img {
-    border: solid 1px #d5d5d5;
-}
-
 .college_gallery ul li .description {
-    width: 163px;
+    width: 173px;
     float: right;
 }
 
