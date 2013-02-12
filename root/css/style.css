@@ -261,7 +261,9 @@ h1, h2, h3, h4 {
 }
 
 .label {
+    float: left;
     margin: 40px 20px;
+    width: 70%;
 }
 
 .post {
@@ -375,4 +377,13 @@ h1, h2, h3, h4 {
 
 .pop-up-footer .post {
     margin: 10px 10px;
+}
+
+.root-heading {
+    height: 80px;
+}
+
+.root-heading .post {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
