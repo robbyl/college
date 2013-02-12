@@ -1231,11 +1231,12 @@ ul.advance_option li.selected a {
 
 .college_gallery h5 {
     width: 225px;
-    padding-top: 13px;
+    /*padding-top: 13px;*/
     font-size: 14px;
     color: #08387f;
     font-weight: bold;
-    height: 23px;
+    height: 36px;
+    line-height: 36px;
     float: left;
     padding-left: 13px;
     border-bottom: solid 1px #d5d5d5;
