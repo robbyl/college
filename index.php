@@ -1,5 +1,4 @@
 <?php
-
 $values = explode('\\', __FILE__);
 $current_file_name = end($values);
 
@@ -19,6 +18,13 @@ $query_events = "SELECT event_title, event_description, event_attachment, event_
                  LIMIT 0, 5";
 
 $result_events = mysql_query($query_events) or die(mysql_error());
+
+$query_downloads = "SELECT dwn_title, dwn_date_uploaded, dwn_file_name
+                 FROM downloads
+                 ORDER BY dwn_date_uploaded DESC
+                 LIMIT 0, 10";
+
+$result_donwloads = mysql_query($query_downloads) or die(mysql_error());
 ?>
 
 
@@ -129,9 +135,9 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                             <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>"><?php echo $row_news['nws_title'] ?></a></h6>
                                             <em>
                                                 (Posted on <?php
-                                                $posted = date_create($row_news['nws_posted_date']);
-                                                echo date_format($posted, 'd M, Y')
-                                                ?>)
+                                $posted = date_create($row_news['nws_posted_date']);
+                                echo date_format($posted, 'd M, Y')
+                                    ?>)
                                             </em>
                                             <p><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>" class="gray" ><?php echo $row_news['nws_description'] ?></a></p>
                                         </div>
@@ -177,34 +183,32 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                         <h5>Downloads</h5>
                         <ul>
                             <li>
-                                <div class="thumb"><a href="index.php#"><img src="images/ourcollege1.jpg"  alt="" /></a></div>
+                                <div class="thumb"><a href="contact.html#"><img src="images/pdf_icon.png"  alt="" /></a></div>
                                 <div class="description">
-                                    <h6><a href="index.php#">National Sports Day</a></h6>
-                                    <a class="gray" href="index.php#"><em>(Posted on 17 Jan 11 , 2011)</em></a> </div>
+                                    <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
+                                    <a class="gray1" href="contact.html#">March 2011 </a>
+                                </div>
                             </li>
                             <li>
-                                <div class="thumb"><a href="index.php#"><img src="images/ourcollege2.jpg"  alt="" /></a></div>
+                                <div class="thumb"><a href="contact.html#"><img src="images/wordicon.png"  alt="" /></a></div>
                                 <div class="description">
-                                    <h6><a href="index.php#"> Annual Walk (2010)</a></h6>
-                                    <a href="index.php#"><em>(Posted on 17 Jan 11 , 2011)</em></a> </div>
+                                    <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
+                                    <a class="gray1" href="contact.html#">March 2011 </a>
+                                </div>
                             </li>
                             <li>
-                                <div class="thumb"><a href="index.php#"><img src="images/ourcollege3.jpg"  alt="" /></a></div>
+                                <div class="thumb"><a href="contact.html#"><img src="images/pdf_icon.png"  alt="" /></a></div>
                                 <div class="description">
-                                    <h6><a href="index.php#"> Facebook Week</a></h6>
-                                    <a href="index.php#"><em>(Posted on 17 Jan 11 , 2011)</em></a> </div>
-                            </li>
-                            <li>
-                                <div class="thumb"><a href="index.php#"><img src="images/ourcollege4.jpg"  alt="" /></a></div>
-                                <div class="description">
-                                    <h6><a href="index.php#">Queens Day (2010)</a></h6>
-                                    <a href="index.php#"><em>(Posted on 17 Jan 11 , 2011)</em></a> </div>
+                                    <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
+                                    <a class="gray1" href="contact.html#">March 2011 </a>
+                                </div>
                             </li>
                             <li class="nobg">
-                                <div class="thumb"><a href="index.php#"><img src="images/ourcollege4.jpg"  alt="" /></a></div>
+                                <div class="thumb"><a href="contact.html#"><img src="images/wordicon.png"  alt="" /></a></div>
                                 <div class="description">
-                                    <h6><a href="index.php#">International Students Day</a></h6>
-                                    <a href="index.php#"><em>(Posted on 17 Jan 11 , 2011)</em></a> </div>
+                                    <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
+                                    <a class="gray1" href="contact.html#">March 2011 </a>
+                                </div>
                             </li>
                         </ul>
                     </div>
