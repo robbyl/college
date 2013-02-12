@@ -31,7 +31,7 @@
                             <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td style="vertical-align: top">Course Description</td>
+                            <td style="vertical-align: top">Event Description</td>
                             <td><textarea name="description" required></textarea></td>
                         </tr>
                     </table>
