@@ -10,10 +10,11 @@
             <ul>
                 <li class="first">&nbsp;</li>
                 <li><a href="news.php">News</a></li>
-                <li><a href="events.php#">Events</a></li>
+                <li><a href="events.php">Events</a></li>
                 <!--<li><a href="index.php#">Jobs</a></li>-->
-                <li><a href="index.php#">Contact Us</a></li>
-                <li><a href="index.php#" style="padding-right: 0">Site Map</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+                <li><a href="sitemap.php">Site Map</a></li>
+                <li class="last"></li>
             </ul>
         </div>
         <div class="clear"></div>
