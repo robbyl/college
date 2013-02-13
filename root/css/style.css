@@ -19,6 +19,12 @@ body {
     color: #747474;
 }
 
+#bg {
+    background-image: url("../../images/bubble.png");
+    background-position: 50% 0%;
+    background-repeat: repeat-x;
+}
+
 ul {
     list-style: none;
 }

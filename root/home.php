@@ -43,7 +43,7 @@ $result_downloads = mysql_query($query_downloads) or die(mysql_error());
     </head>
 
     <body>
-        <div class="wrapper">
+        <div class="wrapper"  id="bg">
             <div id="pop-up"></div>
             <div class="header">
                 <ul class="nav">

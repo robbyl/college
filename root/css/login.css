@@ -19,6 +19,12 @@ body {
     color: #272727;
 }
 
+#bg {
+    background-image: url("../../images/bubble.png");
+    background-position: 50% 0%;
+    background-repeat: repeat-x;
+}
+
 .login-wrapper {
     width: 400px;
     height: 320px;
