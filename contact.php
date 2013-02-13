@@ -1,4 +1,4 @@
-<?php 
+<?php
 $values = explode('\\', __FILE__);
 $current_file_name = end($values);
 ?>
@@ -26,7 +26,7 @@ $current_file_name = end($values);
     </head>
     <body>
         <div class="wapper-header">
-            <?php include 'includes/header.php';?>
+            <?php include 'includes/header.php'; ?>
         </div>
         <div id="bg">
             <!-- Wapper Sec -->
@@ -102,17 +102,29 @@ $current_file_name = end($values);
                                 <h5>Quick Inquiry</h5>
                                 <ul class="inquiry">
                                     <li><input name="txtName" value="Name" type="text"
-                                               onfocus="if(this.value=='Name') {this.value='';}"
-                                               onblur="if(this.value=='') {this.value='Name';}"
+                                               onfocus="if (this.value == 'Name') {
+                                                           this.value = '';
+                                                       }"
+                                               onblur="if (this.value == '') {
+                                                           this.value = 'Name';
+                                                       }"
 
                                                /></li>
                                     <li><input name="txtEmail" value="Email"
-                                               onfocus="if(this.value=='Email') {this.value='';}"
-                                               onblur="if(this.value=='') {this.value='Email';}"
+                                               onfocus="if (this.value == 'Email') {
+                                                           this.value = '';
+                                                       }"
+                                               onblur="if (this.value == '') {
+                                                           this.value = 'Email';
+                                                       }"
                                                type="text" /></li>
                                     <li><input name="txtPhoneno" value="Phone Number"
-                                               onfocus="if(this.value=='Phone Number') {this.value='';}"
-                                               onblur="if(this.value=='') {this.value='Phone Number';}"
+                                               onfocus="if (this.value == 'Phone Number') {
+                                                           this.value = '';
+                                                       }"
+                                               onblur="if (this.value == '') {
+                                                           this.value = 'Phone Number';
+                                                       }"
                                                type="text" /></li>
                                     <li>
                                         <select name="txtcountry">
@@ -125,7 +137,6 @@ $current_file_name = end($values);
                                         <textarea  rows="0" cols="0" name="txtMessage" class="txtarea">Comments</textarea>
                                     </li>
 
-
                                 </ul>
                                 <div class="action1">
                                     <a href="contact.html#" class="btn1 left">Submit</a>
@@ -137,7 +148,7 @@ $current_file_name = end($values);
                                 <div class="map">
                                     <a href="contact.html#"><img src="images/map.gif"  alt="" /></a>
                                 </div>
-                                <div class="map_cities">
+<!--                                <div class="map_cities">
                                     <ul>
                                         <li><a href="contact.html#"><span>London</span></a> </li>
                                         <li><a href="contact.html#"><span>Surrey</span></a> </li>
@@ -145,61 +156,61 @@ $current_file_name = end($values);
                                         <li><a href="contact.html#"><span>Manchester</span></a> </li>
 
                                     </ul>
-                                </div>
+                                </div>-->
                             </div>
 
                             <div class="clear"></div>
                         </div>
                         <div class="clear"></div>
                         <!-- Contact Other Campuses -->
-                        <h2 class="cheadng">Contact Other Campuses</h2>
-                        <div class="contactblock">
-                            <div class="camuses_address">
-                                <ul>
-                                    <li>
-                                        <h5>Surrey</h5>
-                                        <div class="mailingaddress">
-                                            <p>Lempor hendrerit. Phasellus quis</p>
-                                            <p>lacus diam. Sed nisl ligula,</p>
-                                            <p>semper in ultricies sed</p>
-                                        </div>
-                                        <div class="teleno colr">+44 123 4567 89</div>
-                                        <div class="emailaddress">
-                                            <a href="contact.html#">surry@universityofcollege.com</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <h5>Kent</h5>
-                                        <div class="mailingaddress">
-                                            <p>Lempor hendrerit. Phasellus quis</p>
-                                            <p>lacus diam. Sed nisl ligula,</p>
-                                            <p>semper in ultricies sed</p>
-                                        </div>
-                                        <div class="teleno colr">+44 123 4567 89</div>
-                                        <div class="emailaddress">
-                                            <a href="contact.html#">surry@universityofcollege.com</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <h5>Manchester</h5>
-                                        <div class="mailingaddress">
-                                            <p>Lempor hendrerit. Phasellus quis</p>
-                                            <p>lacus diam. Sed nisl ligula,</p>
-                                            <p>semper in ultricies sed</p>
-                                        </div>
-                                        <div class="teleno colr">+44 123 4567 89</div>
-                                        <div class="emailaddress">
-                                            <a href="contact.html#">surry@universityofcollege.com</a>
-                                        </div>
-                                    </li>
-
-
-                                </ul>
-
-                            </div>
-
-
-                        </div>
+                        <!--<h2 class="cheadng">Contact Other Campuses</h2>
+                                                <div class="contactblock">
+                                                    <div class="camuses_address">
+                                                        <ul>
+                                                            <li>
+                                                                <h5>Surrey</h5>
+                                                                <div class="mailingaddress">
+                                                                    <p>Lempor hendrerit. Phasellus quis</p>
+                                                                    <p>lacus diam. Sed nisl ligula,</p>
+                                                                    <p>semper in ultricies sed</p>
+                                                                </div>
+                                                                <div class="teleno colr">+44 123 4567 89</div>
+                                                                <div class="emailaddress">
+                                                                    <a href="contact.html#">surry@universityofcollege.com</a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <h5>Kent</h5>
+                                                                <div class="mailingaddress">
+                                                                    <p>Lempor hendrerit. Phasellus quis</p>
+                                                                    <p>lacus diam. Sed nisl ligula,</p>
+                                                                    <p>semper in ultricies sed</p>
+                                                                </div>
+                                                                <div class="teleno colr">+44 123 4567 89</div>
+                                                                <div class="emailaddress">
+                                                                    <a href="contact.html#">surry@universityofcollege.com</a>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <h5>Manchester</h5>
+                                                                <div class="mailingaddress">
+                                                                    <p>Lempor hendrerit. Phasellus quis</p>
+                                                                    <p>lacus diam. Sed nisl ligula,</p>
+                                                                    <p>semper in ultricies sed</p>
+                                                                </div>
+                                                                <div class="teleno colr">+44 123 4567 89</div>
+                                                                <div class="emailaddress">
+                                                                    <a href="contact.html#">surry@universityofcollege.com</a>
+                                                                </div>
+                                                            </li>
+                        
+                        
+                                                        </ul>
+                        
+                                                    </div>
+                        
+                        
+                                                </div>-->
 
                         <div class="clear"></div>
                         <!-- col1 ends -->
@@ -243,51 +254,6 @@ $current_file_name = end($values);
                                 </li>
                             </ul>
                         </div>
-                        <div class="online_classes">
-                            <div class="crheading">
-                                <h5 class="olineclasses">Online Classes</h5>
-                                <a href="contact.html#">View More</a>
-                            </div>
-                            <ul>
-                                <li>
-                                    <div class="thumb"><a href="contact.html#"><img src="images/ourcollege1.jpg"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="contact.html#">National Sports Day</a></h6>
-                                        <a class="gray" href="contact.html#"><em>(Posted on 17 Jan 11 , 2011)</em></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="thumb"><a href="contact.html#"><img src="images/ourcollege2.jpg"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="contact.html#"> Annual Walk (2010)</a></h6>
-                                        <a href="contact.html#"><em>(Posted on 17 Jan 11 , 2011)</em></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="thumb"><a href="contact.html#"><img src="images/ourcollege3.jpg"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="contact.html#"> Facebook Week</a></h6>
-                                        <a href="contact.html#"><em>(Posted on 17 Jan 11 , 2011)</em></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="thumb"><a href="contact.html#"><img src="images/ourcollege4.jpg"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="contact.html#">Queens Day (2010)</a></h6>
-                                        <a href="contact.html#"><em>(Posted on 17 Jan 11 , 2011)</em></a>
-                                    </div>
-                                </li>
-                                <li class="nobg">
-                                    <div class="thumb"><a href="contact.html#"><img src="images/ourcollege4.jpg"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="contact.html#">International Students Day</a></h6>
-                                        <a href="contact.html#"><em>(Posted on 17 Jan 11 , 2011)</em></a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-
                         <div class="clear"></div>
                         <!--col2 ends -->
                     </div>
@@ -298,22 +264,6 @@ $current_file_name = end($values);
                 <div class="clear"></div>
             </div>
         </div>
-        <?php include 'includes/footer.php';?>
+        <?php include 'includes/footer.php'; ?>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
