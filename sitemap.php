@@ -32,74 +32,18 @@ $current_file_name = end($values);
             <!-- Wapper Sec -->
             <div id="wrapper_sec">
                 <div id="content_section">
-                    <div class="clear"></div>
-                    <!-- Gallery -->
-                    <div class="gallery">
-                        <div class="gallery_top">
-                            <div class="sheadings">
+                    <div class="col1">
+                        <div class="content_heading">
+                            <div class="heading">
                                 <h2>Site Map</h2>
-<!--                                <ul>
-                                    <li><a href="index.php">Home</a></li>
-                                    <li><a href="#">About Us</a>
-                                        <ul>
-                                            <li><a href="#">Background</a></li>
-                                            <li><a href="#">Mission, Vision & Values</a></li>
-                                            <li><a href="#">Institute Structure</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Admissions</a>
-                                        <ul>
-                                            <li><a href="#">Entry requirements</a></li>
-                                            <li><a href="#">Application Form</a></li>
-                                            <li><a href="#">Fee Structure</a></li>
-                                            <li><a href="#">Programmes</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="course.php">Academics</a>
-                                        <ul>
-                                            <li><a href="course.php">Library</a></li>
-                                            <li><a href="course.php">Laboratory</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="research.php#">Research</a></li>
-                                    <li><a href="#">Campus Life</a>
-                                        <ul>
-                                            <li><a href="#">Hostel Information</a></li>
-                                            <li><a href="#">Student Organization</a></li>
-                                            <li><a href="#">Religion Life</a></li>
-                                            <li><a href="#">Spots and Games</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="gallery.php">Gallery</a></li>
-                                    <li><a href="contact.php">Contact Us</a>
-                                        <li><a href="sitemap.php">Site Map</a>
-                                                                    <ul>
-                                                                        <li><a href="index.php">Home</a></li>
-                                                                        <li><a href="course.html">Courses</a></li>
-                                                                        <li><a href="blog.html">Blog</a></li>
-                                                                        <li><a href="blogdetail.html">Blog Detail</a></li>
-                                                                        <li><a href="news.html">News</a></li>
-                                                                        <li><a href="gallery.html">Gallery</a></li>
-                                                                        <li><a href="contact.html">Contact</a></li>
-                                                                        <li><a href="static.html">Static</a></li>
-                                                                    </ul>
-                                        </li>
-                                                            <li><a href="index.php#" class="last">Themes</a>
-                                                                <ul>
-                                                                    <li><a href="index.php">Blue</a></li>
-                                                                    <li><a href="../green/index.html">Green</a></li>
-                                                                    <li><a href="../gray/index.html">Gray</a></li>
-                                                                    <li><a href="../teal/index.html">Teal</a></li>
-                                                                </ul>
-                                                            </li>
-                                </ul>-->
                             </div>
-
-                            <div class="clear"></div>
                         </div>
-                        <!-- Col1 -->
-
+                        <div class="clear"></div>
+                        <div class="site-map">
+                            <?php include 'includes/navigation.php'; ?>
+                        </div>
                     </div>
+                    <!-- Col1 -->
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
@@ -109,19 +53,3 @@ $current_file_name = end($values);
         <?php include 'includes/footer.php'; ?>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
