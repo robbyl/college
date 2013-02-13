@@ -13,8 +13,8 @@
         </script>
     </head>
 
-    <body>
-        <div class="main-wrapper">
+    <body id="bg">
+        <div class="main-wrapper" >
 
             <?php
             // showing errors and messages

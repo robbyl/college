@@ -19,6 +19,12 @@ body {
     color: #272727;
 }
 
+#bg {
+    background-image: url("../../images/bubble.png");
+    background-position: 50% 0%;
+    background-repeat: repeat-x;
+}
+
 .login-wrapper {
     width: 400px;
     height: 320px;
@@ -34,12 +40,12 @@ body {
 }
 
 .login-header {
-	height: 50px;
+    height: 50px;
     font-size: 30px;
-	border: 1px solid #fff;
-	background: url(../images/softbill_logo.png) no-repeat 20px center;
-	background-color: #ffc28b;
-	margin-bottom: 55px;
+    border: 1px solid #fff;
+    background: url(../images/) no-repeat 20px center;
+    background-color: #0086B2;
+    margin-bottom: 55px;
 }
 
 .text-box {
