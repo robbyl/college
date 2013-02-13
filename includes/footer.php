@@ -46,10 +46,12 @@
             <h5>Contact Us</h5>
             <ul>
                 <li class="telephone_no">+44 (12) 123 4567 891</li>
-                <li  class="mailing_address"> Lorem ipsum dolor sit amet
-                    consectetur adipis. </li>
+                <li  class="mailing_address">
+                    <p>Royal pharmaceutical training institute,</p>
+                    <p>P.O.Box 100198,</p>
+                    <p>Dar es Salaam.</p>
+                </li>
                 <li class="email_address"><a href="index.php#">info@college.com</a></li>
-                <li class="googlemaps"><a href="index.php#">Google Maps</a></li>
             </ul>
         </div>
         <div class="clear"></div>
