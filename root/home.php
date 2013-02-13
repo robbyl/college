@@ -301,8 +301,8 @@ $result_downloads = mysql_query($query_downloads) or die(mysql_error());
                     </div>
                     <div class="tab_content" id="tab5" style="display:none" >
                         <div class="root-heading">
-                            <h2 class="label">Manage News</h2>
-                            <button class="post news" >Post news</button>
+                            <h2 class="label">Manage organization structure</h2>
+                            <button class="post org" >Post org structure</button>
                             <div style="clear: both"></div>
                         </div>
 
