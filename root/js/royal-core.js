@@ -136,6 +136,11 @@ $(document).ready(function() {
         getPopForm(this.href);
     });
 
+    $('a.edit-download').click(function(event) {
+        event.preventDefault();
+        getPopForm(this.href);
+    });
+
     $('.news').click(function(event) {
         event.preventDefault();
         getPopForm('post_news.php');
