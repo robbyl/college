@@ -46,7 +46,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                             <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td style="vertical-align: top">News Description</td>
+                            <td style="vertical-align: top">Course Description</td>
                             <td><textarea name="description" required><?php echo $row_courses['course_description']; ?></textarea></td>
                         </tr>
                     </table>
