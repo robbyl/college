@@ -257,12 +257,12 @@ input {
     background-image: url(../images/toplinks_sep.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    color: #aaaaaa;
+    color: #d0d0d0;
     line-height: 30px;
     font-size: 11px;
     float: left;
     padding-top: 0;
-    padding-right: 8px;
+    padding-right: 25px;
     padding-bottom: 0;
     padding-left: 25px;
 }

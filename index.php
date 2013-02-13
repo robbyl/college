@@ -135,9 +135,9 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                                             <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>"><?php echo $row_news['nws_title'] ?></a></h6>
                                             <em>
                                                 (Posted on <?php
-                                $posted = date_create($row_news['nws_posted_date']);
-                                echo date_format($posted, 'd M, Y')
-                                    ?>)
+                                                $posted = date_create($row_news['nws_posted_date']);
+                                                echo date_format($posted, 'd M, Y')
+                                                ?>)
                                             </em>
                                             <p><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>" class="gray" ><?php echo $row_news['nws_description'] ?></a></p>
                                         </div>
@@ -182,34 +182,27 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                     <div class="college_gallery">
                         <h5>Downloads</h5>
                         <ul>
-                            <li>
-                                <div class="thumb"><a href="contact.html#"><img src="images/pdf_icon.png"  alt="" /></a></div>
-                                <div class="description">
-                                    <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
-                                    <a class="gray1" href="contact.html#">March 2011 </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumb"><a href="contact.html#"><img src="images/wordicon.png"  alt="" /></a></div>
-                                <div class="description">
-                                    <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
-                                    <a class="gray1" href="contact.html#">March 2011 </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumb"><a href="contact.html#"><img src="images/pdf_icon.png"  alt="" /></a></div>
-                                <div class="description">
-                                    <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
-                                    <a class="gray1" href="contact.html#">March 2011 </a>
-                                </div>
-                            </li>
-                            <li class="nobg">
-                                <div class="thumb"><a href="contact.html#"><img src="images/wordicon.png"  alt="" /></a></div>
-                                <div class="description">
-                                    <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
-                                    <a class="gray1" href="contact.html#">March 2011 </a>
-                                </div>
-                            </li>
+                            <?php
+                            while ($row_download = mysql_fetch_array($result_donwloads)) {
+                                $posted = date_create($row_download['dwn_date_uploaded']);
+                                ?>
+                                <li>
+                                    <div class="thumb"><a href="root/uploads/downloads/<?php echo $row_download['dwn_file_name'] ?>"><img src="images/pdf_icon.png"  alt="" /></a></div>
+                                    <div class="description">
+                                        <h6><a href="root/uploads/downloads/<?php echo $row_download['dwn_file_name'] ?>"><?php echo $row_download['dwn_title'] ?></a></h6>
+                                        <a class="gray1" href="root/uploads/downloads/<?php echo $row_download['dwn_file_name'] ?>"><?php echo date_format($posted, 'd M, Y') ?></a>
+                                    </div>
+                                </li>
+                                <?php
+                            }
+                            ?>
+                            <!--                            <li>
+                                                            <div class="thumb"><a href="contact.html#"><img src="images/wordicon.png"  alt="" /></a></div>
+                                                            <div class="description">
+                                                                <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
+                                                                <a class="gray1" href="contact.html#">March 2011 </a>
+                                                            </div>
+                                                        </li>-->
                         </ul>
                     </div>
                     <div class="clear"></div>
