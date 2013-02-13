@@ -267,19 +267,3 @@ $current_file_name = end($values);
         <?php include 'includes/footer.php'; ?>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
