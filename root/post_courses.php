@@ -27,14 +27,14 @@
                             <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td style="vertical-align: top">Course Description</td>
+                            <td style="vertical-align: top">Course description</td>
                             <td><textarea name="description" required></textarea></td>
                         </tr>
                     </table>
                 </form>
                 <div class="pop-up-footer">
                     <button type="reset" class="post" style="margin-right: 0" form="news-form">Cancel</button>
-                    <button type="submit" class="post" form="courses-form">Update</button>
+                    <button type="submit" class="post" form="courses-form">Post</button>
                     <div style="clear: both"></div>
                 </div>
             </div>

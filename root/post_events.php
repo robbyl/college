@@ -38,7 +38,7 @@
                 </form>
                 <div class="pop-up-footer">
                     <button type="reset" class="post" style="margin-right: 0" form="news-form">Cancel</button>
-                    <button type="submit" class="post" form="event-form">Update</button>
+                    <button type="submit" class="post" form="event-form">Post</button>
                     <div style="clear: both"></div>
                 </div>
             </div>

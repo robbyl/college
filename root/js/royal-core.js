@@ -156,6 +156,11 @@ $(document).ready(function() {
         getPopForm('upload_downloads.php');
     });
 
+    $('.org').click(function(event) {
+        event.preventDefault();
+        getPopForm('post_org_structure.php');
+    });
+
 });
 
 $(function() {

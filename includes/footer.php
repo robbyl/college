@@ -13,7 +13,7 @@
         <div class="quick_links">
             <h5>ICT Links</h5>
             <ul>
-                <li><a href="index.php#">Administration</a></li>
+                <li><a href="root/index.php">Administration</a></li>
                 <li><a href="index.php#">Staff Mail</a></li>
                 <!--                    <li><a href="index.php#"></a></li>
                                     <li><a href="index.php#">Campus Notices</a></li>
