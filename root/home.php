@@ -1,4 +1,7 @@
 <?php
+
+require 'session_validator.php';
+
 session_start();
 $user_name = $_SESSION['username'];
 session_commit();

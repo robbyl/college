@@ -68,7 +68,7 @@ require '../config/config.php';
 require '../functions/general_functions.php';
 
 $query_news = "INSERT INTO courses
-                      (nws_title, nws_posted_date, nws_description, nws_attachment, nws_image)
+                      (course_title, nws_posted_date, course_description, nws_attachment, nws_image)
                VALUES ('$title', CURRENT_TIMESTAMP(), '$description', '$file_name', '$image_name')";
 
 $result_news = mysql_query($query_news) or die(mysql_error());

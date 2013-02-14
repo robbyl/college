@@ -67,11 +67,13 @@ $current_file_name = end($values);
                                 <h5>Postal Adress</h5>
 
                                 <div class="mailingaddress">
-                                    <p>Lempor hendrerit. Phasellus quis</p>
-                                    <p>lacus diam. Sed nisl ligula,</p>
-                                    <p>semper in ultricies sed</p>
+                                    <p>Royal pharmaceutical training institute,</p>
+                                    <p>P.O.Box 100198,</p>
+                                    <p>Dar es Salaam.</p>
                                 </div>
-                                <div class="teleno colr">+44 123 4567 89, +44 123 4567 89</div>
+                                <div class="teleno colr">
+                                    +255 713 353 310, +255 765 353 310
+                                </div>
                                 <div class="teleno1 colr">+44 123 4567 89</div>
                                 <div class="emailaddress">
                                     <a href="contact.html#">info@universityofcollege.com</a>
@@ -82,11 +84,11 @@ $current_file_name = end($values);
                                 <!-- Visit Address -->
                                 <h5>Visit Adress</h5>
                                 <div class="mailingaddress">
-                                    <p>Lempor hendrerit. Phasellus quis</p>
-                                    <p>lacus diam. Sed nisl ligula,</p>
-                                    <p>semper in ultricies sed</p>
+                                    <p>Plot No.1</p>
+                                    <p>Block C - Mbande</p>
+                                    <p>Temeke District.</p>
                                 </div>
-                                <div class="teleno colr">+44 123 4567 89, +44 123 4567 89</div>
+                                <div class="teleno colr">+255 713 325 507, +255 688 353 310</div>
                                 <div class="emailaddress">
                                     <a href="contact.html#">info@universityofcollege.com</a>
                                     <a href="contact.html#">www.universityofcollege.com</a>
@@ -148,15 +150,15 @@ $current_file_name = end($values);
                                 <div class="map">
                                     <a href="contact.html#"><img src="images/map.gif"  alt="" /></a>
                                 </div>
-<!--                                <div class="map_cities">
-                                    <ul>
-                                        <li><a href="contact.html#"><span>London</span></a> </li>
-                                        <li><a href="contact.html#"><span>Surrey</span></a> </li>
-                                        <li><a href="contact.html#"><span>Kent</span></a> </li>
-                                        <li><a href="contact.html#"><span>Manchester</span></a> </li>
-
-                                    </ul>
-                                </div>-->
+                                <!--                                <div class="map_cities">
+                                                                    <ul>
+                                                                        <li><a href="contact.html#"><span>London</span></a> </li>
+                                                                        <li><a href="contact.html#"><span>Surrey</span></a> </li>
+                                                                        <li><a href="contact.html#"><span>Kent</span></a> </li>
+                                                                        <li><a href="contact.html#"><span>Manchester</span></a> </li>
+                                
+                                                                    </ul>
+                                                                </div>-->
                             </div>
 
                             <div class="clear"></div>
