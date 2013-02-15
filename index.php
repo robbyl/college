@@ -70,13 +70,13 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                     <div id="banner">
                         <div id="wowslider-container1">
                             <div class="ws_images"><ul>
-                                    <li><img src="data1/images/banner1.jpg" alt="Graduants" title="Graduants" id="wows1_0"/></li>
+                                    <li><img src="data1/images/banner1.jpg" alt="Graduates" title="Graduates" id="wows1_0"/></li>
                                     <li><img src="data1/images/picture027.jpg" alt="Lecture rooms" title="Lecture rooms" id="wows1_1"/></li>
                                     <li><img src="data1/images/picture028.jpg" alt="Students" title="Students" id="wows1_2"/></li>
                                     <li><img src="data1/images/picture025.jpg" alt="Buildings" title="Buildings" id="wows1_3"/></li>
                                 </ul></div>
                             <div class="ws_bullets"><div>
-                                    <a href="#" title="Graduants"><img src="data1/tooltips/banner1.jpg" alt="Graduants"/>1</a>
+                                    <a href="#" title="Graduants"><img src="data1/tooltips/banner1.jpg" alt="Graduates"/>1</a>
                                     <a href="#" title="Lecture rooms"><img src="data1/tooltips/picture027.jpg" alt="Lecture rooms"/>2</a>
                                     <a href="#" title="Students"><img src="data1/tooltips/picture028.jpg" alt="Students"/>3</a>
                                     <a href="#" title="Buildings"><img src="data1/tooltips/picture025.jpg" alt="Buildings"/>4</a>

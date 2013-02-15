@@ -37,8 +37,7 @@ if ($news_image !== $image_name && !empty($image_name)) {
                              WHERE nws_id = '$id'";
 
             $result_image = mysql_query($query_image) or die(mysql_error());
-
-            echo 'uploaded';
+            
         }
     } else {
 

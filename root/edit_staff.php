@@ -42,7 +42,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                         </tr>
                         <tr>
                             <td width="200">Position</td>
-                            <td><input type="text" name="title" value="<?php echo $row_staff['position']?>"class="text" required></td>
+                            <td><input type="text" name="position" value="<?php echo $row_staff['position']?>"class="text" required></td>
                         </tr>
                         
                     </table>

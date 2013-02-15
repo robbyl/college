@@ -1,4 +1,5 @@
 <?php
+
 require '../config/config.php';
 require '../functions/general_functions.php';
 
@@ -6,31 +7,33 @@ $title = clean($_POST['title']);
 $description = clean($_POST['description']);
 $image_name = clean($_FILES['image']['name']); // Get image name
 $file_name = clean($_FILES['attachment']['name']); // Get file name
-
+//
 // Get and upload image file
 $allowed_img_ext = array("jpg", "jpeg", "gif", "png");
 
 $image_extenstion = end(explode(".", $image_name));
 
-if (in_array($image_extenstion, $allowed_img_ext) && in_array($image_extenstion, $allowed_img_ext)) {
+if (!empty($image_name)) {
 
-    // Checking file for errors
-    if ($_FILES["image"]["error"] > 0) {
+    if (in_array($image_extenstion, $allowed_img_ext)) {
 
-        $message = "This file contain errors. Return Code: " . $_FILES["image"]["error"];
-        //info('error', $message);
+        // Checking file for errors
+        if ($_FILES["image"]["error"] > 0) {
+
+            $message = "This file contain errors. Return Code: " . $_FILES["image"]["error"];
+            //info('error', $message);
+        } else {
+
+            // Uploading it to image folder.
+            move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/images/" . $image_name);
+            
+        }
     } else {
 
-        // Uploading it to image folder.
-        move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/images/" . $image_name);
-
-        echo 'uploaded';
+        info('error', 'This image type is not allowed');
+        header('Location: home.php');
+        exit(0);
     }
-} else {
-
-    info('error', 'This image type is not allowed');
-    header('Location: home.php');
-    exit(0);
 }
 
 // Get and upload attachment file

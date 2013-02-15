@@ -9,7 +9,7 @@ $position = clean($_POST['position']);
 
 $query_org = "INSERT INTO staff
                       (staff_title, position, posted_date, staff_image)
-               VALUES ('$title', '$position',CURRENT_TIMESTAMP(), '$image_name')";
+               VALUES ('$title', '$position', CURRENT_TIMESTAMP(), '$image_name')";
 
 $result_org = mysql_query($query_org) or die(mysql_error());
 

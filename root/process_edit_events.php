@@ -37,16 +37,12 @@ if ($event_image !== $event_image && !empty($event_image)) {
                              WHERE event_id = '$id'";
 
             $result_image = mysql_query($query_image) or die(mysql_error());
-
-            echo 'uploaded';
         }
     } else {
 
-        echo 'invalid image format';
-
-//    info('error', 'This file type is not allowed');
-//    header('Location: settings.php');
-//    exit(0);
+        info('error', 'This file type is not allowed');
+        header('Location: home.php');
+        exit(0);
     }
 }
 
@@ -80,11 +76,9 @@ if ($event_attachment !== $attachment_name && !empty($attachment_name)) {
         }
     } else {
 
-        echo 'invalid file format';
-
-//    info('error', 'This file type is not allowed');
-//    header('Location: settings.php');
-//    exit(0);
+        info('error', 'This file type is not allowed');
+        header('Location: home.php');
+        exit(0);
     }
 }
 

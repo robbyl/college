@@ -19,10 +19,10 @@
                         </tr>
                         <tr>
                             <td>Image</td>
-                            <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
+                            <td><input type="file" name="image" required="" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td width="200">Possition</td>
+                            <td width="200">Position</td>
                             <td><input type="text" name="position" class="text" required></td>
                         </tr>
                     </table>

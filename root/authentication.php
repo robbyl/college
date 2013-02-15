@@ -1,14 +1,9 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 require '../config/config.php';
 require '../functions/general_functions.php';
 
-$username = $_POST['username'];
+$username = clean($_POST['username']);
 $password = sha1($_POST['password']);
 
 $query_user = "SELECT user_id, username, password

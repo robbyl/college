@@ -5,6 +5,7 @@ require '../functions/general_functions.php';
 
 $title = clean($_POST['title']);
 $file_name = clean($_FILES['download']['name']); // Get file name
+
 // Get and upload attachment file
 $allowed_file_ext = array("pdf", "doc", "docx");
 

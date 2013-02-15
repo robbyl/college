@@ -1,43 +1,41 @@
 <?php
 
-$title = $_POST['title'];
-$description = $_POST['description'];
+require '../functions/general_functions.php';
 
+$title = clean($_POST['title']);
+$description = clean($_POST['description']);
+$image_name = clean($_FILES["image"]["name"]); // Get image name
 // Get and upload image file
 $allowed_img_ext = array("jpg", "jpeg", "gif", "png");
 
-$image_extenstion = end(explode(".", $_FILES["image"]["name"]));
+$image_extenstion = end(explode(".", $image_name));
 
-if (in_array($image_extenstion, $allowed_img_ext) && in_array($image_extenstion, $allowed_img_ext)) {
+if (!empty($image_name)) {
+    if (in_array($image_extenstion, $allowed_img_ext)) {
 
-    // Checking file for errors
-    if ($_FILES["image"]["error"] > 0) {
+        // Checking file for errors
+        if ($_FILES["image"]["error"] > 0) {
 
-        $message = "This file contain errors. Return Code: " . $_FILES["image"]["error"];
-        //info('error', $message);
+            $message = "This file contain errors. Return Code: " . $_FILES["image"]["error"];
+            //info('error', $message);
+        } else {
+
+            // Uploading it to image folder.
+            move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/images/" . $image_name);
+        }
     } else {
 
-        // Get image name
-        $image_name = $_FILES['image']['name'];
-
-        // Uploading it to image folder.
-        move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/images/" . $image_name);
-        
-       echo 'uploaded';
+        info('error', 'This file type is not allowed');
+        header('Location: settings.php');
+        exit(0);
     }
-} else {
-    
-    echo 'invalid image format';
-
-//    info('error', 'This file type is not allowed');
-//    header('Location: settings.php');
-//    exit(0);
 }
 
 // Get and upload attachment file
 $allowed_file_ext = array("pdf", "doc", "docx");
+$file_name = $_FILES['attachment']['name']; // Get file name
 
-$extension = end(explode(".", $_FILES["attachment"]["name"]));
+$extension = end(explode(".", $file_name));
 
 if (in_array($extension, $allowed_file_ext) && ($_FILES["attachment"]["size"] < 100000000)) {
 
@@ -45,23 +43,18 @@ if (in_array($extension, $allowed_file_ext) && ($_FILES["attachment"]["size"] < 
     if ($_FILES["attachment"]["error"] > 0) {
 
         $message = "This file contain errors. Return Code: " . $_FILES["attachment"]["error"];
-        //info('error', $message);
+        info('error', $message);
+        header('Location: home.php');
     } else {
 
-        // Get file name
-        $file_name = $_FILES['attachment']['name'];
-
         // Uploading it to doc folder.
-         move_uploaded_file($_FILES["attachment"]["tmp_name"], "uploads/docs/" . $file_name);
+        move_uploaded_file($_FILES["attachment"]["tmp_name"], "uploads/docs/" . $file_name);
     }
-    
 } else {
-   
-    echo 'invalid file format';
 
-//    info('error', 'This file type is not allowed');
-//    header('Location: settings.php');
-//    exit(0);
+    info('error', 'This file type is not allowed');
+    header('Location: home.php');
+    exit(0);
 }
 
 require '../config/config.php';
@@ -73,12 +66,11 @@ $query_news = "INSERT INTO events
 
 $result_news = mysql_query($query_news) or die(mysql_error());
 
-if($result_news){
+if ($result_news) {
     info('message', 'Events posted successfully!');
     header('Location: home.php');
 } else {
     info('error', 'Cannot post events!');
     header('Location: home.php');
 }
-
 ?>

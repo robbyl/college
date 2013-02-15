@@ -35,14 +35,12 @@ if ($staff_image !== $image_name && !empty($image_name)) {
                              WHERE staff_id = '$id'";
 
             $result_image = mysql_query($query_image) or die(mysql_error());
-
-            echo 'uploaded';
         }
     } else {
 
-    info('error', 'This image type is not allowed');
-    header('Location: home.php');
-    exit(0);
+        info('error', 'This image type is not allowed');
+        header('Location: home.php');
+        exit(0);
     }
 }
 
