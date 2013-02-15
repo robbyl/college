@@ -28,7 +28,7 @@
                         </tr>
                         <tr>
                             <td width="200">Possition</td>
-                            <td><input type="text" name="title" class="text" required></td>
+                            <td><input type="text" name="position" class="text" required></td>
                         </tr>
                     </table>
                 </form>
