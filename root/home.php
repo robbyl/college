@@ -336,7 +336,7 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                                         echo '<td>' . $row_staff['position'] . '</td>';
                                         echo '<td>' . date_format($posted_date, 'd M, Y @ H:i') . '</td>';
                                         echo '<td><a href="uploads/docs/' . $row_staff['staff_image'] . '">' . $row_staff['staff_image'] . '</a></td>';
-                                        echo '<td><a href="edit_0rg_structure.php?id=' . $row_staff['staff_id'] . '" class="edit-org">Edit</a></td>';
+                                        echo '<td><a href="edit_staff.php?id=' . $row_staff['staff_id'] . '" class="edit-staff">Edit</a></td>';
                                         echo '<td><a href="delete_staff.php?id=' . $row_staff['staff_id'] . '" onClick="return confirm(\'Are you sure you want to delete this news\');">Delete</a></td>';
                                         echo '</tr>';
                                     }

@@ -8,30 +8,30 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = clean($_GET['id']);
 
     // Obtaining download file name according to the given id
-    $query_attachment = "SELECT dwn_file_name
-                           FROM downloads
-                          WHERE dwn_id = '$id'
+    $query_image = "SELECT staff_image
+                           FROM staff
+                          WHERE staff_id = '$id'
                           LIMIT 1";
 
-    $result_attachment = mysql_query($query_attachment) or die(mysql_error());
+    $result_image = mysql_query($query_image) or die(mysql_error());
 
-    $attachment = mysql_fetch_array($result_attachment);
+    $image = mysql_fetch_array($result_image);
 
-    $attachment_name = $attachment['dwn_file_name'];
+    $image_name = $image['staff_image'];
 
     // Obtaining download file path
-    $attachment_path = 'uploads/downloads/' . $attachment_name;
+    $image_path = 'uploads/downloads/' . $image_name;
 
     // Deleting download file.
-    unlink($attachment_path);
+    unlink($image_path);
 
     // Deleting download detail in the database.
-    $query_downloads = "DELETE FROM downloads
-                         WHERE dwn_id = '$id'";
+    $query_staff = "DELETE FROM staff
+                         WHERE staff_id = '$id'";
 
-    $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
+    $result_staff = mysql_query($query_staff) or die(mysql_error());
 
-    if ($result_donwloads) {
+    if ($result_staff) {
         info('message', 'Staff deleted successfully!');
         header('Location: home.php');
     } else {
@@ -39,7 +39,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         header('Location: home.php');
     }
 } else {
-    info('error', 'Invalid download id');
+    info('error', 'Invalid staff id');
     header('Location: home.php');
 }
 ?>
