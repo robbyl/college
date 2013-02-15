@@ -20,7 +20,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $image_name = $image['staff_image'];
 
     // Obtaining download file path
-    $image_path = 'uploads/downloads/' . $image_name;
+    $image_path = 'uploads/images/' . $image_name;
 
     // Deleting download file.
     unlink($image_path);

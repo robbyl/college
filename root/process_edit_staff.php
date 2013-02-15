@@ -5,8 +5,8 @@ require '../functions/general_functions.php';
 
 $id = clean($_POST['id']);
 $title = clean($_POST['title']);
-$staff_image = clean($_POST['image']);
-$image_name = clean($_FILES['image']['name']); // Get image name
+$staff_image = clean($_POST['image']); //image from a database
+$image_name = clean($_FILES['image']['name']); //image name from a submitted form
 $position = clean($_POST['position']);
 
 if ($staff_image !== $image_name && !empty($image_name)) {

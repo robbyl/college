@@ -310,7 +310,7 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                     <div class="tab_content" id="tab5" style="display:none" >
                         <div class="root-heading">
                             <h2 class="label">Manage organization structure</h2>
-                            <button class="post org" >Post org structure</button>
+                            <button class="post staff" >Post staff</button>
                             <div style="clear: both"></div>
                         </div>
 

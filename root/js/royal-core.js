@@ -166,9 +166,9 @@ $(document).ready(function() {
         getPopForm('upload_downloads.php');
     });
 
-    $('.org').click(function(event) {
+    $('.staff').click(function(event) {
         event.preventDefault();
-        getPopForm('post_org_structure.php');
+        getPopForm('post_staff.php');
     });
 
     $('.close').live('click', function() {
