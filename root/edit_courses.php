@@ -29,16 +29,12 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
                 <div class="pop-up-header">Edit courses<div class="close"></div></div>
-                <form class="pop-up-form" id="news-form" action="process_edit_courses.php" method="POST" enctype="multipart/form-data">
+                <form class="pop-up-form" id="courses-form" action="process_edit_courses.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $row_courses['course_id'] ?>" />
                     <table border="0" width="100%">
                         <tr>
                             <td width="200">Title</td>
                             <td><input type="text" name="title" value="<?php echo $row_courses['course_title'] ?>" class="text" required></td>
-                        </tr>
-                        <tr>
-                            <td>Attachment</td>
-                            <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
                             <td style="vertical-align: top">Course Description</td>
@@ -47,8 +43,8 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                     </table>
                 </form>
                 <div class="pop-up-footer">
-                    <button type="reset" class="post" style="margin-right: 0" form="news-form">Cancel</button>
-                    <button type="submit" class="post" form="news-form">Update</button>
+                    <button type="reset" class="post" style="margin-right: 0" form="courses-form">Cancel</button>
+                    <button type="submit" class="post" form="courses-form">Update</button>
                     <div style="clear: both"></div>
                 </div>
             </div>
