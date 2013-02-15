@@ -1,6 +1,6 @@
         <ul>
             <li class="first"><a href="index.php"  class="<?php if ($current_file_name === 'index.php') echo 'current' ?>">Home</a></li>
-            <li><a href="" class="<?php if ($current_file_name === 'about.php') echo 'current' ?>">About Us</a>
+            <li><a href="#" class="<?php if ($current_file_name === 'about.php') echo 'current' ?>">About Us</a>
                 <ul>
                     <li><a href="background.php">Background</a></li>
                     <li><a href="mission.php">Mission, Vision & Goals</a></li>
@@ -15,13 +15,13 @@
                     <li><a href="#">Programmes</a></li>
                 </ul>
             </li>
-            <li><a href="course.php"  class="<?php if ($current_file_name === 'course.php') echo 'current' ?>">Academics</a>
+            <li><a href="#"  class="<?php if ($current_file_name === 'course.php') echo 'current' ?>">Academics</a>
                 <ul>
-                    <li><a href="course.php">Library</a></li>
-                    <li><a href="course.php">Laboratory</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Laboratory</a></li>
                 </ul>
             </li>
-            <li><a href="research.php#" class="<?php if ($current_file_name === 'research.php') echo 'current' ?>">Research</a></li>
+            <li><a href="#" class="<?php if ($current_file_name === 'research.php') echo 'current' ?>">Research</a></li>
             <li><a href="#" class="<?php if ($current_file_name === 'campus.php') echo 'current' ?>">Campus Life</a>
                 <ul>
                     <li><a href="#">Hostel Information</a></li>

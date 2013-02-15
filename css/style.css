@@ -1121,10 +1121,12 @@ ul.advance_option li.selected a {
     width: 42px;
     height: 42px;
     float: left;
+    background-color: #efefef;
 }
 
 .rtab_content ul li .thumb img {
     border: solid 1px #d5d5d5;
+    width: 42px;
 }
 
 .rtab_content ul li .description {
@@ -1539,11 +1541,14 @@ ul.listing li.last {
 
 ul.listing li .thumb {
     width: 126px;
+    height: 126px;
     float: left;
+    background-color: #efefef;
 }
 
 ul.listing li .thumb img {
     border: solid 2px #dcdcdc;
+    width: 126px;
 }
 
 ul.listing li .description {

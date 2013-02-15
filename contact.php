@@ -52,11 +52,11 @@ $current_file_name = end($values);
                         </div>
                         <div class="clear"></div>
                         <!-- Note -->
-                        <div class="note1">
+<!--                        <div class="note1">
                             <a href="contact.html#" class="close close1">&nbsp;</a>
                             <p >
                                 <strong> NOTE:</strong>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui dolor. Fusce auctor dolor a diam tincidunt quis malesuada tellus.					</p>
-                        </div>
+                        </div>-->
                         <div class="clear"></div>
                         <p class="contact_text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui dolor. Fusce auctor dolor a diam tincidunt quis malesuada tellus auctor.                                  Integer samet lorem ac ligula interdum elementum. Maecenas lectus mauris.
@@ -74,10 +74,10 @@ $current_file_name = end($values);
                                 <div class="teleno colr">
                                     +255 713 353 310, +255 765 353 310
                                 </div>
-                                <div class="teleno1 colr">+44 123 4567 89</div>
+                                <!--<div class="teleno1 colr">+44 123 4567 89</div>-->
                                 <div class="emailaddress">
-                                    <a href="contact.html#">info@universityofcollege.com</a>
-                                    <a href="contact.html#">www.universityofcollege.com</a>
+                                    <a href="mailto:info@royalpharm.ac.tz">info@royalpharm.ac.tz</a>
+                                    <a href="">www.royalpharm.ac.tz</a>
                                 </div>
                             </div>
                             <div class="block2">
@@ -89,11 +89,11 @@ $current_file_name = end($values);
                                     <p>Temeke District.</p>
                                 </div>
                                 <div class="teleno colr">+255 713 325 507, +255 688 353 310</div>
-                                <div class="emailaddress">
+<!--                                <div class="emailaddress">
                                     <a href="contact.html#">info@universityofcollege.com</a>
                                     <a href="contact.html#">www.universityofcollege.com</a>
                                 </div>
-                                <div class="contacticon colr"> 464 64 65 4 64 56</div>
+                                <div class="contacticon colr"> 464 64 65 4 64 56</div>-->
 
                             </div>
                             <div class="clear"></div>
@@ -219,43 +219,12 @@ $current_file_name = end($values);
                     </div>
                     <!-- Col2 -->
                     <div class="col2">
-                        <!-- Downloads Gallery -->
-                        <div class="course_right">
-                            <div class="crheading">
-                                <h5 class="download" >Downloads</h5>
-                                <a href="contact.html#">View More</a>
-                            </div>
-                            <ul>
-                                <li>
-                                    <div class="thumb"><a href="contact.html#"><img src="images/pdf_icon.png"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
-                                        <a class="gray1" href="contact.html#">March 2011 </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="thumb"><a href="contact.html#"><img src="images/wordicon.png"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
-                                        <a class="gray1" href="contact.html#">March 2011 </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="thumb"><a href="contact.html#"><img src="images/pdf_icon.png"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
-                                        <a class="gray1" href="contact.html#">March 2011 </a>
-                                    </div>
-                                </li>
-                                <li class="nobg">
-                                    <div class="thumb"><a href="contact.html#"><img src="images/wordicon.png"  alt="" /></a></div>
-                                    <div class="description">
-                                        <h6><a href="contact.html#">Lorem ipsum dolor sit amet</a></h6>
-                                        <a class="gray1" href="contact.html#">March 2011 </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- Downloads -->
+                        
+                        <?php
+                        include './config/config.php';
+                        include 'includes/downloads.php';
+                        ?>
                         <div class="clear"></div>
                         <!--col2 ends -->
                     </div>

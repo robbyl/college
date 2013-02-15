@@ -4,7 +4,8 @@ $current_file_name = end($values);
 
 require 'config/config.php';
 
-$query_news = "SELECT nws_title, nws_description, nws_attachment, nws_posted_date
+$query_news = "SELECT nws_title, nws_description, nws_attachment,
+                      nws_posted_date, nws_image
                  FROM news
              ORDER BY nws_posted_date DESC
                 LIMIT 0, 5";
@@ -12,7 +13,8 @@ $query_news = "SELECT nws_title, nws_description, nws_attachment, nws_posted_dat
 $result_news = mysql_query($query_news) or die(mysql_error());
 
 
-$query_events = "SELECT event_title, event_description, event_attachment, event_posted_date
+$query_events = "SELECT event_title, event_description, event_attachment,
+                        event_posted_date, event_image
                  FROM events
                  ORDER BY event_posted_date DESC
                  LIMIT 0, 5";
@@ -87,12 +89,12 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                     <!-- Content Links -->
                     <div class="content_links">
                         <ul>
-                            <li><a class="our_university" href="index.php#">Our University</a></li>
-                            <li><a class="admission" href="index.php#">Admissions</a></li>
-                            <li><a class="accommodaiton" href="index.php#">Accommodations</a></li>
-                            <li><a class="community" href="index.php#">Community</a></li>
-                            <li><a class="schorship" href="index.php#">Scholorships</a></li>
-                            <li class="last"><a class="take_tour" href="index.php#">Take a Tour</a></li>
+                            <li><a class="our_university" href="background.php">Our Institute</a></li>
+                            <li><a class="admission" href="requirements.php">Admissions</a></li>
+                            <li><a class="accommodaiton" href="#">Accommodations</a></li>
+                            <li><a class="community" href="#">Community</a></li>
+                            <li><a class="schorship" href="#">Scholorships</a></li>
+                            <li class="last"><a class="take_tour" href="gallery.php">Take a Tour</a></li>
                         </ul>
                     </div>
                     <!-- Content Heading -->
@@ -101,8 +103,7 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                             <h2>Welcome to Royal Pharmaceutical Training Institute</h2>
                         </div>
                     </div>
-                    <p class="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu porta lorem. Cras turpis ipsum, iaculis ut                                 auctor eget, euismod eget enim. Curabitur a lorem porttitor lectus euismod semper vitae eu purus. </p>
-                    <p>The Royal pharmaceutical training Institute is a private institution, established in August 2010.  As a Pharmaceutical College, our core responsibility is to provide a conducive environment for teaching and learning, knowledge generation and community service. </p>
+                    <p class="text">The Royal pharmaceutical training Institute is a private institution, established in August 2010.  As a Pharmaceutical College, our core responsibility is to provide a conducive environment for teaching and learning, knowledge generation and community service. </p>
                     <p>The educational programmes that are offered have been carefully designed to suite a wide range of clientele. Individual students have the opportunity to choose programmes depending on their interest and convenience. <a class="readmore" href="index.php#"></a> </p>
                     <div class="clear"></div>
                     <!-- Content Block -->
@@ -128,9 +129,10 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                             <ul>
                                 <?php
                                 while ($row_news = mysql_fetch_array($result_news)) {
+                                    
                                     ?>
                                     <li>
-                                        <div class="thumb" ><a href="#"><img src="images/student1.jpg"  alt="" /></a></div>
+                                        <div class="thumb" ><a href="#"><?php if(!empty($row_news['nws_image'])) echo '<img src="root/uploads/images/' . $row_news['nws_image'] . '"  alt="" />'; ?></a></div>
                                         <div class="description">
                                             <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>"><?php echo $row_news['nws_title'] ?></a></h6>
                                             <em>
@@ -156,7 +158,7 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                                 while ($row_events = mysql_fetch_array($result_events)) {
                                     ?>
                                     <li>
-                                        <div class="thumb" ><a href="index.php#"><img src="images/student1.jpg"  alt="" /></a></div>
+                                        <div class="thumb" ><a href="#"><?php if(!empty($row_events['event_image'])) echo '<img src="root/uploads/images/' . $row_events['event_image'] . '"  alt="" />'; ?></a></div>
                                         <div class="description" class="thumb">
                                             <h6><a href="root/uploads/docs/<?php echo $row_events['event_attachment'] ?>"><?php echo $row_events['event_title'] ?></a></h6>
                                             <em>
