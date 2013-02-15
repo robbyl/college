@@ -89,8 +89,8 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                             <table class="data-table1" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>Title</th>
                                         <th>Date posted</th>
+                                        <th>Title</th>
                                         <th>Description</th>
                                         <th>Attachment</th>
                                         <th>Actions</th>
@@ -103,8 +103,8 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                                         $posted = date_create($row_news['nws_posted_date']);
 
                                         echo '<tr>';
-                                        echo '<td>' . $row_news['nws_title'] . '</td>';
                                         echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
+                                        echo '<td>' . $row_news['nws_title'] . '</td>';
                                         echo '<td>' . $row_news['nws_description'] . '</td>';
                                         echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
                                         echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '" class="edit-news">Edit</a></td>';
@@ -127,8 +127,8 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                             <table class="data-table2" border="1" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>Title</th>
                                         <th>Date posted</th>
+                                        <th>Title</th>
                                         <th>Description</th>
                                         <th>Attachment</th>
                                         <th>Actions</th>
@@ -141,8 +141,8 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                                         $evnt_posted = date_create($row_evnt['event_posted_date']);
 
                                         echo '<tr>';
-                                        echo '<td>' . $row_evnt['event_title'] . '</td>';
                                         echo '<td>' . date_format($evnt_posted, 'd M, Y @ H:i') . '</td>';
+                                        echo '<td>' . $row_evnt['event_title'] . '</td>';
                                         echo '<td>' . $row_evnt['event_description'] . '</td>';
                                         echo '<td><a href="uploads/docs/' . $row_evnt['event_attachment'] . '">' . $row_evnt['event_attachment'] . '</a></td>';
                                         echo '<td><a href="edit_events.php?id=' . $row_evnt['event_id'] . '" class="edit-events">Edit</a></td>';
@@ -165,8 +165,8 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                             <table border="1" class="data-table3" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>Title</th>
                                         <th>Date posted</th>
+                                        <th>Title</th>
                                         <th>Description</th>
                                         <th>Actions</th>
                                         <th>Actions</th>
@@ -178,8 +178,8 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                                         $course_posted = date_create($row_courses['course_posted_date']);
 
                                         echo '<tr>';
-                                        echo '<td>' . $row_courses['course_title'] . '</td>';
                                         echo '<td>' . date_format($course_posted, 'd M, Y @ H:i') . '</td>';
+                                        echo '<td>' . $row_courses['course_title'] . '</td>';
                                         echo '<td>' . $row_courses['course_description'] . '</td>';
                                         echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '" class="edit-courses">Edit</a></td>';
                                         echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '" onClick="return confirm(\'Are you sure you want to delete this course\');">Delete</a></td>';
@@ -202,8 +202,8 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                             <table class="data-table4" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>Title</th>
                                         <th>Date uploaded</th>
+                                        <th>Title</th>
                                         <th>File name</th>
                                         <th>Actions</th>
                                         <th>Actions</th>
@@ -215,8 +215,8 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                                         $posted = date_create($row_download['dwn_date_uploaded']);
 
                                         echo '<tr>';
-                                        echo '<td>' . $row_download['dwn_title'] . '</td>';
                                         echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
+                                        echo '<td>' . $row_download['dwn_title'] . '</td>';
                                         echo '<td><a href="uploads/downloads/' . $row_download['dwn_file_name'] . '">' . $row_download['dwn_file_name'] . '</a></td>';
                                         echo '<td><a href="edit_download.php?id=' . $row_download['dwn_id'] . '" class="edit-download">Edit</a></td>';
                                         echo '<td><a href="delete_download.php?id=' . $row_download['dwn_id'] . '" onClick="return confirm(\'Are you sure you want to delete this file\');">Delete</a></td>';
@@ -239,9 +239,9 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                             <table class="data-table5" width="100%">
                                 <thead>
                                     <tr>
+                                        <th>Date posted</th>
                                         <th>Title</th>
                                         <th>Position</th>
-                                        <th>Date posted</th>
                                         <th>Staff image</th>
                                         <th>Actions</th>
                                         <th>Actions</th>
@@ -253,9 +253,9 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                                         $posted_date = date_create($row_staff['posted_date']);
 
                                         echo '<tr>';
+                                        echo '<td>' . date_format($posted_date, 'd M, Y @ H:i') . '</td>';
                                         echo '<td>' . $row_staff['staff_title'] . '</td>';
                                         echo '<td>' . $row_staff['position'] . '</td>';
-                                        echo '<td>' . date_format($posted_date, 'd M, Y @ H:i') . '</td>';
                                         echo '<td><a href="uploads/images/' . $row_staff['staff_image'] . '">' . $row_staff['staff_image'] . '</a></td>';
                                         echo '<td><a href="edit_staff.php?id=' . $row_staff['staff_id'] . '" class="edit-staff">Edit</a></td>';
                                         echo '<td><a href="delete_staff.php?id=' . $row_staff['staff_id'] . '" onClick="return confirm(\'Are you sure you want to delete this news\');">Delete</a></td>';
