@@ -1,12 +1,11 @@
 <?php
-$values = explode('\\', __FILE__);
-$current_file_name = end($values);
+$current_file_name = 'admissions.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>SITE MAP</title>
+        <title>APPLICATION FORM</title>
         <!-- Stylesheet -->
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
@@ -35,13 +34,13 @@ $current_file_name = end($values);
                     <div class="col1">
                         <div class="content_heading">
                             <div class="heading">
-                                <h2>Site Map</h2>
+                                <h2>Application Form</h2>
                             </div>
                         </div>
                         <div class="clear"></div>
-                        <div class="site-map">
-                            <?php include 'includes/navigation.php'; ?>
-                        </div>
+                        <p>Application form for joining us can be downloaded
+                            <a href="root/uploads/downloads/Application%20for%20Admission.doc" style="text-decoration: underline">here</a>
+                        </p>
                     </div>
                     <!-- Col1 -->
                     <div class="clear"></div>

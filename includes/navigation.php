@@ -1,16 +1,16 @@
         <ul>
             <li class="first"><a href="index.php"  class="<?php if ($current_file_name === 'index.php') echo 'current' ?>">Home</a></li>
-            <li><a href="#" class="<?php if ($current_file_name === 'about.php') echo 'current' ?>">About Us</a>
+            <li><a href="" class="<?php if ($current_file_name === 'about.php') echo 'current' ?>">About Us</a>
                 <ul>
-                    <li><a href="#">Background</a></li>
-                    <li><a href="#">Mission, Vision & Values</a></li>
+                    <li><a href="background.php">Background</a></li>
+                    <li><a href="mission.php">Mission, Vision & Goals</a></li>
                     <li><a href="#">Institute Structure</a></li>
                 </ul>
             </li>
             <li><a href="#" class="<?php if ($current_file_name === 'admissions.php') echo 'current' ?>">Admissions</a>
                 <ul>
-                    <li><a href="#">Entry requirements</a></li>
-                    <li><a href="#">Application Form</a></li>
+                    <li><a href="requirements.php">Entry requirements</a></li>
+                    <li><a href="applicationform.php">Application Form</a></li>
                     <li><a href="#">Fee Structure</a></li>
                     <li><a href="#">Programmes</a></li>
                 </ul>

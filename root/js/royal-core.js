@@ -166,6 +166,11 @@ $(document).ready(function() {
         getPopForm('post_org_structure.php');
     });
 
+    $('.close').live('click', function() {
+        $('#pop-up').children().remove();
+        $('body').css('overflow', 'visible');
+    });
+
 });
 
 $(function() {

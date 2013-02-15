@@ -1,12 +1,11 @@
 <?php
-$values = explode('\\', __FILE__);
-$current_file_name = end($values);
+$current_file_name = 'admissions.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>SITE MAP</title>
+        <title>ENTRY REQUIREMENTS</title>
         <!-- Stylesheet -->
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
@@ -35,13 +34,22 @@ $current_file_name = end($values);
                     <div class="col1">
                         <div class="content_heading">
                             <div class="heading">
-                                <h2>Site Map</h2>
+                                <h2>Entry Requirements</h2>
                             </div>
                         </div>
                         <div class="clear"></div>
-                        <div class="site-map">
-                            <?php include 'includes/navigation.php'; ?>
-                        </div>
+                        <p>
+                            In admission we adhere to requirements stipulated to the
+                            Curriculum adopted the Ministry of Health and Social Welfare
+                            for the Certificate programme in Pharmaceutical Licenses.
+                        </p>
+                        <p>We admit students who have a minimum of Certificate of
+                            Secondary Education Examination with passes in Science
+                            subjects of at least grade D, or above.
+                        </p>
+                        <p>We give a crash programme of two weeks in Englishand Mathematics before
+                            joining the institute and give an Examination.
+                        </p>
                     </div>
                     <!-- Col1 -->
                     <div class="clear"></div>

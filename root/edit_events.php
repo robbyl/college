@@ -24,11 +24,6 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 
         <link href="css/style.css" rel="stylesheet" />
 
-        <script type="text/javascript">
-            $('.close').click(function (){
-               $('#pop-up').children().remove();
-            });
-        </script>
     </head>
     <body>
         <div class="pop-up-wrapper">

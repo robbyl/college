@@ -4,9 +4,11 @@
         <div class="find_your_way">
             <h5>Find your Way</h5>
             <ul>
-                <li><a href="index.php#">Home</a></li>
-                <li><a href="index.php#">Site map</a></li>
-                <li><a href="index.php#">About Us</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="sitemap.php">Site map</a></li>
+                <li><a href="background.php">About Us</a></li>
+                <li><a href="news.php">News</a></li>
+                <li><a href="events.php">Events</a></li>
             </ul>
         </div>
         <!-- Quick Links -->
@@ -14,7 +16,7 @@
             <h5>ICT Links</h5>
             <ul>
                 <li><a href="root/index.php">Administration</a></li>
-                <li><a href="index.php#">Staff Mail</a></li>
+                <li><a href="#">Staff Mail</a></li>
                 <!--                    <li><a href="index.php#"></a></li>
                                     <li><a href="index.php#">Campus Notices</a></li>
                                     <li><a href="index.php#">Emergency Information</a></li>
@@ -25,27 +27,27 @@
         <div class="Addmissoin">
             <h5>Addmission</h5>
             <ul>
-                <li><a href="index.php#">Entry Requirements</a></li>
-                <li><a href="index.php#">Application Form</a></li>
-                <li><a href="index.php#">Fee Structure</a></li>
-                <li><a href="index.php#">Programmes</a></li>
+                <li><a href="requirements.php">Entry Requirements</a></li>
+                <li><a href="applicationform.php">Application Form</a></li>
+                <li><a href="#">Fee Structure</a></li>
+                <li><a href="#">Programmes</a></li>
             </ul>
         </div>
         <!-- Help and Support -->
         <div class="help_support">
             <h5>Help &amp;Support</h5>
             <ul>
-                <li><a href="index.php#">Physical Location</a></li>
-                <li><a href="index.php#">E-mail Address</a></li>
-                <li><a href="index.php#">Phone Number</a></li>
-                <li><a href="index.php#">Web Site</a></li>
+                <li><a href="support.php#location">Physical Location</a></li>
+                <li><a href="support.php#email">E-mail Address</a></li>
+                <li><a href="support.php#phone">Phone Number</a></li>
+                <li><a href="support.php#website">Web Site</a></li>
             </ul>
         </div>
         <!-- Contact Us -->
         <div class="contact_us">
             <h5>Contact Us</h5>
             <ul>
-                <li class="telephone_no">+44 (12) 123 4567 891</li>
+                <li class="telephone_no">+255 713/765/688 353 310</li>
                 <li  class="mailing_address">
                     <p>Royal pharmaceutical training institute,</p>
                     <p>P.O.Box 100198,</p>
