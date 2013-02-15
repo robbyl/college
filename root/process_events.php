@@ -74,10 +74,10 @@ $query_news = "INSERT INTO events
 $result_news = mysql_query($query_news) or die(mysql_error());
 
 if($result_news){
-    info('message', 'News posted successfully!');
+    info('message', 'Events posted successfully!');
     header('Location: home.php');
 } else {
-    info('error', 'Cannot post news!');
+    info('error', 'Cannot post events!');
     header('Location: home.php');
 }
 

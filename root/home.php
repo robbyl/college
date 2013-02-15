@@ -27,6 +27,11 @@ $query_downloads = "SELECT *
                       FROM downloads
                   ORDER BY dwn_date_uploaded DESC";
 $result_downloads = mysql_query($query_downloads) or die(mysql_error());
+
+$query_staff = "SELECT * 
+                      FROM staff
+                  ORDER BY posted_date DESC";
+$result_staff = mysql_query($query_staff) or die(mysql_error());
 ?>
 <!DOCTYPE html>
 <html>
@@ -314,25 +319,25 @@ $result_downloads = mysql_query($query_downloads) or die(mysql_error());
                                 <thead>
                                     <tr>
                                         <th>Title</th>
+                                        <th>Position</th>
                                         <th>Date posted</th>
-                                        <th>Description</th>
-                                        <th>Attachment</th>
+                                        <th>Staff image</th>
                                         <th>Actions</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    while ($row_news = mysql_fetch_array($result_news)) {
-                                        $posted = date_create($row_news['nws_posted_date']);
+                                    while ($row_staff = mysql_fetch_array($result_staff)) {
+                                        $posted_date = date_create($row_staff['posted_date']);
 
                                         echo '<tr>';
-                                        echo '<td>' . $row_news['nws_title'] . '</td>';
-                                        echo '<td>' . date_format($posted, 'd M, Y @ H:i') . '</td>';
-                                        echo '<td>' . $row_news['nws_description'] . '</td>';
-                                        echo '<td><a href="uploads/docs/' . $row_news['nws_attachment'] . '">' . $row_news['nws_attachment'] . '</a></td>';
-                                        echo '<td><a href="edit_news.php?id=' . $row_news['nws_id'] . '" class="edit-news">Edit</a></td>';
-                                        echo '<td><a href="delete_news.php?id=' . $row_news['nws_id'] . '" onClick="return confirm(\'Are you sure you want to delete this news\');">Delete</a></td>';
+                                        echo '<td>' . $row_staff['staff_title'] . '</td>';
+                                        echo '<td>' . $row_staff['position'] . '</td>';
+                                        echo '<td>' . date_format($posted_date, 'd M, Y @ H:i') . '</td>';
+                                        echo '<td><a href="uploads/docs/' . $row_staff['staff_image'] . '">' . $row_staff['staff_image'] . '</a></td>';
+                                        echo '<td><a href="edit_staff.php?id=' . $row_staff['staff_id'] . '" class="edit-staff">Edit</a></td>';
+                                        echo '<td><a href="delete_staff.php?id=' . $row_staff['staff_id'] . '" onClick="return confirm(\'Are you sure you want to delete this news\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
                                     ?>

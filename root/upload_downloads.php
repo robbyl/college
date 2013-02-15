@@ -11,7 +11,7 @@
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
                 <div class="pop-up-header">Upload Download File<div class="close"></div></div>
-                <form class="pop-up-form" id="news-form" action="process_download.php" method="POST" enctype="multipart/form-data">
+                <form class="pop-up-form" id="upload-form" action="process_download.php" method="POST" enctype="multipart/form-data">
                     <table border="0" width="100%">
                         <tr>
                             <td width="200">Title</td>
@@ -24,8 +24,8 @@
                     </table>
                 </form>
                 <div class="pop-up-footer">
-                    <button type="reset" class="post" style="margin-right: 0" form="news-form">Cancel</button>
-                    <button type="submit" class="post" form="news-form">Upload</button>
+                    <button type="reset" class="post" style="margin-right: 0" form="upload-form">Cancel</button>
+                    <button type="submit" class="post" form="upload-form">Upload</button>
                     <div style="clear: both"></div>
                 </div>
             </div>

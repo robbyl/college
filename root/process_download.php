@@ -31,13 +31,13 @@ if (in_array($extension, $allowed_file_ext) && ($_FILES["download"]["size"] < 10
     exit(0);
 }
 
-$query_news = "INSERT INTO downloads
+$query_dwn = "INSERT INTO downloads
                       (dwn_title, dwn_date_uploaded, dwn_file_name)
                VALUES ('$title', CURRENT_TIMESTAMP(), '$file_name')";
 
-$result_news = mysql_query($query_news) or die(mysql_error());
+$result_dwn = mysql_query($query_dwn) or die(mysql_error());
 
-if ($result_news) {
+if ($result_dwn) {
     info('message', 'File uploaded successfully!');
     header('Location: home.php');
 } else {
