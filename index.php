@@ -70,16 +70,14 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                     <div id="banner">
                         <div id="wowslider-container1">
                             <div class="ws_images"><ul>
-                                    <li><img src="data1/images/banner1.jpg" alt="Graduates" title="Graduates" id="wows1_0"/></li>
-                                    <li><img src="data1/images/picture027.jpg" alt="Lecture rooms" title="Lecture rooms" id="wows1_1"/></li>
-                                    <li><img src="data1/images/picture028.jpg" alt="Students" title="Students" id="wows1_2"/></li>
-                                    <li><img src="data1/images/picture025.jpg" alt="Buildings" title="Buildings" id="wows1_3"/></li>
+                                    <li><img src="data1/images/banner1.jpg" alt="GRADUATES" title="GRADUATES" id="wows1_0"/></li>
                                 </ul></div>
                             <div class="ws_bullets"><div>
-                                    <a href="#" title="Graduants"><img src="data1/tooltips/banner1.jpg" alt="Graduates"/>1</a>
-                                    <a href="#" title="Lecture rooms"><img src="data1/tooltips/picture027.jpg" alt="Lecture rooms"/>2</a>
-                                    <a href="#" title="Students"><img src="data1/tooltips/picture028.jpg" alt="Students"/>3</a>
-                                    <a href="#" title="Buildings"><img src="data1/tooltips/picture025.jpg" alt="Buildings"/>4</a>
+                                    <a href="data1/images/banner1.jpg" title="GRADUATES"><img src="data1/tooltips/banner1.jpg" alt="GRADUATES"/>1</a>
+                                    <a href="data1/images/picture027.jpg" title="LECTURE ROOMS">2</a>
+                                    <a href="data1/images/picture028.jpg" title="STUDENTS">3</a>
+                                    <a href="data1/images/picture025.jpg" title="BUILDINGS">4</a>
+                                    <a href="data1/images/picture014.jpg" title="CEREMONY">5</a>
                                 </div></div>
                             <div class="ws_shadow"></div>
                         </div>
@@ -129,17 +127,16 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                             <ul>
                                 <?php
                                 while ($row_news = mysql_fetch_array($result_news)) {
-                                    
                                     ?>
                                     <li>
-                                        <div class="thumb" ><a href="#"><?php if(!empty($row_news['nws_image'])) echo '<img src="root/uploads/images/' . $row_news['nws_image'] . '"  alt="" />'; ?></a></div>
+                                        <div class="thumb" ><a href="#"><?php if (!empty($row_news['nws_image'])) echo '<img src="root/uploads/images/' . $row_news['nws_image'] . '"  alt="" />'; ?></a></div>
                                         <div class="description">
                                             <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>"><?php echo $row_news['nws_title'] ?></a></h6>
                                             <em>
                                                 (Posted on <?php
-                                                $posted = date_create($row_news['nws_posted_date']);
-                                                echo date_format($posted, 'd M, Y')
-                                                ?>)
+                                $posted = date_create($row_news['nws_posted_date']);
+                                echo date_format($posted, 'd M, Y')
+                                    ?>)
                                             </em>
                                             <p><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>" class="gray" ><?php echo $row_news['nws_description'] ?></a></p>
                                         </div>
@@ -158,7 +155,7 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                                 while ($row_events = mysql_fetch_array($result_events)) {
                                     ?>
                                     <li>
-                                        <div class="thumb" ><a href="#"><?php if(!empty($row_events['event_image'])) echo '<img src="root/uploads/images/' . $row_events['event_image'] . '"  alt="" />'; ?></a></div>
+                                        <div class="thumb" ><a href="#"><?php if (!empty($row_events['event_image'])) echo '<img src="root/uploads/images/' . $row_events['event_image'] . '"  alt="" />'; ?></a></div>
                                         <div class="description" class="thumb">
                                             <h6><a href="root/uploads/docs/<?php echo $row_events['event_attachment'] ?>"><?php echo $row_events['event_title'] ?></a></h6>
                                             <em>

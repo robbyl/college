@@ -18,4 +18,4 @@ function ws_kenburns(c,j,k){var d=jQuery;var e=document.createElement("canvas").
 // Obfuscated by Javascript Obfuscator
 // http://javascript-source.com
 //***********************************************
-jQuery("#wowslider-container1").wowSlider({effect:"kenburns",prev:"",next:"",duration:20*100,delay:20*100,width:710,height:319,autoPlay:true,stopOnHover:true,loop:false,bullets:true,caption:true,captionEffect:"slide",controls:true,logo:"engine1/loading.gif",onBeforeStep:function(i,c){return (i+1 + Math.floor((c-1)*Math.random()))},images:0});
+jQuery("#wowslider-container1").wowSlider({effect:"kenburns",prev:"",next:"",duration:20*100,delay:20*100,width:710,height:319,autoPlay:true,stopOnHover:true,loop:false,bullets:true,caption:true,captionEffect:"slide",controls:true,logo:"engine1/loading.gif",onBeforeStep:0,images:[{src:"./banner1.jpg",title:"GRADUATES"},{src:"./picture027.jpg",title:"LECTURE ROOMS"},{src:"./picture028.jpg",title:"STUDENTS"},{src:"./picture025.jpg",title:"BUILDINGS"},{src:"./picture014.jpg",title:"CEREMONY"}]});
