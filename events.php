@@ -81,7 +81,9 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                 while ($row_events = mysql_fetch_array($result_events)) {
                                     ?>
                                     <li>
-                                        <div class="thumb"><a href="events.php#"><img src="images/news1.gif"  alt="" /></a></div>
+                                        <div class="thumb"><a href="root/uploads/docs/<?php echo $row_events['event_attachment'];?>">
+                                                <?php if(!empty($row_events['event_image'])) echo '<img src="root/uploads/images/' . $row_events['event_image'] . '"  alt="" />'; ?></a>
+                                        </div>
                                         <div class="description">
                                             <h6><a href="root/uploads/docs/<?php echo $row_events['event_attachment'];?>" class="colr"><?php echo $row_events['event_title']; ?></a></h6>
                                             <p>
@@ -92,7 +94,7 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                                 <?php 
                                                    $posted = date_create($row_events['event_posted_date']);
                                                 ?>
-                                                <span class="lastupdte"> Last Update by:<i><?php echo date_format($posted, 'D, d M Y') ?></i></span>
+                                                <span class="lastupdte"> Last Update:<i><?php echo date_format($posted, 'D, d M Y') ?></i></span>
                                                 <!--<span class="tag">Tag: <a href="news.html#">Business</a></span>-->
                                                 <!--<span class="comments"><a href="news.html#"><strong>852</strong> Comments</a></span>-->
                                                 <a class="moreinfo" href="root/uploads/docs/<?php echo $row_events['event_attachment'];?>">:: Moreinfo</a>
@@ -144,85 +146,8 @@ $result_events = mysql_query($query_events) or die(mysql_error());
                                 <li> <a href="events.php#"><img src="images/search_btn.jpg"  alt="" /></a></li>
                             </ul>
                         </div>
-                        <!-- Top Student -->
-                        <div class="rtab">
-                            <div class="tab_navigation">
-                                <ul>
-                                    <li class="active" ><a   href="events.php#rtab1">Top Students</a></li>
-                                    <li><a href="events.php#rtab2">Almuni</a> </li>
-                                </ul>
-                            </div>
-                            <div class="rtab_content" id="rtab1" style="display:none;">
-                                <ul>
-                                    <li>
-                                        <div class="thumb" ><a href="events.php#"><img src="images/student1.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="events.php#">Peter Morgen</a></h6>
-                                            <p><a href="events.php#" class="gray" >MBA, March 2011</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb" ><a href="events.php#"><img src="images/student2.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="events.phpl#">Elizabeth Simon</a></h6>
-                                            <p><a href="events.php#" class="gray">BBA February 2010</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb" ><a href="events.php#"><img src="images/student3.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="events.php#">Remond Price</a></h6>
-                                            <p><a href="events.php#" class="gray">ACCA January 2011</a></p>
-                                        </div>
-                                    </li>
-                                    <li class="nobg" >
-                                        <div class="thumb" ><a href="events.php#"><img src="images/student4.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="events.php#">Maria Knowls</a></h6>
-                                            <p><a href="events.php#" class="gray">MBA December 2010</a></p>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                                <div class="clear"></div>
-                            </div>
-
-                            <div class="rtab_content" id="rtab2" style="display:none;">
-                                <ul>
-                                    <li>
-                                        <div class="thumb" ><a href="events.php#"><img src="images/student1.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="events.php#">Peter Morgen</a></h6>
-                                            <p><a href="events.php#" class="gray" >MBA, March 2011</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb" ><a href="events.php#"><img src="images/student2.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="events.php#">Elizabeth Simon</a></h6>
-                                            <p><a href="events.php#" class="gray">BBA February 2010</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb" ><a href="events.php#"><img src="images/student3.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="events.php#">Remond Price</a></h6>
-                                            <p><a href="events.php#" class="gray">ACCA January 2011</a></p>
-                                        </div>
-                                    </li>
-                                    <li class="nobg" >
-                                        <div class="thumb" ><a href="events.php#"><img src="images/student4.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="events.php#">Maria Knowls</a></h6>
-                                            <p><a href="events.php#" class="gray">MBA December 2010</a></p>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                                <div class="clear"></div>
-                            </div>
-
-                        </div>
+                        <!-- Downloads -->
+                        <?php include 'includes/downloads.php'; ?>
                         <div class="clear"></div>
                         <!--col2 ends -->
                     </div>

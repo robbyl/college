@@ -55,23 +55,23 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                     <!-- Col1 -->
                     <div class="col1">
                         <!-- Banner -->
-<!--                        <div id="banner1">
-                            <a href="news.html#"><img src="images/newsbanner.gif" alt="" /></a>
-                            <div class="heading">
-                                <h1>College News and Events</h1>
-                            </div>
-                        </div>
-                         Content Links 
-                        <div class="content_links">
-                            <ul>
-                                <li><a class="our_university" href="news.html#">Our University</a></li>
-                                <li><a class="admission" href="news.html#">Admissions</a></li>
-                                <li><a class="accommodaiton" href="news.html#">Accommodations</a></li>
-                                <li><a class="community" href="news.html#">Community</a></li>
-                                <li><a class="schorship" href="news.html#">scholarships</a></li>
-                                <li class="last"><a class="take_tour" href="news.html#">Take a Tour</a></li>
-                            </ul>
-                        </div>-->
+                        <!--                        <div id="banner1">
+                                                    <a href="news.html#"><img src="images/newsbanner.gif" alt="" /></a>
+                                                    <div class="heading">
+                                                        <h1>College News and Events</h1>
+                                                    </div>
+                                                </div>
+                                                 Content Links 
+                                                <div class="content_links">
+                                                    <ul>
+                                                        <li><a class="our_university" href="news.html#">Our University</a></li>
+                                                        <li><a class="admission" href="news.html#">Admissions</a></li>
+                                                        <li><a class="accommodaiton" href="news.html#">Accommodations</a></li>
+                                                        <li><a class="community" href="news.html#">Community</a></li>
+                                                        <li><a class="schorship" href="news.html#">scholarships</a></li>
+                                                        <li class="last"><a class="take_tour" href="news.html#">Take a Tour</a></li>
+                                                    </ul>
+                                                </div>-->
                         <!-- Content Heading -->
                         <div id="content2">
                             <h2 class="pad8">Institute News</h2>
@@ -81,21 +81,23 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                                 while ($row_news = mysql_fetch_array($result_news)) {
                                     ?>
                                     <li>
-                                        <div class="thumb"><a href="news.html#"><img src="images/news1.gif"  alt="" /></a></div>
+                                        <div class="thumb"><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>">
+                                                <?php if (!empty($row_news['nws_image'])) echo '<img src="root/uploads/images/' . $row_news['nws_image'] . '"  alt="" />'; ?></a>
+                                        </div>
                                         <div class="description">
-                                            <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment'];?>" class="colr"><?php echo $row_news['nws_title']; ?></a></h6>
+                                            <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>" class="colr"><?php echo $row_news['nws_title']; ?></a></h6>
                                             <p>
                                                 <?php echo $row_news['nws_description']; ?>
                                             </p>
                                             <div class="clear"></div>
                                             <div class="info">
-                                                <?php 
-                                                   $posted = date_create($row_news['nws_posted_date']);
+                                                <?php
+                                                $posted = date_create($row_news['nws_posted_date']);
                                                 ?>
-                                                <span class="lastupdte"> Last Update by:<i><?php echo date_format($posted, 'D, d M Y') ?></i></span>
+                                                <span class="lastupdte"> Last Update:<i><?php echo date_format($posted, 'D, d M Y') ?></i></span>
                                                 <!--<span class="tag">Tag: <a href="news.html#">Business</a></span>-->
                                                 <!--<span class="comments"><a href="news.html#"><strong>852</strong> Comments</a></span>-->
-                                                <a class="moreinfo" href="root/uploads/docs/<?php echo $row_news['nws_attachment'];?>">:: Moreinfo</a>
+                                                <a class="moreinfo" href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>">:: Moreinfo</a>
                                             </div>
                                         </div>
                                         <div class="clear"></div>
@@ -107,19 +109,19 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                             <div class="clear"></div>
                             <!-- pagination Listing -->
                             <div class="pginaiton pad9">
-                                <?php echo pagination($statement, $limit, $page)  ?>
-<!--                                <ul>
-                                    <li><a href="news.html#">1</a></li>
-                                    <li><a href="news.html#">2</a></li>
-                                    <li><a href="news.html#">3</a></li>
-                                    <li><a href="news.html#">4</a></li>
-                                    <li><a href="news.html#">5</a></li>
-                                    <li><a href="news.html#">6</a></li>
-                                    <li><a href="news.html#">7</a></li>
-                                    <li class="dots"> . . . . . . .</li>
-                                    <li ><a href="news.html#"> 22</a></li>
-                                    <li class="nextpage"><a href="news.html#">Next Page</a></li>
-                                </ul>-->
+                                <?php echo pagination($statement, $limit, $page) ?>
+                                <!--                                <ul>
+                                                                    <li><a href="news.html#">1</a></li>
+                                                                    <li><a href="news.html#">2</a></li>
+                                                                    <li><a href="news.html#">3</a></li>
+                                                                    <li><a href="news.html#">4</a></li>
+                                                                    <li><a href="news.html#">5</a></li>
+                                                                    <li><a href="news.html#">6</a></li>
+                                                                    <li><a href="news.html#">7</a></li>
+                                                                    <li class="dots"> . . . . . . .</li>
+                                                                    <li ><a href="news.html#"> 22</a></li>
+                                                                    <li class="nextpage"><a href="news.html#">Next Page</a></li>
+                                                                </ul>-->
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -144,86 +146,8 @@ $result_news = mysql_query($query_news) or die(mysql_error());
                                 <li> <a href="news.html#"><img src="images/search_btn.jpg"  alt="" /></a></li>
                             </ul>
                         </div>
-                        <!-- Top Student -->
-                        <div class="rtab">
-                            <div class="tab_navigation">
-                                <ul>
-                                    <li class="active" ><a   href="news.html#rtab1">Top Students</a></li>
-                                    <li><a href="news.html#rtab2">Almuni</a> </li>
-                                </ul>
-                            </div>
-                            <div class="rtab_content" id="rtab1" style="display:none;">
-                                <ul>
-                                    <li>
-                                        <div class="thumb" ><a href="news.html#"><img src="images/student1.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="news.html#">Peter Morgen</a></h6>
-                                            <p><a href="news.html#" class="gray" >MBA, March 2011</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb" ><a href="news.html#"><img src="images/student2.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="news.html#">Elizabeth Simon</a></h6>
-                                            <p><a href="news.html#" class="gray">BBA February 2010</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb" ><a href="news.html#"><img src="images/student3.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="news.html#">Remond Price</a></h6>
-                                            <p><a href="news.html#" class="gray">ACCA January 2011</a></p>
-                                        </div>
-                                    </li>
-                                    <li class="nobg" >
-                                        <div class="thumb" ><a href="news.html#"><img src="images/student4.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="news.html#">Maria Knowls</a></h6>
-                                            <p><a href="news.html#" class="gray">MBA December 2010</a></p>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                                <div class="clear"></div>
-                            </div>
-
-                            <div class="rtab_content" id="rtab2" style="display:none;">
-                                <ul>
-                                    <li>
-                                        <div class="thumb" ><a href="news.html#"><img src="images/student1.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="news.html#">Peter Morgen</a></h6>
-                                            <p><a href="news.html#" class="gray" >MBA, March 2011</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb" ><a href="news.html#"><img src="images/student2.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="news.html#">Elizabeth Simon</a></h6>
-                                            <p><a href="news.html#" class="gray">BBA February 2010</a></p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb" ><a href="news.html#"><img src="images/student3.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="news.html#">Remond Price</a></h6>
-                                            <p><a href="news.html#" class="gray">ACCA January 2011</a></p>
-                                        </div>
-                                    </li>
-                                    <li class="nobg" >
-                                        <div class="thumb" ><a href="news.html#"><img src="images/student4.jpg"  alt="" /></a></div>
-                                        <div class="description">
-                                            <h6><a href="news.html#">Maria Knowls</a></h6>
-                                            <p><a href="news.html#" class="gray">MBA December 2010</a></p>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                                <div class="clear"></div>
-                            </div>
-
-                        </div>
-                        <div class="clear"></div>
+                        <!-- Downloads -->
+                        <?php include 'includes/downloads.php'; ?>
                         <!--col2 ends -->
                     </div>
                     <div class="clear"></div>

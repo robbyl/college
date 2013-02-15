@@ -53,7 +53,7 @@
                     <p>P.O.Box 100198,</p>
                     <p>Dar es Salaam.</p>
                 </li>
-                <li class="email_address"><a href="index.php#">info@college.com</a></li>
+                <li class="email_address"><a href="mailto:info@royalpharm.ac.tz">info@royalpharm.ac.tz</a></li>
             </ul>
         </div>
         <div class="clear"></div>

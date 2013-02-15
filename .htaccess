@@ -1,1 +1,2 @@
 ErrorDocument 404 /college/404.html
+IndexIgnore *
