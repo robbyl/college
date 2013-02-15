@@ -38,7 +38,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                         </tr>
                         <tr>
                             <td>File Path</td>
-                            <td><input type="file" name="download" class="text" style="padding-left: 0; padding-right: 10px" required=""></td>
+                            <td><input type="file" name="download" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                     </table>
                 </form>
