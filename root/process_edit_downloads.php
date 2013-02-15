@@ -4,77 +4,35 @@ require '../config/config.php';
 require '../functions/general_functions.php';
 
 $id = clean($_POST['id']);
-$dwn_title = clean($_POST['dwn_title']);
-$news_description = clean($_POST['description']);
-$news_image = clean($_POST['nws_image']); // image name from database
-$dwn_file_name = clean($_POST['dwn_file_name']); // attachment name from database
-$image_name = clean($_FILES["image"]["name"]); // image name from submitted form.
-$attachment_name = clean($_FILES["attachment"]["name"]); // attachment name from submitted form.
+$dwn_title = clean($_POST['title']);
+$dwn_file_name = clean($_POST['download']); // attachment name from database
 
-if ($news_image !== $image_name && !empty($image_name)) {
-// Get and upload image file
-    $allowed_img_ext = array("jpg", "jpeg", "gif", "png");
-
-    $image_extenstion = end(explode(".", $image_name));
-
-    if (in_array($image_extenstion, $allowed_img_ext) && in_array($image_extenstion, $allowed_img_ext)) {
-
-        // Checking file for errors
-        if ($_FILES["image"]["error"] > 0) {
-
-            $message = "This file contain errors. Return Code: " . $_FILES["image"]["error"];
-            //info('error', $message);
-        } else {
-
-            // Uploading new image image folder.
-            move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/images/" . $image_name);
-
-            // Deleting old file
-            unlink("uploads/images/" . $news_image);
-
-            $query_image = "UPDATE news
-                               SET nws_image = '$image_name'
-                             WHERE nws_id = '$id'";
-
-            $result_image = mysql_query($query_image) or die(mysql_error());
-
-            echo 'uploaded';
-        }
-    } else {
-
-    info('error', 'This image type is not allowed');
-    header('Location: home.php');
-    exit(0);
-    }
-}
-
-
-if ($news_attachment !== $attachment_name && !empty($attachment_name)) {
+if ($dwn_file_name !== $dwn_file_name && !empty($dwn_file_name)) {
 // Get and upload attachment file
     $allowed_file_ext = array("pdf", "doc", "docx");
 
-    $extension = end(explode(".", $attachment_name));
+    $extension = end(explode(".", $dwn_file_name));
 
-    if (in_array($extension, $allowed_file_ext) && ($_FILES["attachment"]["size"] < 100000000)) {
+    if (in_array($extension, $allowed_file_ext) && ($_FILES["download"]["size"] < 100000000)) {
 
         // Checking file for errors
-        if ($_FILES["attachment"]["error"] > 0) {
+        if ($_FILES["download"]["error"] > 0) {
 
-            $message = "This file contain errors. Return Code: " . $_FILES["attachment"]["error"];
+            $message = "This file contain errors. Return Code: " . $_FILES["download"]["error"];
             //info('error', $message);
         } else {
 
             // Uploading new attachment to doc folder.
-            move_uploaded_file($_FILES["attachment"]["tmp_name"], "uploads/docs/" . $attachment_name);
+            move_uploaded_file($_FILES["download"]["tmp_name"], "uploads/docs/" . $dwn_file_name);
 
             // Deleting old attachment file
-            unlink("uploads/docs/" . $news_attachment);
+            unlink("uploads/docs/" . $dwn_file_name);
 
-            $query_attachment = "UPDATE news
-                                 SET nws_attachment = '$attachment_name'
-                               WHERE nws_id = '$id'";
+            $dwn_file_name = "UPDATE downloads
+                                 SET dwn_file_name = '$dwn_file_name'
+                               WHERE dwn_id = '$id'";
 
-            $result_attachment = mysql_query($query_attachment) or die(mysql_error());
+            $result_dwn_file_name = mysql_query($dwn_file_name) or die(mysql_error());
         }
     } else {
 
@@ -84,18 +42,17 @@ if ($news_attachment !== $attachment_name && !empty($attachment_name)) {
     }
 }
 
-$query_news = "UPDATE news
-                  SET nws_title = '$news_title',
-                      nws_description = '$news_description'
-                WHERE nws_id = '$id'";
+$query_dwn = "UPDATE downloads
+                  SET dwn_title = '$dwn_title',
+                WHERE dwn_id = '$id'";
 
-$result_news = mysql_query($query_news) or die(mysql_error());
+$result_dwn = mysql_query($query_dwn) or die(mysql_error());
 
-if ($result_news) {
-    info('message', 'News updated successfully!');
+if ($result_dwn) {
+    info('message', 'Downloads updated successfully!');
     header("Location: home.php");
 } else {
-    info('error', 'Cannot update news, please try again!');
+    info('error', 'Cannot update downloads, please try again!');
     header("Location: home.php");
 }
 ?>
