@@ -31,6 +31,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                 <div class="pop-up-header">Edit downloads<div class="close"></div></div>
                 <form class="pop-up-form" id="dwn-form" action="process_edit_downloads.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $row_downloads['dwn_id'];?>"/>
+                    <input type="hidden" name="dwn_file_name" value="<?php echo $row_news['dwn_file_name'] ?>" />
                     <table border="0" width="100%">
                         <tr>
                             <td width="200">Title</td>

@@ -11,7 +11,7 @@
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
                 <div class="pop-up-header">Post organisation structure<div class="close"></div></div>
-                <form class="pop-up-form" id="org-form" action="process_org_structure.php" method="POST" enctype="multipart/form-data">
+                <form class="pop-up-form" id="org-form" action="process_staff.php" method="POST" enctype="multipart/form-data">
                     <table border="0" width="100%">
                         <tr>
                             <td width="200">Name</td>

@@ -18,10 +18,6 @@
                             <td><input type="text" name="title" class="text" required></td>
                         </tr>
                         <tr>
-                            <td>Attachment</td>
-                            <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
-                        </tr>
-                        <tr>
                             <td style="vertical-align: top">Course description</td>
                             <td><textarea name="description" required></textarea></td>
                         </tr>
