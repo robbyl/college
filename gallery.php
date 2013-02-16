@@ -37,7 +37,7 @@ $current_file_name = end($values);
                     <div class="gallery">
                         <div class="gallery_top">
                             <div class="gallery_heading">
-                                <h2>Our  College Gallery</h2>
+                                <h2>Our Institute Gallery</h2>
                             </div>
                             <div class="select_gallery">
                                 <a  class="photo pactive" href="gallery.html#">&nbsp;</a>
@@ -49,33 +49,18 @@ $current_file_name = end($values);
                         <!-- Col1 -->
                         <div class="categorydiv">
                             <ul>
-                                <li><a class="selected" href="gallery.html#">College Fun Fair</a></li>
-                                <li><a href="gallery.html#">College Biulding</a></li>
+                                <li><a class="selected" href="gallery.html#">Institute photos</a></li>
+<!--                                <li><a href="gallery.html#">College Biulding</a></li>
                                 <li><a href="gallery.html#">Our International Students</a></li>
                                 <li><a href="gallery.html#">English Classis</a></li>
                                 <li><a href="gallery.html#">Mr.Robort Lecture  </a></li>
-                                <li><a href="gallery.html#">Lorum ipsum Dollor</a></li>
+                                <li><a href="gallery.html#">Lorum ipsum Dollor</a></li>-->
                             </ul>
                         </div>
                         <div class="thumbdiv">
                             <ul>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery1.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu"><img src="images/gallery3.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu"><img src="images/gallery4.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery5.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery6.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery7.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery8.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery9.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery10.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery11.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery12.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery13.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery14.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery15.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery16.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery17.gif"  alt="" /></a></li>
-                                <li><a href="images/lightboximg.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery18.gif"  alt="" /></a></li>
+                                <li><a href="images/gallery1.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery1.gif"  alt="" /></a></li>
+                                
                             </ul>
                             <div class="hdiv">&nbsp;</div>
                         </div>

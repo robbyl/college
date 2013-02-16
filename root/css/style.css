@@ -317,7 +317,8 @@ h1, h2, h3, h4 {
     border: 1px #cd0707 solid;
 }
 
-.data-table1, .data-table2, .data-table3, .data-table4, .data-table5 {
+.data-table1, .data-table2, .data-table3,
+.data-table4, .data-table5, .data-table6 {
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #e0e0e0;
@@ -327,12 +328,14 @@ h1, h2, h3, h4 {
 .data-table2 td, .data-table2 th,
 .data-table3 td, .data-table3 th,
 .data-table4 td, .data-table4 th,
-.data-table5 td, .data-table5 th {
+.data-table5 td, .data-table5 th,
+.data-table6 td, .data-table6 th {
     border: 1px solid #e0e0e0;
     padding: 5px;
 }
 
-.data-table1 th, .data-table2 th, .data-table3 th, .data-table4 th, .data-table5 th {
+.data-table1 th, .data-table2 th, .data-table3 th,
+.data-table4 th, .data-table5 th, .data-table6 th {
     background-color: #999999;
     color: #ffffff;
 }
