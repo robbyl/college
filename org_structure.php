@@ -36,9 +36,14 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                 font-weight: bold;
                 background-color: #f4ffd0;
                 color: #08387f;
-                border-bottom: solid 1px #bbc1c4;
+                border: solid 1px #bbc1c4;
                 height: 26px;
                 line-height: 26px;
+            }
+            td{
+                width: 708px;
+                border: solid 1px #bbc1c4;
+                background-color: #fafafa;
             }
         </style>
     </head>
@@ -51,8 +56,8 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
             <div id="wrapper_sec">
                 <div id="content_section">
                         <div class="clear"></div>
+                        <h2>List below is the organisation structure</h2></br>
                         <table align="center" border="1px" cellpadding="1" cellspacing="0" width="100%">
-                            <h2>List below is the organisation structure</h2>
                             <tbody>
                                 <tr>
                                     <th>Picture</th>
