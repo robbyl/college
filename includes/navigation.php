@@ -4,7 +4,7 @@
                 <ul>
                     <li><a href="background.php">Background</a></li>
                     <li><a href="mission.php">Mission, Vision & Goals</a></li>
-                    <li><a href="#">Institute Structure</a></li>
+                    <li><a href="org_structure.php">Institute Structure</a></li>
                 </ul>
             </li>
             <li><a href="#" class="<?php if ($current_file_name === 'admissions.php') echo 'current' ?>">Admissions</a>
