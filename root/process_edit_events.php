@@ -41,7 +41,7 @@ if ($event_image !== $event_image && !empty($event_image)) {
     } else {
 
         info('error', 'This file type is not allowed');
-        header('Location: home.php');
+        header('Location: home#tab2.php');
         exit(0);
     }
 }
@@ -77,7 +77,7 @@ if ($event_attachment !== $attachment_name && !empty($attachment_name)) {
     } else {
 
         info('error', 'This file type is not allowed');
-        header('Location: home.php');
+        header('Location: home.php#tab2');
         exit(0);
     }
 }
@@ -93,6 +93,6 @@ if ($result_events) {
     header("Location: home.php#tab2");
 } else {
     info('error', 'Cannot update events, please try again!');
-    header("Location: home.php");
+    header("Location: home.php#tab2");
 }
 ?>

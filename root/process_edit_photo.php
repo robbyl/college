@@ -38,7 +38,7 @@ if ($photo_name !== $image_name && !empty($image_name)) {
     } else {
 
         info('error', 'This image type is not allowed');
-        header('Location: home.php');
+        header('Location: home.php#tab6');
         exit(0);
     }
 }
@@ -51,9 +51,9 @@ $result_news = mysql_query($query_news) or die(mysql_error());
 
 if ($result_news) {
     info('message', 'Photo updated successfully!');
-    header("Location: home.php");
+    header("Location: home.php#tab6");
 } else {
     info('error', 'Cannot update photo, please try again!');
-    header("Location: home.php");
+    header("Location: home.php#tab6");
 }
 ?>

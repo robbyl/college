@@ -33,13 +33,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if ($result_staff) {
         info('message', 'Staff deleted successfully!');
-        header('Location: home.php');
+        header('Location: home.php#tab5');
     } else {
         info('error', 'Cannot delete staff, please try again');
-        header('Location: home.php');
+        header('Location: home.php#tab5');
     }
 } else {
     info('error', 'Invalid staff id');
-    header('Location: home.php');
+    header('Location: home.php#tab5');
 }
 ?>

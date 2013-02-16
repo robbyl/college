@@ -32,13 +32,13 @@ if ($num_currpass === 1) {
     if ($result_newpass) {
        
         info('message', 'Password changed!');
-        header('Location: home.php');
+        header('Location: home.php#tab7');
     } else {
         info('error', 'Cannot change password!');
-        header('Location: home.php');
+        header('Location: home.php#tab7');
     }
 } else {
     info('error', 'Incorrect current password!');
-    header('Location: home.php');
+    header('Location: home.php#tab7');
 }
 ?>

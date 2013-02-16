@@ -83,7 +83,7 @@ $(document).ready(function() {
         "bLengthChange": true,
         "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
     });
-    
+
     oTable6 = $('.data-table6').dataTable({
         "bJQueryUI": true,
         "bScrollCollapse": true,
@@ -99,18 +99,43 @@ $(document).ready(function() {
         "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
     });
 
-    $(".tab_content").hide(); //Hide all content
-    $(".tabs_links ul li:first").addClass("active").show(); //Activate first tab
-    $(".tab_content:first").show(); //Show first tab content
-    oTable1.fnAdjustColumnSizing();
+    var link = document.location.hash;
+    
+    if (link) {
+        $('html, body').animate({scrollTop:0})
+        
+        $(".tabs_links ul li").removeClass("active"); //Remove any "active" class
+//        alert($('.tabs_links ul li:contains(' + link + ')'));
+//        $('.tabs_links ul li a').find(link).parent('li').addClass("active");
+        $('a[href="' +link + '"]').parent('li').addClass("active");
+        $(".tab_content").hide(); //Hide all tab content
+        $(link).fadeIn(); //Fade in the active content
+        
+        oTable1.fnAdjustColumnSizing();
+        oTable2.fnAdjustColumnSizing();
+        oTable3.fnAdjustColumnSizing();
+        oTable4.fnAdjustColumnSizing();
+        oTable5.fnAdjustColumnSizing();
+        oTable6.fnAdjustColumnSizing();
+        
+    } else {
+        $(".tab_content").hide(); //Hide all content
+        $(".tabs_links ul li:first").addClass("active").show(); //Activate first tab
+        $(".tab_content:first").show(); //Show first tab content
+        oTable1.fnAdjustColumnSizing();
+    }
+
+
     //On Click Event
     $(".tabs_links ul li").click(function() {
         $(".tabs_links ul li").removeClass("active"); //Remove any "active" class
         $(this).addClass("active"); //Add "active" class to selected tab
         $(".tab_content").hide(); //Hide all tab content
         var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+
         $(activeTab).fadeIn(); //Fade in the active content
 
+        oTable1.fnAdjustColumnSizing();
         oTable2.fnAdjustColumnSizing();
         oTable3.fnAdjustColumnSizing();
         oTable4.fnAdjustColumnSizing();
@@ -162,7 +187,7 @@ $(document).ready(function() {
         event.preventDefault();
         getPopForm(this.href);
     });
-    
+
     $('a.edit-photo').click(function(event) {
         event.preventDefault();
         getPopForm(this.href);
@@ -192,7 +217,7 @@ $(document).ready(function() {
         event.preventDefault();
         getPopForm('post_staff.php');
     });
-    
+
     $('.photo').click(function(event) {
         event.preventDefault();
         getPopForm('upload_photo.php');

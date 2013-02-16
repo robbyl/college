@@ -27,7 +27,7 @@ if (in_array($image_extenstion, $allowed_img_ext)) {
 } else {
 
     info('error', 'This image type is not allowed');
-    header('Location: home.php');
+    header('Location: home.php#tab6');
     exit(0);
 }
 
@@ -39,9 +39,9 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
 
 if ($result_gallery) {
     info('message', 'Photo uploaded successfully!');
-    header('Location: home.php');
+    header('Location: home.php#tab6');
 } else {
     info('error', 'Cannot upload photo!');
-    header('Location: home.php');
+    header('Location: home.php#tab6');
 }
 ?>

@@ -17,9 +17,9 @@ $query_courses = "UPDATE courses
 $result_courses = mysql_query($query_courses) or die(mysql_error());
 if ($result_courses) {
     info('message', 'Courses updated successfully!');
-    header("Location: home.php");
+    header("Location: home.php#tab3");
 } else {
     info('error', 'Cannot update courses, please try again!');
-    header("Location: home.php");
+    header("Location: home.php#tab3");
 }
 ?>

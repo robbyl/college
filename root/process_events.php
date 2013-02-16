@@ -26,7 +26,7 @@ if (!empty($image_name)) {
     } else {
 
         info('error', 'This file type is not allowed');
-        header('Location: settings.php');
+        header('Location: home.php#tab2');
         exit(0);
     }
 }
@@ -44,7 +44,7 @@ if (in_array($extension, $allowed_file_ext) && ($_FILES["attachment"]["size"] < 
 
         $message = "This file contain errors. Return Code: " . $_FILES["attachment"]["error"];
         info('error', $message);
-        header('Location: home.php');
+        header('Location: home.php#tab2');
     } else {
 
         // Uploading it to doc folder.
@@ -53,7 +53,7 @@ if (in_array($extension, $allowed_file_ext) && ($_FILES["attachment"]["size"] < 
 } else {
 
     info('error', 'This file type is not allowed');
-    header('Location: home.php');
+    header('Location: home.php#tab2');
     exit(0);
 }
 
@@ -68,9 +68,9 @@ $result_news = mysql_query($query_news) or die(mysql_error());
 
 if ($result_news) {
     info('message', 'Events posted successfully!');
-    header('Location: home.php');
+    header('Location: home.php#tab2');
 } else {
     info('error', 'Cannot post events!');
-    header('Location: home.php');
+    header('Location: home.php#tab2');
 }
 ?>

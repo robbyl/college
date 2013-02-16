@@ -38,7 +38,7 @@ if ($dwn_attachment !== $file_name && !empty($file_name)) {
     } else {
 
     info('error', 'This file type is not allowed');
-    header('Location: home.php');
+    header('Location: home.php#tab4');
     exit(0);
     }
 }
@@ -52,9 +52,9 @@ $result_downloads = mysql_query($query_downloads) or die(mysql_error());
 
 if ($result_downloads) {
     info('message', 'File updated successfully!');
-    header('Location: home.php');
+    header('Location: home.php#tab4');
 } else {
     info('error', 'Cannot updated file, please try again!');
-    header('Location: home.php');
+    header('Location: home.php#tab4');
 }
 ?>

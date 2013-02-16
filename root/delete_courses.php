@@ -15,13 +15,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if ($result_courses) {
         info('message', 'Courses deleted successfully!');
-        header('Location: home.php');
+        header('Location: home.php#tab3');
     } else {
         info('error', 'Cannot delete courses');
-        header('Location: home.php');
+        header('Location: home.php#tab3');
     }
 } else {
     info('error', 'Invalid course id');
-    header('Location: home.php');
+    header('Location: home.php#tab3');
 }
 ?>

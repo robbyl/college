@@ -28,7 +28,7 @@ if (in_array($extension, $allowed_file_ext) && ($_FILES["download"]["size"] < 10
 } else {
 
     info('error', 'This file type is not allowed');
-    header('Location: home.php');
+    header('Location: home.php#tab4');
     exit(0);
 }
 
@@ -40,9 +40,9 @@ $result_dwn = mysql_query($query_dwn) or die(mysql_error());
 
 if ($result_dwn) {
     info('message', 'File uploaded successfully!');
-    header('Location: home.php');
+    header('Location: home.php#tab4');
 } else {
     info('error', 'Cannot upload file, please try again!');
-    header('Location: home.php');
+    header('Location: home.php#tab4');
 }
 ?>

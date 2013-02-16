@@ -39,7 +39,7 @@ if ($staff_image !== $image_name && !empty($image_name)) {
     } else {
 
         info('error', 'This image type is not allowed');
-        header('Location: home.php');
+        header('Location: home.php#tab5');
         exit(0);
     }
 }
@@ -53,9 +53,9 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
 
 if ($result_staff) {
     info('message', 'Staff updated successfully!');
-    header('Location: home.php');
+    header('Location: home.php#tab5');
 } else {
     info('error', 'Cannot update staff, please try again!');
-    header('Location: home.php');
+    header('Location: home.php#tab5');
 }
 ?>

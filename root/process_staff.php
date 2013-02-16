@@ -30,7 +30,7 @@ if (!empty($image_name)) {
     } else {
 
         info('error', 'This image type is not allowed');
-        header('Location: home.php');
+        header('Location: home.php#tab5');
         exit(0);
     }
 }
@@ -43,9 +43,9 @@ $result_org = mysql_query($query_org) or die(mysql_error());
 
 if ($result_org) {
     info('message', 'Staff posted successfully!');
-    header('Location: home.php');
+    header('Location: home.php#tab5');
 } else {
     info('error', 'Cannot post staff, please try again!');
-    header('Location: home.php');
+    header('Location: home.php#tab5');
 }
 ?>
