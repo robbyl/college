@@ -43,7 +43,7 @@ $current_file_name = 'academics.php';
                     <div class="col1">
                         <!-- Banner -->
                         <div id="banner1">
-                            <a href="news.html#"><img src="images/newsbanner.gif" alt="" /></a>
+                            <a href="news.html#"><img src="images/library.jpg" alt="" /></a>
                             <div class="heading">
                                 <h1>Our Library</h1>
                             </div>

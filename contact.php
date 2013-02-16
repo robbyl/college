@@ -148,7 +148,7 @@ $current_file_name = end($values);
                             <div class="block2">
                                 <h5>Our Location</h5>
                                 <div class="map">
-                                    <a href="contact.html#"><img src="images/map.gif"  alt="" /></a>
+                                    <a href="contact.html#"><img src="images/map.jpg"  alt="" /></a>
                                 </div>
                                 <!--                                <div class="map_cities">
                                                                     <ul>

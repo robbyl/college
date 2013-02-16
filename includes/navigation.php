@@ -12,7 +12,7 @@
                     <li><a href="requirements.php">Entry requirements</a></li>
                     <li><a href="applicationform.php">Application Form</a></li>
                     <li><a href="#">Fee Structure</a></li>
-                    <li><a href="#">Programmes</a></li>
+                    <li><a href="course.php">Programmes</a></li>
                 </ul>
             </li>
             <li><a href="#"  class="<?php if ($current_file_name === 'academics.php') echo 'current' ?>">Academics</a>

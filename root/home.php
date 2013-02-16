@@ -173,6 +173,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                                         <th>Date posted</th>
                                         <th>Title</th>
                                         <th>Description</th>
+                                        <th>Duration</th>
                                         <th>Actions</th>
                                         <th>Actions</th>
                                     </tr>
@@ -186,6 +187,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                                         echo '<td>' . date_format($course_posted, 'd M, Y @ H:i') . '</td>';
                                         echo '<td>' . $row_courses['course_title'] . '</td>';
                                         echo '<td>' . $row_courses['course_description'] . '</td>';
+                                        echo '<td>' . $row_courses['duration'] . '</td>';
                                         echo '<td><a href="edit_courses.php?id=' . $row_courses['course_id'] . '" class="edit-courses">Edit</a></td>';
                                         echo '<td><a href="delete_courses.php?id=' . $row_courses['course_id'] . '" onClick="return confirm(\'Are you sure you want to delete this course\');">Delete</a></td>';
                                         echo '</tr>';
