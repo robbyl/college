@@ -32,8 +32,13 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
         <script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
         
         <style>
-            th tr {
-                border: blue;
+            th{
+                font-weight: bold;
+                background-color: #f4ffd0;
+                color: #08387f;
+                border-bottom: solid 1px #bbc1c4;
+                height: 26px;
+                line-height: 26px;
             }
         </style>
     </head>
@@ -47,7 +52,7 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                 <div id="content_section">
                         <div class="clear"></div>
                         <table align="center" border="1px" cellpadding="1" cellspacing="0" width="100%">
-                            <thead><h2>List below is the organisation structure</h2></thead>
+                            <h2>List below is the organisation structure</h2>
                             <tbody>
                                 <tr>
                                     <th>Picture</th>
@@ -56,11 +61,9 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                                 </tr>
                                 
                                 <?php
-                                
                                    while ($row = mysql_fetch_array($result_staff)) {
-                                       $image = $row['staff_image'];
                                      echo "<tr>";
-                                     echo '<img src="data:images/gif;base64,' . base64_encode($image) . '" />';
+                                     echo '<td><img src="root/uploads/images/' . $row['staff_image'] . '" height="80"/></td>';
                                      echo "<td>" . $row['staff_title'] . "</td>";
                                      echo "<td>" . $row['position'] . "</td>";
                                      echo "</tr>";
