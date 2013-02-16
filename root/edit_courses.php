@@ -37,6 +37,10 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                             <td><input type="text" name="title" value="<?php echo $row_courses['course_title'] ?>" class="text" required></td>
                         </tr>
                         <tr>
+                            <td width="200">Duration</td>
+                            <td><input type="text" name="duration" value="<?php echo $row_courses['duration'] ?>" class="text" required></td>
+                        </tr>
+                        <tr>
                             <td style="vertical-align: top">Course Description</td>
                             <td><textarea name="description" required><?php echo $row_courses['course_description']; ?></textarea></td>
                         </tr>

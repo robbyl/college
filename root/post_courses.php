@@ -18,6 +18,10 @@
                             <td><input type="text" name="title" class="text" required></td>
                         </tr>
                         <tr>
+                            <td width="200">Duration</td>
+                            <td><input type="text" name="duration" class="text" required></td>
+                        </tr>
+                        <tr>
                             <td style="vertical-align: top">Course description</td>
                             <td><textarea name="description" required></textarea></td>
                         </tr>
