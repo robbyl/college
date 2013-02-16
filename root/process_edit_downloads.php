@@ -37,9 +37,9 @@ if ($dwn_attachment !== $file_name && !empty($file_name)) {
         }
     } else {
 
-    info('error', 'This file type is not allowed');
-    header('Location: home.php');
-    exit(0);
+        info('error', 'This file type is not allowed');
+        header('Location: home.php');
+        exit(0);
     }
 }
 

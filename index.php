@@ -134,9 +134,9 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                                             <h6><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>"><?php echo $row_news['nws_title'] ?></a></h6>
                                             <em>
                                                 (Posted on <?php
-                                $posted = date_create($row_news['nws_posted_date']);
-                                echo date_format($posted, 'd M, Y')
-                                    ?>)
+                                                $posted = date_create($row_news['nws_posted_date']);
+                                                echo date_format($posted, 'd M, Y')
+                                                ?>)
                                             </em>
                                             <p><a href="root/uploads/docs/<?php echo $row_news['nws_attachment']; ?>" class="gray" ><?php echo $row_news['nws_description'] ?></a></p>
                                         </div>

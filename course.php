@@ -22,7 +22,7 @@
     </head>
     <body>
         <div class="wapper-header">
-            <?php include 'includes/header.php';?>
+            <?php include 'includes/header.php'; ?>
             <!-- end outter--></div>
         <div id="bg">
             <!-- Wapper Sec -->
@@ -310,7 +310,7 @@
             </div>
         </div>
         <!-- Footer Section -->
-        <?php include 'includes/footer.php';?>
+        <?php include 'includes/footer.php'; ?>
     </body>
 </html>
 

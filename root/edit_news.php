@@ -1,19 +1,18 @@
 <?php
-
 require '../config/config.php';
 require '../functions/general_functions.php';
 
-if(isset($_GET['id']) && !empty($_GET['id'])){
+if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = clean($_GET['id']);
-    
+
     $query_news = "SELECT *
                      FROM news
                     WHERE nws_id = '$id'
                     LIMIT 1";
-    
+
     $result_news = mysql_query($query_news) or die(mysql_error());
-    
-   $row_news = mysql_fetch_array($result_news);
+
+    $row_news = mysql_fetch_array($result_news);
 }
 ?>
 <!DOCTYPE html>

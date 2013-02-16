@@ -12,12 +12,11 @@ $query_courses = "INSERT INTO courses
 
 $result_courses = mysql_query($query_courses) or die(mysql_error());
 
-if($result_courses){
+if ($result_courses) {
     info('message', 'Course posted successfully!');
     header('Location: home.php');
 } else {
     info('error', 'Cannot post course!');
     header('Location: home.php');
 }
-
 ?>

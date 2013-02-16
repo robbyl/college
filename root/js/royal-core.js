@@ -83,7 +83,7 @@ $(document).ready(function() {
         "bLengthChange": true,
         "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
     });
-    
+
     oTable6 = $('.data-table6').dataTable({
         "bJQueryUI": true,
         "bScrollCollapse": true,
@@ -162,7 +162,7 @@ $(document).ready(function() {
         event.preventDefault();
         getPopForm(this.href);
     });
-    
+
     $('a.edit-photo').click(function(event) {
         event.preventDefault();
         getPopForm(this.href);
@@ -192,7 +192,7 @@ $(document).ready(function() {
         event.preventDefault();
         getPopForm('post_staff.php');
     });
-    
+
     $('.photo').click(function(event) {
         event.preventDefault();
         getPopForm('upload_photo.php');

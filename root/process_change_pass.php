@@ -30,7 +30,7 @@ if ($num_currpass === 1) {
     $result_newpass = mysql_query($query_newpass) or die();
 
     if ($result_newpass) {
-       
+
         info('message', 'Password changed!');
         header('Location: home.php');
     } else {

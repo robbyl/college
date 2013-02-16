@@ -37,13 +37,12 @@ if ($news_image !== $image_name && !empty($image_name)) {
                              WHERE nws_id = '$id'";
 
             $result_image = mysql_query($query_image) or die(mysql_error());
-            
         }
     } else {
 
-    info('error', 'This image type is not allowed');
-    header('Location: home.php');
-    exit(0);
+        info('error', 'This image type is not allowed');
+        header('Location: home.php');
+        exit(0);
     }
 }
 
@@ -77,9 +76,9 @@ if ($news_attachment !== $attachment_name && !empty($attachment_name)) {
         }
     } else {
 
-    info('error', 'This file type is not allowed');
-    header('Location: home.php');
-    exit(0);
+        info('error', 'This file type is not allowed');
+        header('Location: home.php');
+        exit(0);
     }
 }
 

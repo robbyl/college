@@ -1,19 +1,18 @@
 <?php
-
 require '../config/config.php';
 require '../functions/general_functions.php';
 
-if(isset($_GET['id']) && !empty($_GET['id'])){
+if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = clean($_GET['id']);
-    
+
     $query_gallery = "SELECT *
                      FROM gallery
                     WHERE photo_id = '$id'
                     LIMIT 1";
-    
+
     $result_gallery = mysql_query($query_gallery) or die(mysql_error());
-    
-   $row_gallery = mysql_fetch_array($result_gallery);
+
+    $row_gallery = mysql_fetch_array($result_gallery);
 }
 ?>
 <!DOCTYPE html>
@@ -32,7 +31,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
                 <form class="pop-up-form" id="news-form" action="process_edit_photo.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $row_gallery['photo_id'] ?>" />
                     <input type="hidden" name="photo_name" value="<?php echo $row_gallery['photo_name'] ?>" />
-                    
+
                     <table border="0" width="100%">
                         <tr>
                             <td>Image</td>

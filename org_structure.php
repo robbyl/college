@@ -31,7 +31,7 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
         <script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
 
         <style>
-            
+
         </style>
     </head>
     <body>

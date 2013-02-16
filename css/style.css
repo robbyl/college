@@ -3350,7 +3350,7 @@ a.top {
 
 .site-map {
     margin-left: 15px;
-    
+
 }
 
 .site-map li {
@@ -3378,28 +3378,28 @@ a.top {
 }
 
 .site-map a:hover {
-   text-decoration: underline; 
+    text-decoration: underline; 
 }
 td{
     text-align: center;
     width: 708px;
     border: solid 1px #bbc1c4;
     background-color: #fafafa;
-                
+
 }
 th{
-     font-weight: bold;
-     background-color: #f4ffd0;
-     color: #08387f;
-     border: solid 1px #bbc1c4;
-     height: 26px;
-     line-height: 26px;
-  }
-  td img{
-      width: 150px;
-      height: 150;
-  }
-  .org_heading{
-      margin-top: 15px;
-      margin-bottom: 15px;
-  }
+    font-weight: bold;
+    background-color: #f4ffd0;
+    color: #08387f;
+    border: solid 1px #bbc1c4;
+    height: 26px;
+    line-height: 26px;
+}
+td img{
+    width: 150px;
+    height: 150;
+}
+.org_heading{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

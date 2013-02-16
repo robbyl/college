@@ -1,19 +1,18 @@
 <?php
-
 require '../config/config.php';
 require '../functions/general_functions.php';
 
-if(isset($_GET['id']) && !empty($_GET['id'])){
+if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = clean($_GET['id']);
-    
+
     $query_courses = "SELECT *
                      FROM courses
                     WHERE course_id = '$id'
                     LIMIT 1";
-    
+
     $result_courses = mysql_query($query_courses) or die(mysql_error());
-    
-   $row_courses = mysql_fetch_array($result_courses);
+
+    $row_courses = mysql_fetch_array($result_courses);
 }
 ?>
 <!DOCTYPE html>

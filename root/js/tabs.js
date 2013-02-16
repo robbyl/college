@@ -39,9 +39,9 @@ $(function() {
         btnPrev: ".rightarrow"
     });
     $("a.galleryimg").fancybox({
-        'titlePosition'		: 'inside',
-        'overlayColor'		: '#000',
-        'overlayOpacity'	: 0.9
+        'titlePosition': 'inside',
+        'overlayColor': '#000',
+        'overlayOpacity': 0.9
 
     });
 });

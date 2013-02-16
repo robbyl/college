@@ -6,7 +6,7 @@ require '../config/config.php';
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     $id = clean($_GET['id']);
-    
+
     // Obtaining news attachment name according to the given id
     $query_attachment = "SELECT nws_attachment
                            FROM news
