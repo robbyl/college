@@ -50,7 +50,7 @@ $result_courses = mysql_query($query_course) or die(mysql_error());
 
                         <!-- Content Heading -->
                         <div class="content_heading">
-                            <div class="heading"><h2>Course Schedule</h2> </div>
+                            <div class="heading"><h2>Courses</h2> </div>
                         </div>
                         <p>
                             Nullam scelerisque cursus leo at volutpat. Etiam non faucibus ante. Ut eget leo placerat velit imperdiet suscipit.                                ,                                at aliquam est. Proin eget laoreet lectus. Nullam scelerisque cursus leo at volutpat. Etiam non faucibus ante.                                Ut eget                                leo placerat velit imperdiet suscipit.  at aliquam est. Proin eget laoreet lectus. Nullam scelerisque                                cursus leo at                                volutpat.
