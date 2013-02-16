@@ -6,7 +6,7 @@ $current_file_name = end($values);
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>College02</title>
+        <title>CONTACT</title>
         <!-- Stylesheet -->
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
@@ -141,8 +141,8 @@ $current_file_name = end($values);
 
                                 </ul>
                                 <div class="action1">
-                                    <a href="contact.html#" class="btn1 left">Submit</a>
-                                    <a href="contact.html#" class="right">Cancel</a>
+                                    <a href="#" class="btn1 left">Submit</a>
+                                    <a href="#" class="right">Cancel</a>
                                 </div>
                             </div>
                             <div class="block2">
