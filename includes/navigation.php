@@ -15,9 +15,9 @@
                     <li><a href="#">Programmes</a></li>
                 </ul>
             </li>
-            <li><a href="#"  class="<?php if ($current_file_name === 'course.php') echo 'current' ?>">Academics</a>
+            <li><a href="#"  class="<?php if ($current_file_name === 'academics.php') echo 'current' ?>">Academics</a>
                 <ul>
-                    <li><a href="#">Library</a></li>
+                    <li><a href="library.php">Library</a></li>
                     <li><a href="#">Laboratory</a></li>
                 </ul>
             </li>

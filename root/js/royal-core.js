@@ -7,6 +7,7 @@ $(document).ready(function() {
     var oTable3;
     var oTable4;
     var oTable5;
+    var oTable6;
 
     oTable1 = $('.data-table1').dataTable({
         "bJQueryUI": true,
@@ -82,6 +83,21 @@ $(document).ready(function() {
         "bLengthChange": true,
         "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
     });
+    
+    oTable6 = $('.data-table6').dataTable({
+        "bJQueryUI": true,
+        "bScrollCollapse": true,
+        "sScrollY": "auto",
+        "bAutoWidth": false,
+        "bPaginate": true,
+        "sPaginationType": "full_numbers", //full_numbers,two_button
+        "bStateSave": true,
+        "bInfo": true,
+        "bFilter": true,
+        "iDisplayLength": 25,
+        "bLengthChange": true,
+        "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
+    });
 
     $(".tab_content").hide(); //Hide all content
     $(".tabs_links ul li:first").addClass("active").show(); //Activate first tab
@@ -99,6 +115,7 @@ $(document).ready(function() {
         oTable3.fnAdjustColumnSizing();
         oTable4.fnAdjustColumnSizing();
         oTable5.fnAdjustColumnSizing();
+        oTable6.fnAdjustColumnSizing();
         return false;
     });
 
@@ -145,6 +162,11 @@ $(document).ready(function() {
         event.preventDefault();
         getPopForm(this.href);
     });
+    
+    $('a.edit-photo').click(function(event) {
+        event.preventDefault();
+        getPopForm(this.href);
+    });
 
     $('.news').click(function(event) {
         event.preventDefault();
@@ -169,6 +191,11 @@ $(document).ready(function() {
     $('.staff').click(function(event) {
         event.preventDefault();
         getPopForm('post_staff.php');
+    });
+    
+    $('.photo').click(function(event) {
+        event.preventDefault();
+        getPopForm('upload_photo.php');
     });
 
     $('.close').live('click', function() {

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 15, 2013 at 12:09 PM
+-- Generation Time: Feb 16, 2013 at 11:14 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -18,7 +18,6 @@ SET time_zone = "+00:00";
 
 --
 -- Database: `college`
-
 --
 
 -- --------------------------------------------------------
@@ -41,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
 --
 
 INSERT INTO `courses` (`course_id`, `course_title`, `course_description`, `course_posted_date`, `duration`) VALUES
-(1, 'html', '', '0000-00-00 00:00:00', '3');
+(1, 'html', '', '2013-02-12 00:00:00', '3');
 
 -- --------------------------------------------------------
 
@@ -62,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `downloads` (
 --
 
 INSERT INTO `downloads` (`dwn_id`, `dwn_title`, `dwn_date_uploaded`, `dwn_file_name`) VALUES
-(1, 'fee structure', '2013-02-12 13:13:02', 'data_analyst_CV_template.pdf'),
+(1, 'fee structure', '2013-02-15 19:52:11', 'data_analyst_CV_template.pdf'),
 (3, 'Admission form', '2013-02-12 16:41:57', 'PHP_developer_CV_template.pdf');
 
 -- --------------------------------------------------------
@@ -95,6 +94,32 @@ INSERT INTO `events` (`event_id`, `event_title`, `event_posted_date`, `event_des
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE IF NOT EXISTS `gallery` (
+  `photo_id` int(11) NOT NULL AUTO_INCREMENT,
+  `photo_name` varchar(255) NOT NULL,
+  `photo_description` text NOT NULL,
+  PRIMARY KEY (`photo_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`photo_id`, `photo_name`, `photo_description`) VALUES
+(3, 'Modern+kerala+exterior+design+for+a+2352+sq+ft+home.jpg', 'Modern housing'),
+(4, 'P070213_10.40.jpg', 'Building'),
+(5, 'P070213_10.41.jpg', 'institute building'),
+(8, 'P070213_10.40.jpg', 'Building'),
+(9, 'Picture 024.jpg', 'lab'),
+(10, 'Picture 017.jpg', 'maonesho'),
+(11, 'P070213_10.55.jpg', 'students');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `news`
 --
 
@@ -106,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `nws_attachment` varchar(255) NOT NULL,
   `nws_image` varchar(255) NOT NULL,
   PRIMARY KEY (`nws_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `news`
@@ -118,6 +143,28 @@ INSERT INTO `news` (`nws_id`, `nws_title`, `nws_posted_date`, `nws_description`,
 (20, 'Prospectus', '2013-02-06 17:08:32', 'Prospectus for all colleges', 'flash-forward-robert-j-sawyer.pdf', ''),
 (21, 'Institute opening', '2013-02-11 00:00:00', 'This is to inform all students that that the institute will be opened on 03/Mar/2013', '', ''),
 (22, 'Institute opening', '2013-02-11 16:00:00', 'This is to inform all students that that the institute will be opened on 03/Mar/2013', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff`
+--
+
+CREATE TABLE IF NOT EXISTS `staff` (
+  `staff_id` int(11) NOT NULL AUTO_INCREMENT,
+  `staff_title` varchar(255) NOT NULL,
+  `position` varchar(255) NOT NULL,
+  `staff_image` varchar(255) NOT NULL,
+  `posted_date` datetime NOT NULL,
+  PRIMARY KEY (`staff_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `staff`
+--
+
+INSERT INTO `staff` (`staff_id`, `staff_title`, `position`, `staff_image`, `posted_date`) VALUES
+(6, 'fsaf', 'afasf', 'picture016.jpg', '2013-02-15 12:18:33');
 
 -- --------------------------------------------------------
 

@@ -90,7 +90,7 @@ $query_events = "UPDATE events
 $result_events = mysql_query($query_events) or die(mysql_error());
 if ($result_events) {
     info('message', 'Event updated successfully!');
-    header("Location: home.php");
+    header("Location: home.php#tab2");
 } else {
     info('error', 'Cannot update events, please try again!');
     header("Location: home.php");

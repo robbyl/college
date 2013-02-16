@@ -32,6 +32,10 @@ $query_staff = "SELECT *
                       FROM staff
                   ORDER BY posted_date DESC";
 $result_staff = mysql_query($query_staff) or die(mysql_error());
+
+$query_gallery = "SELECT * 
+                      FROM gallery";
+$result_gallery = mysql_query($query_gallery) or die(mysql_error());
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,9 +76,10 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                             <li><a href="#tab1">Manage News</a></li>
                             <li><a href="#tab2">Manage Events</a></li>
                             <li><a href="#tab3">Manage Courses</a></li>
-                            <li><a  href="#tab4">Manage Uploads</a></li>
+                            <li><a  href="#tab4">Manage Downloads</a></li>
                             <li><a href="#tab5">Org Structure</a></li>
-                            <li><a href="#tab6">Change password</a></li>
+                            <li><a href="#tab6">Gallery</a></li>
+                            <li><a href="#tab7">Change password</a></li>
                         </ul>
                     </div>
                    
@@ -193,7 +198,7 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                     </div>
                     <div class="tab_content" id="tab4" style="display:none" >
                         <div class="root-heading">
-                            <h2 class="label">Manage Uploads</h2>
+                            <h2 class="label">Manage Downloads</h2>
                             <button class="post upload" >Upload new files</button>
                             <div style="clear: both"></div>
                         </div>
@@ -268,9 +273,42 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                         </div>
                     </div>
                     <div class="tab_content" id="tab6" style="display:none" >
+                        <div class="root-heading">
+                        <h2 class="label">Manage Photo gallery</h2>
+                        <button class="post photo">Upload photo</button>
+                        </div>
+                        <div class="form-wrapper">
+                            <table class="data-table6" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Photo</th>
+                                        <th>Description</th>
+                                        <th>Actions</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    while ($row_gallery = mysql_fetch_array($result_gallery)) {
+
+                                        echo '<tr>';
+                                        echo '<td><img src="uploads/images/gallery/' . $row_gallery['photo_name'] . '" height="40"/></td>';
+                                        echo '<td>' . $row_gallery['photo_description'] . '</td>';
+                                        echo '<td><a href="edit_photo.php?id=' . $row_gallery['photo_id'] . '" class="edit-photo">Edit</a></td>';
+                                        echo '<td><a href="delete_photo.php?id=' . $row_gallery['photo_id'] . '" onClick="return confirm(\'Are you sure you want to delete this photo\');">Delete</a></td>';
+                                        echo '</tr>';
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab_content" id="tab7" style="display:none" >
+                        <div class="root-heading">
                         <button type="reset" class="post" form="charge_password">Reset</button>
                         <button type="submit" class="post" style="margin-right: 0" form="resert_password">Change</button>
                         <h2 class="label">Change your password</h2>
+                        </div>
                         <div class="form-wrapper">
                             <form id="resert_password" action="process_change_pass.php" method="POST">
                                 <table border="0" width="100%">
@@ -297,6 +335,7 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
                     <div class="clear"></div>
                 </div>
             </div>
+            <div class="clear"></div>
         </div>
         <div> 
             <?php include 'footer.php'; ?>
