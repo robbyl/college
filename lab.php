@@ -45,7 +45,7 @@ $current_file_name = 'academics.php';
                         <div id="banner1">
                             <a href="news.html#"><img src="images/newsbanner.gif" alt="" /></a>
                             <div class="heading">
-                                <h1>Our Library</h1>
+                                <h1>Our Laboratory</h1>
                             </div>
                         </div>
                         <!--Content Links--> 
@@ -61,7 +61,7 @@ $current_file_name = 'academics.php';
                         </div>
                         <!-- Content Heading -->
                         <div id="content2">
-                            <h2 class="pad8">Our Library</h2>
+                            <h2 class="pad8">Our Laboratory</h2>
                             <!-- News Listing -->
 
                             <div class="clear"></div>

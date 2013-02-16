@@ -18,7 +18,7 @@
             <li><a href="#"  class="<?php if ($current_file_name === 'academics.php') echo 'current' ?>">Academics</a>
                 <ul>
                     <li><a href="library.php">Library</a></li>
-                    <li><a href="#">Laboratory</a></li>
+                    <li><a href="lab.php">Laboratory</a></li>
                 </ul>
             </li>
             <li><a href="#" class="<?php if ($current_file_name === 'research.php') echo 'current' ?>">Research</a></li>
