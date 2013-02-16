@@ -33,13 +33,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if ($result_events) {
         info('message', 'Events deleted successfully!');
-        header('Location: home.php');
+        header('Location: home.php#tab2');
     } else {
         info('error', 'Cannot delete events');
-        header('Location: home.php');
+        header('Location: home.php#tab2');
     }
 } else {
     info('error', 'Invalid event id');
-    header('Location: home.php');
+    header('Location: home.php#tab2');
 }
 ?>

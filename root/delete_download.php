@@ -33,13 +33,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if ($result_donwloads) {
         info('message', 'Download deleted successfully!');
-        header('Location: home.php');
+        header('Location: home.php#tab4');
     } else {
         info('error', 'Cannot delete download file, please try again');
-        header('Location: home.php');
+        header('Location: home.php#tab4');
     }
 } else {
     info('error', 'Invalid download id');
-    header('Location: home.php');
+    header('Location: home.php#tab4');
 }
 ?>

@@ -33,13 +33,13 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if ($result_gallery) {
         info('message', 'Photo deleted successfully!');
-        header('Location: home.php');
+        header('Location: home.php#tab6');
     } else {
         info('error', 'Cannot delete photo');
-        header('Location: home.php');
+        header('Location: home.php#tab6');
     }
 } else {
     info('error', 'Invalid photo id');
-    header('Location: home.php');
+    header('Location: home.php#tab6');
 }
 ?>
