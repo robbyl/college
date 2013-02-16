@@ -1,6 +1,13 @@
 <?php
+require 'config/config.php';
+
 $values = explode('\\', __FILE__);
 $current_file_name = end($values);
+
+$query_gallery = "SELECT photo_name, photo_description
+                    FROM gallery";
+
+$result_gallery = mysql_query($query_gallery) or die(mysql_errno());
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,7 +33,7 @@ $current_file_name = end($values);
     </head>
     <body>
         <div class="wapper-header">
-            <?php include 'includes/header.php';?>
+            <?php include 'includes/header.php'; ?>
         </div>
         <div id="bg">
             <!-- Wapper Sec -->
@@ -50,17 +57,22 @@ $current_file_name = end($values);
                         <div class="categorydiv">
                             <ul>
                                 <li><a class="selected" href="gallery.html#">Institute photos</a></li>
-<!--                                <li><a href="gallery.html#">College Biulding</a></li>
-                                <li><a href="gallery.html#">Our International Students</a></li>
-                                <li><a href="gallery.html#">English Classis</a></li>
-                                <li><a href="gallery.html#">Mr.Robort Lecture  </a></li>
-                                <li><a href="gallery.html#">Lorum ipsum Dollor</a></li>-->
+                                <!--                                <li><a href="gallery.html#">College Biulding</a></li>
+                                                                <li><a href="gallery.html#">Our International Students</a></li>
+                                                                <li><a href="gallery.html#">English Classis</a></li>
+                                                                <li><a href="gallery.html#">Mr.Robort Lecture  </a></li>
+                                                                <li><a href="gallery.html#">Lorum ipsum Dollor</a></li>-->
                             </ul>
                         </div>
                         <div class="thumbdiv">
                             <ul>
-                                <li><a href="images/gallery1.gif" rel="galleryimg" class="galleryimg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibu" ><img src="images/gallery1.gif"  alt="" /></a></li>
-                                
+                                <?php
+                                while ($row_gallery = mysql_fetch_array($result_gallery)) {
+                                    ?>
+                                    <li><a href="root/uploads/images/gallery/<?php echo $row_gallery['photo_name']; ?>" rel="galleryimg" class="galleryimg" title="<?php echo $row_gallery['photo_description'] ?>" ><img src="root/uploads/images/gallery/<?php echo $row_gallery['photo_name'] ?>"  height="100" /></a></li>
+                                    <?php
+                                }
+                                ?>
                             </ul>
                             <div class="hdiv">&nbsp;</div>
                         </div>
@@ -72,7 +84,7 @@ $current_file_name = end($values);
             </div>
         </div>
         <!-- Footer Section -->
-        <?php include 'includes/footer.php';?>
+        <?php include 'includes/footer.php'; ?>
     </body>
 </html>
 

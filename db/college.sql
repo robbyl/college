@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 16, 2013 at 10:35 AM
+-- Generation Time: Feb 16, 2013 at 11:14 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -102,14 +102,20 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `photo_name` varchar(255) NOT NULL,
   `photo_description` text NOT NULL,
   PRIMARY KEY (`photo_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `gallery`
 --
 
 INSERT INTO `gallery` (`photo_id`, `photo_name`, `photo_description`) VALUES
-(3, 'Modern+kerala+exterior+design+for+a+2352+sq+ft+home.jpg', 'Modern housing');
+(3, 'Modern+kerala+exterior+design+for+a+2352+sq+ft+home.jpg', 'Modern housing'),
+(4, 'P070213_10.40.jpg', 'Building'),
+(5, 'P070213_10.41.jpg', 'institute building'),
+(8, 'P070213_10.40.jpg', 'Building'),
+(9, 'Picture 024.jpg', 'lab'),
+(10, 'Picture 017.jpg', 'maonesho'),
+(11, 'P070213_10.55.jpg', 'students');
 
 -- --------------------------------------------------------
 
