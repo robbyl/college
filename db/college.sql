@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 16, 2013 at 11:14 AM
+-- Generation Time: Feb 16, 2013 at 02:40 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
 --
 
 INSERT INTO `courses` (`course_id`, `course_title`, `course_description`, `course_posted_date`, `duration`) VALUES
-(1, 'html', '', '2013-02-12 00:00:00', '3');
+(1, 'html', 'some description', '2013-02-12 00:00:00', '4 month');
 
 -- --------------------------------------------------------
 
