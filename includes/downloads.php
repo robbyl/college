@@ -9,7 +9,7 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
 <div class="course_right">
     <div class="crheading">
         <h5 class="download" >Downloads</h5>
-        <a href="contact.html#">View More</a>
+        <a href="#">View More</a>
     </div>
     <ul>
         <?php
