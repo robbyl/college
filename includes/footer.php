@@ -16,11 +16,7 @@
             <h5>ICT Links</h5>
             <ul>
                 <li><a href="root/index.php">Administration</a></li>
-                <li><a href="#">Staff Mail</a></li>
-                <!--                    <li><a href="index.php#"></a></li>
-                                    <li><a href="index.php#">Campus Notices</a></li>
-                                    <li><a href="index.php#">Emergency Information</a></li>
-                                    <li><a href="index.php#">Staff</a></li>-->
+                <li><a href="http://royalpharm.ac.tz/webmail" target="black">Staff Mail</a></li>
             </ul>
         </div>
         <!-- Addmission -->
@@ -30,7 +26,7 @@
                 <li><a href="requirements.php">Entry Requirements</a></li>
                 <li><a href="applicationform.php">Application Form</a></li>
                 <li><a href="#">Fee Structure</a></li>
-                <li><a href="#">Programmes</a></li>
+                <li><a href="course.php">Courses</a></li>
             </ul>
         </div>
         <!-- Help and Support -->

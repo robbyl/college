@@ -3350,7 +3350,7 @@ a.top {
 
 .site-map {
     margin-left: 15px;
-    
+
 }
 
 .site-map li {
@@ -3378,5 +3378,29 @@ a.top {
 }
 
 .site-map a:hover {
-   text-decoration: underline; 
+    text-decoration: underline; 
+}
+
+.structure {
+    width: 100%;
+    border: 1px solid #BBC1C4;
+    border-collapse: collapse;
+}
+
+.structure th {
+    border: 1px solid #BBC1C4;
+    text-align: left;
+    padding-left: 13px;
+    padding-right: 13px;
+    background-color: #F4FFD0;
+    color: #0086B2;
+    font-weight: 700;
+    height: 26px;
+}
+
+.structure td {
+    border: 1px solid #BBC1C4;
+    text-align: left;
+    padding: 13px;
+    vertical-align: top;
 }

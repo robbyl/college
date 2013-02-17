@@ -266,7 +266,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                                         echo '<td>' . $row_staff['position'] . '</td>';
                                         echo '<td><a href="uploads/images/' . $row_staff['staff_image'] . '">' . $row_staff['staff_image'] . '</a></td>';
                                         echo '<td><a href="edit_staff.php?id=' . $row_staff['staff_id'] . '" class="edit-staff">Edit</a></td>';
-                                        echo '<td><a href="delete_staff.php?id=' . $row_staff['staff_id'] . '" onClick="return confirm(\'Are you sure you want to delete this news\');">Delete</a></td>';
+                                        echo '<td><a href="delete_staff.php?id=' . $row_staff['staff_id'] . '" onClick="return confirm(\'Are you sure you want to delete this staff?\');">Delete</a></td>';
                                         echo '</tr>';
                                     }
                                     ?>
