@@ -1,19 +1,18 @@
 <?php
-
 require '../config/config.php';
 require '../functions/general_functions.php';
 
-if(isset($_GET['id']) && !empty($_GET['id'])){
+if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = clean($_GET['id']);
-    
+
     $query_downloads = "SELECT *
                      FROM downloads
                     WHERE dwn_id = '$id'
                     LIMIT 1";
-    
+
     $result_downloads = mysql_query($query_downloads) or die(mysql_error());
-    
-   $row_downloads = mysql_fetch_array($result_downloads);
+
+    $row_downloads = mysql_fetch_array($result_downloads);
 }
 ?>
 <!DOCTYPE html>
@@ -30,12 +29,12 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
             <div class="pop-up-contents">
                 <div class="pop-up-header">Edit downloads<div class="close"></div></div>
                 <form class="pop-up-form" id="dwn-form" action="process_edit_downloads.php" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="<?php echo $row_downloads['dwn_id'];?>"/>
+                    <input type="hidden" name="id" value="<?php echo $row_downloads['dwn_id']; ?>"/>
                     <input type="hidden" name="dwn_file_name" value="<?php echo $row_news['dwn_file_name'] ?>" />
                     <table border="0" width="100%">
                         <tr>
                             <td width="200">Title</td>
-                            <td><input type="text" name="title" value="<?php echo $row_downloads['dwn_title']?>"class="text" required></td>
+                            <td><input type="text" name="title" value="<?php echo $row_downloads['dwn_title'] ?>"class="text" required></td>
                         </tr>
                         <tr>
                             <td>File Path</td>

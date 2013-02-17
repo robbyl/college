@@ -6,7 +6,7 @@ require '../config/config.php';
 if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     $id = clean($_GET['id']);
-    
+
     // Obtaining events attachment name according to the given id
     $query_attachment = "SELECT event_attachment
                            FROM events
@@ -31,7 +31,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     $result_events = mysql_query($query_events) or die(mysql_error());
 
-    if ($result_events ) {
+    if ($result_events) {
         info('message', 'Events deleted successfully!');
         header('Location: home.php#tab2');
     } else {

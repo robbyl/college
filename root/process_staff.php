@@ -25,7 +25,6 @@ if (!empty($image_name)) {
 
             // Uploading it to image folder.
             move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/images/" . $image_name);
-            
         }
     } else {
 

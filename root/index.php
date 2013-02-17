@@ -7,7 +7,7 @@
         <script src="js/jquery-1.7.2.js" type="text/javascript"></script>
 
         <script type="text/javascript">
-            $(document).ready(function(){
+            $(document).ready(function() {
                 $('.message-outer, .error-outer').hide().slideDown('normal');
             });
         </script>
@@ -46,7 +46,7 @@
                 </form>
                 <!-- .end login wrapper --></div>
             <div class="login-footer">&copy; <?php echo date('Y'); ?> Royal Pharmaceutical Training Institute.
-            <!-- end .footer --></div>
+                <!-- end .footer --></div>
             <!-- end .main-wrapper --></div>
     </body>
 </html>

@@ -1,19 +1,18 @@
 <?php
-
 require '../config/config.php';
 require '../functions/general_functions.php';
 
-if(isset($_GET['id']) && !empty($_GET['id'])){
+if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = clean($_GET['id']);
-    
+
     $query_events = "SELECT *
                      FROM events
                     WHERE event_id = '$id'
                     LIMIT 1";
-    
+
     $result_events = mysql_query($query_events) or die(mysql_error());
-    
-   $row_events = mysql_fetch_array($result_events);
+
+    $row_events = mysql_fetch_array($result_events);
 }
 ?>
 <!DOCTYPE html>

@@ -22,7 +22,7 @@
     </head>
     <body>
         <div class="wapper-header">
-            <?php include 'includes/header.php';?>
+            <?php include 'includes/header.php'; ?>
         </div>
         <div id="bg">
             <!-- Wapper Sec -->
@@ -164,20 +164,32 @@
                             <ul class="inquiryform">
                                 <li>
                                     <input name="txtName" value="Name" type="text"
-                                           onfocus="if(this.value=='Name') {this.value='';}"
-                                           onblur="if(this.value=='') {this.value='Name';}"
+                                           onfocus="if (this.value == 'Name') {
+                                                       this.value = '';
+                                                   }"
+                                           onblur="if (this.value == '') {
+                                                       this.value = 'Name';
+                                                   }"
                                            />
                                 </li>
                                 <li>
                                     <input name="txtEmail" value="Email"
-                                           onfocus="if(this.value=='Email') {this.value='';}"
-                                           onblur="if(this.value=='') {this.value='Email';}"
+                                           onfocus="if (this.value == 'Email') {
+                                                       this.value = '';
+                                                   }"
+                                           onblur="if (this.value == '') {
+                                                       this.value = 'Email';
+                                                   }"
                                            type="text" />
                                 </li>
                                 <li>
                                     <input name="txtPhoneno" value="Phone Number"
-                                           onfocus="if(this.value=='Phone Number') {this.value='';}"
-                                           onblur="if(this.value=='') {this.value='Phone Number';}"
+                                           onfocus="if (this.value == 'Phone Number') {
+                                                       this.value = '';
+                                                   }"
+                                           onblur="if (this.value == '') {
+                                                       this.value = 'Phone Number';
+                                                   }"
                                            type="text" />
                                 </li>
                                 <li>
@@ -250,7 +262,7 @@
             </div>
         </div>
         <!-- Footer Section -->
-         <?php include 'includes/footer.php';?>
+        <?php include 'includes/footer.php'; ?>
     </body>
 </html>
 

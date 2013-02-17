@@ -24,12 +24,10 @@ if ($num_row === 1) {
     $_SESSION['user_id'] = $row_user['user_id'];
     $_SESSION['password'] = $row_user['password'];
     session_commit();
-    
-    header('Location:home.php');
-    
-    } else {
-        info('error-outer', 'Incorrect username or password!');
-        header('Location: index.php');   
-}
 
+    header('Location:home.php');
+} else {
+    info('error-outer', 'Incorrect username or password!');
+    header('Location: index.php');
+}
 ?>

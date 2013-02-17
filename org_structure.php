@@ -7,7 +7,6 @@ require 'functions/general_functions.php';
 $query_staff = "SELECT * 
                        FROM staff";
 $result_staff = mysql_query($query_staff) or die(mysql_error());
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,16 +29,9 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
         <script type="text/javascript" src="js/tabs.js"></script>
         <script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>
         <script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
-        
+
         <style>
-            th{
-                font-weight: bold;
-                background-color: #f4ffd0;
-                color: #08387f;
-                border-bottom: solid 1px #bbc1c4;
-                height: 26px;
-                line-height: 26px;
-            }
+
         </style>
     </head>
     <body>
@@ -50,28 +42,28 @@ $result_staff = mysql_query($query_staff) or die(mysql_error());
             <!-- Wapper Sec -->
             <div id="wrapper_sec">
                 <div id="content_section">
-                        <div class="clear"></div>
-                        <table align="center" border="1px" cellpadding="1" cellspacing="0" width="100%">
-                            <h2>List below is the organisation structure</h2>
-                            <tbody>
-                                <tr>
-                                    <th>Picture</th>
-                                    <th>Title</th>
-                                    <th>Name</th>
-                                </tr>
-                                
-                                <?php
-                                   while ($row = mysql_fetch_array($result_staff)) {
-                                     echo "<tr>";
-                                     echo '<td><img src="root/uploads/images/' . $row['staff_image'] . '" height="80"/></td>';
-                                     echo "<td>" . $row['staff_title'] . "</td>";
-                                     echo "<td>" . $row['position'] . "</td>";
-                                     echo "</tr>";
-                                   }
-                                ?>
-                               
-                            </tbody>
-                        </table>
+                    <div class="clear"></div>
+                    <div class="org_heading"><h2>Organisation structure</h2></div>
+                    <div></div>
+                    <table align="center" cellpadding="1" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <th>Picture</th>
+                                <th>Title</th>
+                                <th>Name</th>
+                            </tr>
+                            <?php
+                            while ($row = mysql_fetch_array($result_staff)) {
+                                echo "<tr>";
+                                echo '<td><img src="root/uploads/images/' . $row['staff_image'] . '"/></td>';
+                                echo "<td>" . $row['staff_title'] . "</td>";
+                                echo "<td>" . $row['position'] . "</td>";
+                                echo "</tr>";
+                            }
+                            ?>
+
+                        </tbody>
+                    </table>
                     <!-- Col1 -->
                     <div class="clear"></div>
                 </div>

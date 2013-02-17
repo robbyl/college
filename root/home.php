@@ -1,5 +1,4 @@
 <?php
-
 require 'session_validator.php';
 
 session_start();
@@ -83,7 +82,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                             <li><a href="#tab7">Change password</a></li>
                         </ul>
                     </div>
-                   
+
                     <div class="tab_content" id="tab1" style="display:none" >
                         <div class="root-heading">
                             <h2 class="label">Manage News</h2>
@@ -277,8 +276,8 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                     </div>
                     <div class="tab_content" id="tab6" style="display:none" >
                         <div class="root-heading">
-                        <h2 class="label">Manage Photo gallery</h2>
-                        <button class="post photo">Upload photo</button>
+                            <h2 class="label">Manage Photo gallery</h2>
+                            <button class="post photo">Upload photo</button>
                         </div>
                         <div class="form-wrapper">
                             <table class="data-table6" width="100%">
@@ -308,9 +307,9 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
                     </div>
                     <div class="tab_content" id="tab7" style="display:none" >
                         <div class="root-heading">
-                        <button type="reset" class="post" form="charge_password">Reset</button>
-                        <button type="submit" class="post" style="margin-right: 0" form="resert_password">Change</button>
-                        <h2 class="label">Change your password</h2>
+                            <button type="reset" class="post" form="charge_password">Reset</button>
+                            <button type="submit" class="post" style="margin-right: 0" form="resert_password">Change</button>
+                            <h2 class="label">Change your password</h2>
                         </div>
                         <div class="form-wrapper">
                             <form id="resert_password" action="process_change_pass.php" method="POST">

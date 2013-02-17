@@ -68,7 +68,7 @@ $current_file_name = 'about.php';
                         </p>
                         <p>
                             Academic freedom by upholding the spirit of free and critical thought and enquiry, through the tolerance of a diversity of beliefs and understanding, as well as fostering open exchange of ideas and knowledge amongst the staff and/or students
-                             unrelenting pursuit of scholarly and strategic research, education, training and public service directed at the attainment of equitable and sustainable socio-economic development of Tanzania.
+                            unrelenting pursuit of scholarly and strategic research, education, training and public service directed at the attainment of equitable and sustainable socio-economic development of Tanzania.
                         </p>
                         <p>
                             Teaching and learning by creating a holistic teaching and learning environment which is student centred, providing students with social, cultural and recreational opportunities that will facilitate the full realisation of their potential for academic and personal growth

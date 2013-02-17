@@ -52,11 +52,11 @@ $current_file_name = end($values);
                         </div>
                         <div class="clear"></div>
                         <!-- Note -->
-<!--                        <div class="note1">
-                            <a href="contact.html#" class="close close1">&nbsp;</a>
-                            <p >
-                                <strong> NOTE:</strong>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui dolor. Fusce auctor dolor a diam tincidunt quis malesuada tellus.					</p>
-                        </div>-->
+                        <!--                        <div class="note1">
+                                                    <a href="contact.html#" class="close close1">&nbsp;</a>
+                                                    <p >
+                                                        <strong> NOTE:</strong>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui dolor. Fusce auctor dolor a diam tincidunt quis malesuada tellus.					</p>
+                                                </div>-->
                         <div class="clear"></div>
                         <p class="contact_text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui dolor. Fusce auctor dolor a diam tincidunt quis malesuada tellus auctor.                                  Integer samet lorem ac ligula interdum elementum. Maecenas lectus mauris.
@@ -89,11 +89,11 @@ $current_file_name = end($values);
                                     <p>Temeke District.</p>
                                 </div>
                                 <div class="teleno colr">+255 713 325 507, +255 688 353 310</div>
-<!--                                <div class="emailaddress">
-                                    <a href="contact.html#">info@universityofcollege.com</a>
-                                    <a href="contact.html#">www.universityofcollege.com</a>
-                                </div>
-                                <div class="contacticon colr"> 464 64 65 4 64 56</div>-->
+                                <!--                                <div class="emailaddress">
+                                                                    <a href="contact.html#">info@universityofcollege.com</a>
+                                                                    <a href="contact.html#">www.universityofcollege.com</a>
+                                                                </div>
+                                                                <div class="contacticon colr"> 464 64 65 4 64 56</div>-->
 
                             </div>
                             <div class="clear"></div>
@@ -220,7 +220,7 @@ $current_file_name = end($values);
                     <!-- Col2 -->
                     <div class="col2">
                         <!-- Downloads -->
-                        
+
                         <?php
                         include './config/config.php';
                         include 'includes/downloads.php';

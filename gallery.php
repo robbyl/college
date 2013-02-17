@@ -56,7 +56,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_errno());
                         <!-- Col1 -->
                         <div class="categorydiv">
                             <ul>
-                                <li><a class="selected" href="gallery.html#">Institute photos</a></li>
+                                <li><a class="selected" href="gallery.php#">Institute photos</a></li>
                                 <!--                                <li><a href="gallery.html#">College Biulding</a></li>
                                                                 <li><a href="gallery.html#">Our International Students</a></li>
                                                                 <li><a href="gallery.html#">English Classis</a></li>

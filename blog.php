@@ -22,8 +22,8 @@
     </head>
     <body>
         <div class="wapper-header">
-        <?php include './includes/header.php'; ?>
-        <!-- end outter--></div>
+            <?php include './includes/header.php'; ?>
+            <!-- end outter--></div>
         <div id="bg">
             <!-- Wapper Sec -->
             <div id="wrapper_sec">
@@ -227,8 +227,12 @@
                             <ul>
                                 <li>
                                     <input name="txt" value="Search you any keyword"
-                                           onfocus="if(this.value=='Search you any keyword') {this.value='';}"
-                                           onblur="if(this.value=='') {this.value='Search you any keyword';}"
+                                           onfocus="if (this.value == 'Search you any keyword') {
+                                                       this.value = '';
+                                                   }"
+                                           onblur="if (this.value == '') {
+                                                       this.value = 'Search you any keyword';
+                                                   }"
                                            type="text" />
                                 </li>
                                 <li> <a href="blog.html#"><img src="images/search_btn.jpg"  alt="" /></a></li>
@@ -333,7 +337,7 @@
             </div>
         </div>
         <!-- Footer Section -->
-       <?php include './includes/footer.php'; ?> 
+        <?php include './includes/footer.php'; ?> 
     </body>
 </html>
 
