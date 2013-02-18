@@ -2021,7 +2021,7 @@ a.btn {
     display: inline-block;
 }
 
-a.btn1 {
+a.btn1, .btn1 {
     width: 83px;
     height: 25px;
     line-height: 25px;
@@ -2030,6 +2030,7 @@ a.btn1 {
     font-weight: bold;
     background-color: #89ab20;
     display: inline-block;
+    cursor: pointer;
 }
 
 .leftimg {
@@ -2448,7 +2449,7 @@ ul.courselisting li {
     padding-right: 43px;
 }
 
-.note1 {
+.note1, .note2 {
     width: 655px;
     background-color: #e7f1ff;
     border: solid 1px #bbc1c4;
@@ -2461,11 +2462,16 @@ ul.courselisting li {
     padding-right: 38px;
 }
 
+.note2 {
+    background-color: #ffebe8 !important;
+    border-color: #cd0707 !important;
+}
+
 .note p {
     padding-bottom: 11px!important;
 }
 
-.note1 p {
+.note1 p, .note2 p {
     padding-bottom: 8px!important;
 }
 

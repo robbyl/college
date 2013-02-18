@@ -98,7 +98,6 @@ function pagination($query, $per_page = 10, $page = 1, $url = '?') {
         $pagination .= "<div class='details'>Page $page of $lastpage</div>";
     }
 
-
     return $pagination;
 }
 

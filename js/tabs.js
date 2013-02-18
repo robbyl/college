@@ -34,6 +34,11 @@ $(document).ready(function() {
 
     $('a:contains("WOWSlider.com")').remove();
 
+    $('.note1, .note2').hide().slideDown('normal');
+    $('.close').click(function() {
+        $(this).parent('.note1, .note2').slideUp('normal');
+    });
+
 });
 
 $(function() {

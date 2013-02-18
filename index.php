@@ -101,7 +101,7 @@ $result_donwloads = mysql_query($query_downloads) or die(mysql_error());
                             <h2>Welcome to Royal Pharmaceutical Training Institute</h2>
                         </div>
                     </div>
-                    <p class="text">The Royal pharmaceutical training Institute is a private institution, established in August 2010.  As a Pharmaceutical College, our core responsibility is to provide a conducive environment for teaching and learning, knowledge generation and community service. </p>
+                    <p>The Royal pharmaceutical training Institute is a private institution, established in August 2010.  As a Pharmaceutical College, our core responsibility is to provide a conducive environment for teaching and learning, knowledge generation and community service. </p>
                     <p>The educational programmes that are offered have been carefully designed to suite a wide range of clientele. Individual students have the opportunity to choose programmes depending on their interest and convenience. <a class="readmore" href="index.php#"></a> </p>
                     <div class="clear"></div>
                     <!-- Content Block -->
