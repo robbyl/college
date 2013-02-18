@@ -15,9 +15,6 @@ $(document).ready(function() {
         return false;
     });
 
-
-
-
     $(".rtab_content").hide(); //Hide all content
     $(".tab_navigation ul li:first").addClass("active").show(); //Activate first tab
     $(".rtab_content:first").show(); //Show first tab content
@@ -35,7 +32,8 @@ $(document).ready(function() {
     $('a:contains("WOWSlider.com")').remove();
 
     $('.note1, .note2').hide().slideDown('normal');
-    $('.close').click(function() {
+    $('.close').click(function(event) {
+        event.preventDefault();
         $(this).parent('.note1, .note2').slideUp('normal');
     });
 

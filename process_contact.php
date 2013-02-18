@@ -1,11 +1,9 @@
 <?php
 
-require './functions/general_functions.php';
-
 if (isset($_POST['txtEmail'])) {
 
-    $email_to = "robbyl@ovi.com";
-    $email_subject = "Royal message";
+    $email_to = "info@royalpharm.ac.tz";
+    $email_subject = "Royal Pharmaceutical Training Institute contact form message";
 
     function died($error) {
         // Error code
@@ -27,10 +25,10 @@ if (isset($_POST['txtEmail'])) {
         die();
     }
 
-    $txtName = clean($_POST['txtName']); // required
-    $email_from = clean($_POST['txtEmail']); // required
-    $telephone = clean($_POST['txtPhoneno']); // not required
-    $comments = clean($_POST['txtMessage']); // required
+    $txtName = $_POST['txtName']; // required
+    $email_from = $_POST['txtEmail']; // required
+    $telephone = $_POST['txtPhoneno']; // not required
+    $comments = $_POST['txtMessage']; // required
 
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
@@ -49,7 +47,7 @@ if (isset($_POST['txtEmail'])) {
         header('Location: contact.php');
         die();
     }
-    $email_message = "Form details below.\n\n";
+    $email_message = "Message details.\n\n";
 
     function clean_string($string) {
         $bad = array("content-type", "bcc:", "to:", "cc:", "href");
