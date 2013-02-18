@@ -2033,6 +2033,17 @@ a.btn1, .btn1 {
     cursor: pointer;
 }
 
+.btn2 {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .leftimg {
     width: 37px;
     float: left;

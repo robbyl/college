@@ -123,7 +123,7 @@ $current_file_name = end($values);
                                     </ul>
                                     <div class="action1">
                                         <input type="submit" value="Submit"  class="btn1 left"/>
-                                        <input type="reset" value="Cancel"  class=" right"/>
+                                        <input type="reset" value="Cancel"  class="btn2 right"/>
                                         <!--<a href="#" class="btn1 left">Submit</a>-->
                                         <!--<a href="#" class="right">Cancel</a>-->
                                     </div>
