@@ -53,7 +53,7 @@ $result_courses = mysql_query($query_course) or die(mysql_error());
                             <div class="heading"><h2>Courses</h2> </div>
                         </div>
                         <p>
-                            Nullam scelerisque cursus leo at volutpat. Etiam non faucibus ante. Ut eget leo placerat velit imperdiet suscipit.                                ,                                at aliquam est. Proin eget laoreet lectus. Nullam scelerisque cursus leo at volutpat. Etiam non faucibus ante.                                Ut eget                                leo placerat velit imperdiet suscipit.  at aliquam est. Proin eget laoreet lectus. Nullam scelerisque                                cursus leo at                                volutpat.
+                            List of Courses that we offer.
                         </p>
                         <!--                        <div class="make_slection">
                                                     <span>To view the schedule for a different quarter, make your selection.</span>
