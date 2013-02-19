@@ -1,5 +1,7 @@
 <?php
 
+require './functions/general_functions.php';
+
 if (isset($_POST['txtEmail'])) {
 
     $email_to = "info@royalpharm.ac.tz";
