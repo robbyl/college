@@ -11,18 +11,19 @@
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
                 <div class="pop-up-header">Post organisation structure<div class="close"></div></div>
+                <p class="dscptn">* Indicates this field is required.</p>
                 <form class="pop-up-form" id="org-form" action="process_staff.php" method="POST" enctype="multipart/form-data">
                     <table border="0" width="100%">
                         <tr>
-                            <td width="200">Name</td>
+                            <td width="200">Name*</td>
                             <td><input type="text" name="title" class="text" required></td>
                         </tr>
                         <tr>
-                            <td>Image</td>
+                            <td>Image* <div class="file-types">(jpeg, png, gif)</div></td>
                             <td><input type="file" name="image" required="" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td width="200">Position</td>
+                            <td width="200">Position*</td>
                             <td><input type="text" name="position" class="text" required></td>
                         </tr>
                     </table>

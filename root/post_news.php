@@ -11,22 +11,23 @@
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
                 <div class="pop-up-header">Post news<div class="close"></div></div>
+                <p class="dscptn">* Indicates this field is required.</p>
                 <form class="pop-up-form" id="news-form" action="process_news.php" method="POST" enctype="multipart/form-data">
                     <table border="0" width="100%">
                         <tr>
-                            <td width="200">Title</td>
+                            <td width="200">Title*</td>
                             <td><input type="text" name="title" class="text" required></td>
                         </tr>
                         <tr>
-                            <td>Image</td>
+                            <td>Image <div class="file-types">(jpeg, png, gif)</div></td>
                             <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td>Attachment</td>
+                            <td>Attachment* <div class="file-types">(pdf, doc, docx)</div></td>
                             <td><input type="file" name="attachment" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td style="vertical-align: top">News Description</td>
+                            <td style="vertical-align: top">News Description*</td>
                             <td><textarea name="description" required></textarea></td>
                         </tr>
                     </table>

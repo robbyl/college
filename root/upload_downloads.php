@@ -11,14 +11,15 @@
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
                 <div class="pop-up-header">Upload Download File<div class="close"></div></div>
+                <p class="dscptn">* Indicates this field is required.</p>
                 <form class="pop-up-form" id="upload-form" action="process_download.php" method="POST" enctype="multipart/form-data">
                     <table border="0" width="100%">
                         <tr>
-                            <td width="200">Title</td>
+                            <td width="200">Title*</td>
                             <td><input type="text" name="title" class="text" required></td>
                         </tr>
                         <tr>
-                            <td>File Path</td>
+                            <td>File Path*  <div class="file-types">(pdf, doc, docx)</div></td>
                             <td><input type="file" name="download" class="text" required="" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                     </table>

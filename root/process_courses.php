@@ -10,7 +10,7 @@ $description = clean($_POST['description']);
 
 $query_courses = "INSERT INTO courses
                       (course_title, course_posted_date, course_description, duration)
-               VALUES ('$title', CURRENT_TIMESTAMP(), '$description', '$duration)";
+               VALUES ('$title', CURRENT_TIMESTAMP(), '$description', '$duration')";
 
 $result_courses = mysql_query($query_courses) or die(mysql_error());
 

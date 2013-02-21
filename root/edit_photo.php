@@ -28,17 +28,18 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
         <div class="pop-up-wrapper">
             <div class="pop-up-contents">
                 <div class="pop-up-header">Edit Photo<div class="close"></div></div>
+                <p class="dscptn">* Indicates this field is required.</p>
                 <form class="pop-up-form" id="news-form" action="process_edit_photo.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $row_gallery['photo_id'] ?>" />
                     <input type="hidden" name="photo_name" value="<?php echo $row_gallery['photo_name'] ?>" />
 
                     <table border="0" width="100%">
                         <tr>
-                            <td>Image</td>
+                            <td width="200">Image <div class="file-types">(jpeg, png, gif)</div></td>
                             <td><input type="file" name="image" class="text" style="padding-left: 0; padding-right: 10px"></td>
                         </tr>
                         <tr>
-                            <td style="vertical-align: top"> Image Description</td>
+                            <td style="vertical-align: top">Image Description*</td>
                             <td><textarea name="description" required><?php echo $row_gallery['photo_description']; ?></textarea></td>
                         </tr>
                     </table>

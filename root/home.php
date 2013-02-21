@@ -51,7 +51,7 @@ $result_gallery = mysql_query($query_gallery) or die(mysql_error());
         <script src="js/jquery.dataTables.columnFilter.js" type="text/javascript"></script>
         <script src="js/jquery.dataTables.pagination.js" type="text/javascript"></script>
         <script src="js/royal-core.js" type="text/javascript"></script>
-        
+
     </head>
 
     <body>
